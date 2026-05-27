@@ -1,0 +1,90 @@
+{
+  "sources_base": [
+    "Radio-Canada",
+    "La Presse",
+    "Le Devoir",
+    "Journal de Montréal",
+    "Journal de Québec"
+  ],
+  "projets": [
+    {
+      "nom": "Tramway de Québec",
+      "mots_cles": [
+        "tramway de Québec"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Ligne bleue",
+      "mots_cles": [
+        "ligne bleue métro Montréal"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "TGV",
+      "mots_cles": [
+        "TGV Alto"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "DMA",
+      "mots_cles": [
+        "déficit de maintien d’actif",
+        "entretien des infrastructures"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Pont de l'Île-d'Orléans",
+      "mots_cles": [
+        "chantier Pont de l'Île-d'Orléans"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Pont-tunnel Louis-Hippolyte-La Fontaine",
+      "mots_cles": [
+        "chantier pont tunnel"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    }
+  ]
+}
