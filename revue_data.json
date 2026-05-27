@@ -635,5 +635,75 @@
     "source": "Radio-Canada",
     "date": "2026-05-09T07:00:00+00:00",
     "projet": "TGV"
+  },
+  {
+    "titre": "Épisode du mercredi 29 avril 2026 | Le téléjournal Québec",
+    "lien": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQUtSV1A3dkFzSlZYMC1qTjVWVkNhZXlMd0hiQzAwZkxOMDFJUnczb0pjRVZuVFVOME1KbUZ5NUFSaDIyXzVuMGlGOGtoVHNuemlUajc0MDJHOXcwUDRNWFJTTV8yUkZVZmRKY3hfSDlYZ3k2bkZfYlZiMXZLU2tLOUlTdjREWkpLZzdQTWNTd0M5cWlNYlNxakNvdmpIaExQWVBJ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-29T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Fin de la brève : L’entretien des infrastructures coûte trop cher aux villes. Brève suivante",
+    "lien": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPSzV2UWpyTnNMc05Sei1ka1JoZHFBbTRKbUd3YW0yNzRjRGpFMmNLNk5QYmw0OWQtNEdleDVteHlNYXhyaGx5WDJ6ZmZiZDJyWV9zZFozOGdwYkdSVFZWdWVzNWFqMWpUNDI2M045d0R6ekQySURueFl0OHRMbGpGbnRGMG9QelBzSmw5VWVYcWtRRjZvVUw2QXdCNk1pWG96aE52dHJYRHhGRkN4U2loZHJucGtLTVk?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-22T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Fréchette veut donner «un nouveau souffle», y compris pour le troisième lien",
+    "lien": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOaEE2bFg2NEhuMTZVQzBVUllNcVVVbUExNWlvUjhGM09qNjFHVEdEd0d1SFA5MUcxUXlfMklVSVdrS0llYkZEY2tYRlBPd2ZJY2JLLXQyUTNxdVQxYU1UWHd4cEsyRlRPZF9TQVhlbF9XNHFBMkZubGVnVGJ0dVN5dGsyRlN1UUNtSnNueWtDUl90MUFtSlZkY1FJN0tsTUZ1Rk5DYURCRzU4bWc2WU5Deg?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-05-05T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "3e lien: le corridor central ne soulevait «aucun enthousiasme» ni adhésion, dit Charette",
+    "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWXFnS3Y5aHV6dEJzMHp4T1VMcWlvdkRRcVE2MUtsMTJtaUs3NzdURUdVTU14ZXI5WUtLTGoxTVltRWJjWWtabWhCaXVuZG5rLTNHcUhmYllsVVBnV0RFZ1hORlZVOXo1STdfTFprTWxWY1RpVTRMdnptNDU5cjNZc2Q4X1NyRVZneTRKQ1lxVUZjT200QmFNeXc4R3hFOExzRmhjMHRoUVZBQTZ1S3dJU3ppcGNNRE01dFd0QS1VSjhEcmZxbHQtRg?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-05-06T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Le troisième lien permettra à ses travailleurs d’«aller au restaurant» et d’«acheter des Ski-Doo»",
+    "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOM0ZWWV9oVm5kQm9iV3ozeTVLa1E2cklwWHRLSTQwYnBUa1pjVDZoU2ZpMkhEdFZNS0tHUHlHZ2laQ1V5TlpOM2lyaHQ5b3lJMEVGY3g2NnVDRzhxSnEyTV9hUlFYU0h0N2xvRUc0ZHExbS1SeTZGM2dXbnpPMUpfVGhXZnhmOS15dDAzSXJtTUE3S3JHcG1XcmdjdG9Gd2oxRDFDMXZmNkFPTVpWamdVS3dMN1NSMXdYcWlQVG9SNXg?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-05-13T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Un accès au fleuve sacrifié au profit du privé?",
+    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOZVAxaDJGcERtaTRnNWtIa0t2bUM4S2pXaG9OcWpJa2pqZTRTYzlzcWNlMVRsX1pUZ1E0UDlPQnVIOFlFcGE3UzRFSE9tMVhVbklaQXphYV9UVHljc1FwSTd4NGFqaEphSEVibndpdmViSnU5WnBELTI3YlVzdWdPcm80ZmtCQWU5LVpMTVpBU3VqNHgwVkRJMFJGOHZaR19qUmstUTdUcVZ6VFQ0dmFwZDVrRHh0U3o1ZDJ0TzQydHFaaHFzY1JzcjFvd0RULUxUX010OTByZUxrdUk?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-27T14:21:04+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "3e lien à l’est: la promenade Samuel-De Champlain ne doit pas écoper, dit Bruno Marchand",
+    "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOV3U4YjVjM3M3alZkdWV5endWbG05M1p2X1AzLVZvUUdnV0FzMjQzRDNqTmtjYnNTVTNyNExsMW5OTTNpTjBZLWZOdV9WaGlBVzBJQ2xldjd4YkdobU4xWXhDQ3JiMVdsOWF1cTlHVjhrbGJmMnpyR09SbDlUQ0xiNE9xUFB6OWZLSDJ3SHlrRThfXzBmMWw2aUtSQm9fWHhpUk5jWQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-05-27T17:05:14+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Duhaime mise finalement sur Bellechasse",
+    "lien": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPSzBqb1pOZFJKdjZFYjdPWlFVWDAyYl96cVZZNWJqd0RhUzZWTW9QdC1NOTRnMDMzUi1lZjdKWGlOSzVfdWNXaFUtSFRLYmJsU0Y1d0hVcVBoWnozQU9xeFBVX2VLYmdUTWZHV3JIeEJTaFF4LW9USE95SzZiZlNtM3dYeTlDdkwwRk5ISg?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-05-26T18:51:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "L’ouverture du nouveau pont Gordie-Howe est très attendue",
+    "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQT0RwbEdIYlgwQkJOZDNpbHFUUFoyNDBWdEJUZnNwTGd0dUNnbG5UUHJWMks4YllEaUNpd2J0WXIzSnNNaW9NSVVvMkl5SXctcGZnSVNudjRpaHRaNmNsQ3Jmak03VjcydTVUazYxb1VhQWtUekdKUVAwd1o2aEtmUll3c3gtMnVINXdLbFFWOXo?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-17T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Ouverture du pont Gordie-Howe : l’impatience augmente",
+    "lien": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQV2hGUFpxZTFWUHFYTWtlalppTXlVX2tsMWEtbkZpc2J2SEdNa3VhVnpDVWI5RjZaVHZtb29wZzdfaWlkdktYMHBqUnFsVk9SSHROTTFWclJSTnBGRGJ3YndHMWhPNi1jYi1YY0hXbHl5VUhNMDNXUHhmZVBrTDdFWUVQbHVkNlR4bURzTTdCVnJXUE9Rc05F?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-23T14:12:20+00:00",
+    "projet": "Troisième lien"
   }
 ]
