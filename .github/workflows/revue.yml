@@ -1,0 +1,41 @@
+name: Revue de presse quotidienne
+
+on:
+  # Lancement automatique chaque jour à 11 h UTC (7 h, heure de l'Est).
+  schedule:
+    - cron: "0 11 * * *"
+  # Permet aussi de lancer le robot à la main depuis l'onglet Actions.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generer:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Installer Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Installer feedparser
+        run: pip install feedparser
+
+      - name: Lancer le script
+        run: python revue_presse.py
+
+      - name: Publier les fichiers mis à jour
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html revue_data.json
+          if git diff --cached --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Revue de presse $(date -u +'%Y-%m-%d')"
+            git push
+          fi
