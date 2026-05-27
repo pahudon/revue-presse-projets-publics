@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Revue de presse : grands projets publics au Québec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --encre: #1a1f2e; --papier: #f4f1ea; --carte: #fffefb;
+    --accent: #9a3b2e; --accent-doux: #c46a4a; --gris: #6b6a64; --ligne: #ddd8cc;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Spline Sans', sans-serif; background: var(--papier);
+    color: var(--encre); line-height: 1.5;
+    background-image: radial-gradient(var(--ligne) 0.5px, transparent 0.5px);
+    background-size: 22px 22px;
+  }
+  .ruban { height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-doux)); }
+  header { max-width: 1100px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }
+  .surtitre { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }
+  .sous { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }
+  .sous .date { font-style: italic; }
+  main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }
+  .barre { position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-bottom: 1px solid var(--ligne); }
+  .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }
+  .filtre:hover, .filtre.actif { background: var(--encre); color: var(--papier); }
+  .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }
+  .recherche { font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 220px; color: var(--encre); outline: none; }
+  .recherche::placeholder { color: var(--gris); }
+  .periode { margin-left: auto; font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+  .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
+  .bloc { margin-top: 40px; }
+  .bloc h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
+  .bloc h2::before { content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }
+  .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
+  .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }
+  .carte h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.08rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }
+  .lien { text-decoration: none; }
+  .lien:hover h3 { color: var(--accent); }
+  .meta { margin-top: 12px; font-size: 0.8rem; color: var(--gris); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+  .source { font-weight: 600; color: var(--accent-doux); }
+  .sep { opacity: 0.5; }
+  .vide { color: var(--gris); font-style: italic; grid-column: 1 / -1; }
+  .bloc.cache, .carte.cache { display: none; }
+  footer { max-width: 1100px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }
+  footer code { background: #e8e3d8; padding: 1px 6px; border-radius: 4px; }
+</style>
+</head>
+<body>
+  <div class="ruban"></div>
+  <header>
+    <div class="surtitre">Veille quotidienne</div>
+    <h1>Grands projets publics au Québec</h1>
+    <div class="sous">
+      <span class="date">27 mai 2026</span>
+      <span>82 articles sur les 3 derniers mois</span>
+      <span>82 au total dans l'archive</span>
+    </div>
+  </header>
+  <main>
+    <div class="barre">
+      <button class="filtre actif" data-projet="tous">Tous</button>
+        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">38</span></button>
+        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">16</span></button>
+        <button class="filtre" data-projet="TGV">TGV <span class="compte">16</span></button>
+        <button class="filtre" data-projet="DMA">DMA <span class="compte">6</span></button>
+        <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">3</span></button>
+        <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
+      <select class="periode" id="periode" title="Période affichée">
+        <option value="1">Dernières 24 h</option>
+        <option value="7">7 derniers jours</option>
+        <option value="14">14 derniers jours</option>
+        <option value="30">30 derniers jours</option>
+        <option value="90" selected>3 derniers mois</option>
+      </select>
+      <input class="recherche" type="search" placeholder="Chercher dans les titres...">
+    </div>
+      <section class="bloc projet" data-projet="Tramway de Québec">
+        <h2>Tramway de Québec</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Tramway de Québec" data-titre="bruno marchand appelle a «celebrer les victoires»" data-source="journal de quebec" data-date="2026-05-26T17:08:49+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNWFI0U3VySHFwYkwyR3NmTWY3bW9TNEM3WkFjSzlzY1lSYU9jRndhM2VBdE1NT3BBUEhZTVRTMG5nUGphZlVWbTJKSkE5SjBSeGRDWjV5Y3Y2a0tmMUNXMHROb0xSZDR1dkpPWHNzaHJGSmg2ck9FTTU5V05NOEVtUWpmVDFjTHJHMHVWd1p2Q0NfbkM2?oc=5" target="_blank" rel="noopener">
+            <h3>Bruno Marchand appelle à «célébrer les victoires»</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>26 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="girard admet qu il pourrait en faire plus pour les infrastructures en transport en commun" data-source="le devoir" data-date="2026-05-26T16:25:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMVRiOE9Rd2J6NjBCT1dtejZmVnZSNm40TVNGRG1MQ2ZOeEhtZHhWS0dVVGtuTU1FVzN6bFhBT1V0a1ByMkVfQVpaTVRNUGc5eTRGNlY5R1F5dEdqcWFZTFo2emdMOXltUUlJTjJHWmZkUUZHcDlRY1YyNVZzeExtMk1NazJPajNNM1lpaVBUVU9YS1otTGtVS1MxY08wajZ5d2h1MVdqZ3dRSU0zRnkyaXJEcTBWc1No?oc=5" target="_blank" rel="noopener">
+            <h3>Girard admet qu’il pourrait en faire plus pour les infrastructures en transport en commun</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>26 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="stephane lachance s exprime sur le tunnel du tramway de quebec" data-source="radio-canada" data-date="2026-05-22T06:20:37+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZE9ZalE2ak1PLUJqdlVydTlEbEl2aWZPQWIxa1dNc0JqVVRpc0pMSGdrLWxlWDRIUnpqRlZhbDJiTEd1Y0stOXlFdERILUNYbFIyR3hHSWZ1WndTeXBhM2l3UEcyWFRZdWIwd2F3VUVMQXFFQ3hoNWhtajdmOEEzVXRKaU13amRoOC1zVDVRdXlmX2Y2QWhZUlBta2JBV3FidGRSVXMwaEx3ME1ud2k2aHFMSDNkNDJuRnhv?oc=5" target="_blank" rel="noopener">
+            <h3>Stéphane Lachance s&#x27;exprime sur le tunnel du tramway de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>22 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="jusqu a 18,5 m$ pour un stationnement souterrain rendu necessaire par le tramway" data-source="radio-canada" data-date="2026-05-21T08:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQdUlOYm96QndzTkZfdzliZTlKdi00SDVyMTh5SW5FcnQtdGdJUllnRV94eS1iZk1vVUpWb1VzVHJ2R2tEVDIwMFE1UWVyNnpSZmVFNkt2UjUwNVFSTHdvY2F4anpYeUFnRmJGY0tmeU9oSk1Wd0RHcjRGQWZVNEJaMDVEekpMOWpYQl9NOWI5cw?oc=5" target="_blank" rel="noopener">
+            <h3>Jusqu’à 18,5 M$ pour un stationnement souterrain rendu nécessaire par le tramway</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway de quebec" data-source="radio-canada" data-date="2026-05-21T00:04:49+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMidEFVX3lxTE12cEJZOG9yWGRVZTVUOGtBYkU3LWZYb0JXUzZRamJhcnU2THhBQzVaeEl3RjZ1RC1zcHQ1MFoydWtLZDRJM01ScjJ6S3Rid3lKUERid2M3QTl5eFZ2OWo3U21IZTVNX0liM0xiREhIY1hTSVQ4?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tunnel du tramway : des citoyens preoccupes demandent des reponses" data-source="radio-canada" data-date="2026-05-17T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQcVU3SjZuZVh3RmxOeUJ6T08wNXpnb2d6dnJMRTBDRjJSWUNTNndwME1HV1ZvUEhCT2tsekgydHRWZER0ZEVOZEFNU1VyREtpckxlOEhiQ25vdXNrZTdRalRxc1lEUFh4VW1XOTBGcTd3MkhlWThQUS1UWFZyVzhBX28ybVRKMUFB?oc=5" target="_blank" rel="noopener">
+            <h3>Tunnel du tramway : des citoyens préoccupés demandent des réponses</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>17 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="&quot;tunnel du tramway : des citoyens preoccupes demandent des reponses&quot;" data-source="radio-canada" data-date="2026-05-17T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxPVWk2Mk56cXBUSks4MHg1RHBUSGxGRjJvS3ZUeXhiZy1zZGFsNGsxSjItU0ZIU0c3MDNRRndwNkNVWjNhX0JVYjZOX244QnpNeW10Z05GQURhWmwxSm1EWEwxWEx6aFhrWUt4ZGhRRlNISWpVV2lrN0pDR0VBRmJIby1rdzhmTDR1d1RRQnB6QU85dFVQNXViWE1UR2tsM0FNc09Cd3hPSDMzeUY2aHJEMzRiaUdMcGdralZSZTZ5a2ZyMEphdkhZbGxOV1NVemZz?oc=5" target="_blank" rel="noopener">
+            <h3>&quot;Tunnel du tramway : des citoyens préoccupés demandent des réponses&quot;</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>17 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="financement federal: le tramway realise «sur une napkin», dit champagne, avant de se retracter" data-source="journal de quebec" data-date="2026-05-13T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMinAFBVV95cUxOdHJXZXNTd0k2em1yQWFmR1NlVXpFeXJMQy1SQVZ3UjF3NUdEXy1OZkxETlY1amI4RFRwN0ZnZllZZ0R6cGsyeVVkMzBzQm1oYkt3d2ZYMWJiTzRFRnlfR2hLTkNRdERRMjBjQ1UtVW9CR1VvdUtrTFI4MV9KSFJJVWZPOTZxV2J4MzVxTTBjSFlhSk9vbGo4LWYwYzI?oc=5" target="_blank" rel="noopener">
+            <h3>Financement fédéral: le tramway réalisé «sur une napkin», dit Champagne, avant de se rétracter</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>13 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="une delegation de seattle vient s inspirer du quebec pour ses projets de mobilite" data-source="journal de quebec" data-date="2026-05-13T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSEwyR05vd0JyeExuS3RiczdTeFFmUGJ4Smc5SHpQVkE1c3M1WlIwSDM0SnhUNUlZNF9EZ0NPWS1TOGhSWk4yZ3pRY19tel9yOEh1UDVaZDNPa2ROZEF5WUpibEppbDExdjF0UGRqVk1KZkdoY3ljUXdBLVA2U0libGZQRFZWMWRGOHZFQlAycl8tZ3hBSkROTzdMcXNpblhXWG5pLUtPejcydFlzN3paZlZHZDB6YWRBTHdobnNFd1E?oc=5" target="_blank" rel="noopener">
+            <h3>Une délégation de Seattle vient s’inspirer du Québec pour ses projets de mobilité</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>13 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="la force d inertie est puissante au quebec" data-source="journal de quebec" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQTGZxcjNxTlRPMmN6MmtleUJJWXhOOExwTnVsVG1WUDUwV2tEN3ZldTlZajV3RUR3WWJqc3hwbXl2RElCWVlzajhfc2d2NlJsczVtdkNsNk8xTzBJbllGNHdhcHJZcFZVOW10YVpndTlxNU50RnZSem5iQzZQZWNVU0lxLUtWRGI0OHdKdw?oc=5" target="_blank" rel="noopener">
+            <h3>La force d’inertie est puissante au Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway de quebec | batir sans faire fuir | la presse" data-source="la presse" data-date="2026-05-07T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPYUM4YXhaMlJxYzJOZEFJUEEzNDdXRThWNDhzeWZ4QWZuR01zUEZsZl9BbUhKSDRYWUFLbF9kTE1MYWlVQjVyeU1mN0ZIQ2g4QXVHUE9FSFdFUkFDSTZEWlpYbGd4MWx5OHB6RkZsMmZ1RXZiYTdqTEplMk9Ld21iRUxrekh0Umk5em1EMi1SMGg2ajNxczdJRHF1Wk1Ba00?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway de Québec | Bâtir sans faire fuir | La Presse</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>7 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="les signaux sont au vert pour le tramway de quebec" data-source="journal de quebec" data-date="2026-05-07T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxPY0hDcjRqSEZVdG5kWnRrWlBTbUNKZHBONi0xZHZnWWdqT0Vyam12MW94bTNLbTRFZmhWcUJTM0wzZHVRQlk5M0FnV2hhbEllOS1qXzNjd2YtR3BRSXZVbUVaSllFbFoyV0NiN084MDNwZkd5V3U3TnM1NE83cVkzdGk5aGNPaHNKRWlQcnVxVXh6ZVREVjdXQg?oc=5" target="_blank" rel="noopener">
+            <h3>Les signaux sont au vert pour le tramway de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>7 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="mobilite infra quebec, la «petite» agence aux grandes ambitions" data-source="le devoir" data-date="2026-05-07T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxQa01Cejd6d2ljMUQ2aWV2WVRPYjRUWHpCUnZDRlo4SHNRd0V0bWxqUmphXzdVSzVjeENlVmpDR1MyckhqZUMtZG1nOFUteENGZURUblpub1hHNmRJSVBYR25JTVh2YlZMZGtvSWJnLXU0RDI0TkxTYXk5QkFPdWtDVDV4azhSYTdWSWdqWmdsNUZRcGtqVjBFQ3FuS3c1X3F2ZUwzRnZTbUJDYjRtZmx0YmhaWFRMcHRW?oc=5" target="_blank" rel="noopener">
+            <h3>Mobilité Infra Québec, la «petite» agence aux grandes ambitions</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>7 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="le tramway de quebec est «irreversible» aux yeux du ministre des transports" data-source="le devoir" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxNOWpiQjM0MXI4azVQNk9OUU1mOU1OMXg1aENiRDNzSGpUUGxIQzU4bHFuTmRhSlZDb3Zka1d3V0NZWlV5cU9SczI3S1paaGZQVDRRMWp1N1NBTnpHSnBYRmNxTjBGNHhMR1NBRUtyazNnNUtTLWEyaF9NTmZpd0FuNWhnMndLZURqTlNMVDVkbDA3Um9lQmZvbXRMamw5ZVpQSS1XT0R3Tmc?oc=5" target="_blank" rel="noopener">
+            <h3>Le tramway de Québec est «irréversible» aux yeux du ministre des Transports</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tunnel du tramway: les commercants de montcalm surpris et inquiets" data-source="journal de quebec" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxQeU5OYmpFZFJyVm8wQXRWUW4ybjlpMEZXby1lVHlIVEt0ZEJYSU9NSUh3RkR3RGJxN2FiZkV0d0hyYzh3ZFo4X045OTA4OEZDSGp2aWhCdUh5MHhoTjdxTS1SclRUUXVTbG9hc0FQbldVTXlDTU9ENl9YejdETHZvQ2pOSGwtcmJrNG5jUWI2VHFnWFBQNmJnR1NFaEF4ODBDQWY5NTY2N1ljNmFC?oc=5" target="_blank" rel="noopener">
+            <h3>Tunnel du tramway: les commerçants de Montcalm surpris et inquiets</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="le tramway, un « dossier classe » avec les travaux du tunnel, previent marchand" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPRE96dWV6TG9aYkh4dTVkZVRCSHdUdFQzRXY1Q1ZqUVVxVERrYzhBaGZGbUdoMTBqZjZ2eTVsS1NDSnlGWWwyT0hLRmV3ZTctcWNnN2p6bFA3QzRKS2M0RHlTeTNxdkUwQkc2NjAxdEM4Z3hEb29pMTJBTXp0ZTJqV3VDeWlJelFsc3hn?oc=5" target="_blank" rel="noopener">
+            <h3>Le tramway, un « dossier classé » avec les travaux du tunnel, prévient Marchand</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="avec la decision de devancer le tunnel, le tramway est un «dossier classe», estime marchand" data-source="journal de quebec" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxQUW9OSVg1WDJ4d1BIMXZ0QnRPZGl3UVRlVnJibEZfWW1wSlF4alFrMzROSDBfaU9nWTA5X3BVaG93bUhpbktCbTJINmlLOXN0Unp2ZFlzV1ByV3FkVWZZX0ktV2JfcUNSSTBuUFNRZWExV2taOTlidEhwNjA1dHk1RGUtbVVBSm9IVDlEWG41dzZtYnA0OEl4R04xd2Q3Z3VWamdQX2UyUmdWS1lPREpiTUEtZ0lvYUljS2NpQ18yUV8tUGgwa0JzV0xR?oc=5" target="_blank" rel="noopener">
+            <h3>Avec la décision de devancer le tunnel, le tramway est un «dossier classé», estime Marchand</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="acceleration des travaux du tramway : « on ne peut plus reculer », dit charette" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNaWt1cDAwaVVJejNhb1RTWmx2SGJSeUxNNkhNck9KcS1QaUhQTGhvWUhVZ05lYmN3WFZDd1ZSS0F1dlpoQzI0VERYWnRzdGY4TDUzNWZWUm1BVGdQQnQ3SVRKbnVBb0ljQmhzVmZCdU1BZ2tQcEZYTzA3ZzVYTWdYdXZKckV2aWN4Wnc2TDcyeVVBQQ?oc=5" target="_blank" rel="noopener">
+            <h3>Accélération des travaux du tramway : « On ne peut plus reculer », dit Charette</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tunnel du tramway : les travaux devances d un an" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQVDFqUUpaejkycFFwVXMtLUZnMzRHNnJfVnRLWGx1WmgwWXZnSGxwNkllai0zcGZBNzA5amhfSWp2S1d3UDQ5ektPcnpDalZobzRkU2ZITnZRSUJpWXljMi1QZHlqcWlhRnVTYjYydVpCUFFBQmxrNUstVlR4SlBZRjNVakxmZ2M1NmRIRA?oc=5" target="_blank" rel="noopener">
+            <h3>Tunnel du tramway : les travaux devancés d&#x27;un an</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway : entrevue avec le ministre benoit charette" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPdVBSVXdXdXhqc2JTSmpqbVhsbjRtZmtKVGcxR1JwWW1nOHFSVFJXQjRXSjRkUzNFNnJDSFBraFl5MFdRVm5ObnE0S1RaSDVpRUtYSG5iYlFlWlo3ay05T25TT09fNjlkOEVoOE1EeTZZV01Yb3V6Qkh1LW52WXdnbk1RVzhyd3BJWW1xdmhXOUJ5akNKbTIxVHkwUHoxY0YyWWltVHJTYzE5VmhGN2ZSOGQ5dHVnS2pqcnZBVmVTcw?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway : entrevue avec le ministre Benoit Charette</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="la caq devance les travaux lies au tunnel du tramway" data-source="radio-canada" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxPdzVEcFdHbXZNcGVhTkRuY2QzTUIwSUR3TTJsWDZpM0JtQ3ExdHk4WmRnWGw1VDNFSXl3NUtMX2hzZHMxQkJLYzBZbjdTVE9KTnpsX1NsX2JpWVREaldtNmU3WXhteER6bnFkT0YwSXozU1ZHakZqWFU5TVU5c19ucFNiTkM5dw?oc=5" target="_blank" rel="noopener">
+            <h3>La CAQ devance les travaux liés au tunnel du tramway</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="sondage defavorable sur le tramway: lachance invite les partis quebecois a stopper le projet" data-source="journal de quebec" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxQdzZSTzR0dHpjb0VvR3l5eUFQZnMxOTBGcDRmX0NrVGwzYjZaaW9nVE9UVGRHVUpMRU93cjNya2NiYjVyRTQ3Q2t5enVKd05qd2FHdzdfUFkybGJlZERXcWs3aDZlSUtFQ1ZHS01SUDRhWTVTU0F4akRjQzR5cWhhZ3R2QnZNVXhkaFFHQXBrUE9oc0psTVZlaVNOZUpaMURuQ2d3eno2VE45REdPUzZpWlhkZG1XZVVVb1U1Z3hOSQ?oc=5" target="_blank" rel="noopener">
+            <h3>Sondage défavorable sur le tramway: Lachance invite les partis québécois à stopper le projet</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway: l excavation du tunnel commence bientot et 55 m$ sont debloques" data-source="journal de quebec" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOUzVEWG0tcWhjUmZwdXR5VDN3YkwzSUtUbmh0T25XSWE4cHE2UVdwMTNVLS16d29Yd28ya2Y3X09sOEduQ1hMend5SkxwSXB2YVpNaDctcDViNXNCYzhpeUM0TjJldDRCSl96dkxxSXN3Zk1PWlJyaFNlUnh0d241OEdTTlZjdXNWMmtuYXFZMUVDRjBsNlZ2R3YtR190bkJUQXZrU2tIZXhLRzRVUEZJNnlR?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway: l’excavation du tunnel commence bientôt et 55 M$ sont débloqués</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="malgre les dires de stephane lachance, des entreprises vont realiser le tunnel du tramway" data-source="radio-canada" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNWU90M2JZY0tjX2FaVWpINy04cHJQQTE0RmkxMmhaMVktdXROdnpLV1R1QkdFSDFoWDUwOV83OHdINU1OaXZKVFlCQnQtS2dTWjlaY2MtR2poalhEZ2xpX2l5QTR4OWJKRVNCMmN2Q2szUXFNVmNYZ3NUY2UxRE56ZE1uVUpoOUoyYlE2ZzlhQ2NabHc?oc=5" target="_blank" rel="noopener">
+            <h3>Malgré les dires de Stéphane Lachance, des entreprises vont réaliser le tunnel du tramway</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="respect citoyens reclame l arret du tramway de quebec" data-source="radio-canada" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxOTWo1ZlZkSzVwWHhyTnNrUk9pN2J6SkYzbW9zSUY5VkEwUnA2cUpZOFBaMnowRFV5UDY1Y0pNNWN4dldQWEdBb0o3c0t3OXpMSWkzNDIxNkp0ampaODBVOW4yT0lCbFZyYUZ6YnRaVFZDUHlDNmhYcFJYdFlHa29FR2dzUGUtTUZESV9ySEJnNlFHWU9Sak00VzlFa3dQSlc4dGJjMXVDYlhJMU5NVkJDSmFPNFkxSXRyMGJtVmRyVFFTM3RqY3dzTElWcDFWYkZkanA0?oc=5" target="_blank" rel="noopener">
+            <h3>Respect citoyens réclame l&#x27;arrêt du tramway de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="chronique de michel david | la culture de collaboration" data-source="le devoir" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBhYko1OThCMXZERXRGRlVsa3pyQk1FUVlkMFBfbHlTVFlPOWNFaDBNc2FMTVNUV29xNGZ3ZFRyU01PT3lfWUFJOTdTSzBPUmV5N0ZTd0NmREtrY3Jwd1NTUGpEU1gteGhicm16cVlreTUtWkdob0Z2dUxvQ2c?oc=5" target="_blank" rel="noopener">
+            <h3>Chronique de Michel David | La culture de collaboration</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="quebec serait sur le point de s entendre avec ottawa sur le financement des projets de transport collectif, comme le tramway" data-source="journal de quebec" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbnpWU2xNR05yYm9yWm1BRFlaN2tlYzVYZTlCQXU0QXhtT2FjdzhMb1JKOUlsN3VTWGZYb2lBS3J3a1ByY2tnWUtSaGNaYWNLTHFTdmJWVFZIRmp2Q3JsMzc2cjFmVHAwbHd4cGpjdTdGb3J6MWNFWkpQOTk4TkdfcHdocU9pUW9CZWZzdC01M1VpTjZ5UzVEZ293ajhGRkJnS25sUEQ2c0czblZBamVPdmVYalRnQk1xaVF0Nnc5OXAzdWpjLUFPQjRVelB4SVpGMXVv?oc=5" target="_blank" rel="noopener">
+            <h3>Québec serait sur le point de s’entendre avec Ottawa sur le financement des projets de transport collectif, comme le tramway</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="les chantiers prevus en 2026 vont bien au-dela du tramway, dit la ville de quebec" data-source="radio-canada" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPRk1pYjN2QVRiS2QweDRWRnU5WVNzTVFuMHJ3QXhQSEVuMDJoR0tmRGlGeXIzRXRxWUdZaXEwTDVqcjFuOTNjOWpLUDBRODgtelVzWkdRSDY3cU9oNWlra1pwa2NjNGVGSFRjQjdSSWRMVjhjUVNORG1nblhuUUlKeXNSV0xIRzVTWWUzTEtjLTdTRjlHLXRj?oc=5" target="_blank" rel="noopener">
+            <h3>Les chantiers prévus en 2026 vont bien au-delà du tramway, dit la Ville de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="financement federal du transport collectif : « ca evolue relativement bien », dit boulet" data-source="radio-canada" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPaEEzLUdhNXl4R1c1cGRQUV8yLTdTZlhGc1RVT2NHelZZeVBFXzlWYWIyTEVnY3UzNlVTLUN5TURVSldMQ1JFVWhzN1BTQ1JRaG9sUm1ZektvOEhrX2RzVjl5dlRvNXI5TFp2azhiVEJuTFU3N3BqeEhLTUo3c0tpOFFWWHFsai0tQVE?oc=5" target="_blank" rel="noopener">
+            <h3>Financement fédéral du transport collectif : « ça évolue relativement bien », dit Boulet</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway et chantiers: une «tres grosse annee de travaux» a quebec" data-source="journal de quebec" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRU4yWjBfVkZwWkNKb3pQdk9IejlIU3lGYWhpeVl2dllyeWxDaVdRdlFBNlhtQnFGa05SU0Zkd0VFci1BNjc1NHFzZUxJRDFzOExWYU54bGtDSDhUeFNhbE1MMVYxX1YwV3NWVjdGWHVWS0NHT19Oendoa2VRYzBmeDQ2Wi1tTmRZeUNBQ3RxQmtuTjhBNDNUNjlNZjkzTzBLanl6YlUzX1Q?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway et chantiers: une «très grosse année de travaux» à Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="avril en images dans la grande region de quebec" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPTXBHaHotRjRxV2hqb0dodXRVN19HYmN2dV90NlhVbnRLaERkQ3h5aDdZMjh1TWsxYnhTWmVwRTZ2VEpJR2NBd3BhQkhtYzNORFVyZnp5Y2NQU1RDSzhOYzJaeGhwbUVZQVR1VUtKdjZib1NIUlg1SHdJZ0dZVHVDLW5uSnlIUzNsam1J?oc=5" target="_blank" rel="noopener">
+            <h3>Avril en images dans la grande région de Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="financement du tramway : une entente imminente avec ottawa?" data-source="radio-canada" data-date="2026-04-29T23:13:35+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPeElfS0w1RXRHdzE4MXA4cy1yMEpZT1FkZXMydV9QMEVSMllmRXZIVlg1dnI4TTkzZ3VuUkEtdnlPcXdVT3c5Wi1GUUVxMEdsT01YS3BSUXFZeHRUVC1XWWJmUS1XNGpYR05DVXJvUzRhZmxqaWZKRm02cTdYZ1JCVmxjRzAzRGwyNkl3REdoOFRoXzNXalZXRXBnTm9lb1hJaXN0MERpdw?oc=5" target="_blank" rel="noopener">
+            <h3>Financement du tramway : une entente imminente avec Ottawa?</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="pas de « trappe a tickets » pour le tramway, assure marchand" data-source="radio-canada" data-date="2026-04-29T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxPMUpiS1d5QXlITlR5Ti1LUWMyOEhHNU9CLXpUN1ZST25ET1Y1NzFWQ2tXTDdVNmQ2Qzc1MVE2TUNEa2lZbldfM3ZNQ2N5Ri16OEZjUkE4cndOcE5la3gzY0hZVC1qRU9RRXhRSWhSNFVTNEVvcEtVNkhJWXhNeHVQeUV1dEdxUW5YYloyZEZIUQ?oc=5" target="_blank" rel="noopener">
+            <h3>Pas de « trappe à tickets » pour le tramway, assure Marchand</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="fermeture d une rpa d une centaine de places dans limoilou" data-source="radio-canada" data-date="2026-04-29T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNZWJzR21BUklvc3FTVm5SQTBTR3NyZkY1TWNnMFE1YzBFdUp6US1FZXFMbjBJY0UxdmhhaFlMNUZodS04LUdMZG5ZUXVSNVE4Wi1uVG96eHJBaVZHb1FMSGx3akdWOFNWcEM4R0NTcVBUZkJYYU96ZVlaV1hmZWlPaXotQ2lfeDN0bEI4UHY2UVZKSDQ0SFdwTkZsLUpCakZPQmtaMGVwektoMVhweDNlY200MnlCcFpScVNGZkgzNlFINkcwX05v?oc=5" target="_blank" rel="noopener">
+            <h3>Fermeture d’une RPA d’une centaine de places dans Limoilou</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="entrevue avec jean charest" data-source="radio-canada" data-date="2026-04-29T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxOLUs2Rzc0SXpYb0pPUHR0SXNTQ0RBclNfdDROUkpvbGpZdktlcGNidklqdi1aMWFoZF8xZlRzMUw0WnIyUmh5YjdPWk1VQVZlYmRJVHJWZno4VXA5NkhCQTFMbzF0UlNNdWMxMDA5dnRTdHowYTdUVTZ2N1NhR1UxV3I5ZC1mRnBBNkI5RUx6SzJ2WWdsZDRBYml0WS1JXzFzVG1lUXNodTZacWRVVUgxbEVvOXV2NUptTHNVeGpmTUFjd2xNcS12YXVBUHp4c3M2TEJyMg?oc=5" target="_blank" rel="noopener">
+            <h3>Entrevue avec Jean Charest</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="des pme beauceronnes reviennent a la charge pour les travailleurs etrangers" data-source="radio-canada" data-date="2026-04-29T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxNUGF0ZDNYRnQwMUFXNVl6QVZ6NVJOY2N2cTNYNVdsUmtMLUM4c3NsMWFud0hfNGRzbTBubmNZVDZ0S1lUTVY4NzhPRnBiNnNaVWo1M2VFZ2Zpbmw0RFo5Mm9IYVh0b0dwTzlKSjZRdWE2TlFtdkRNQXBqMGw3TTFXa2ItWHZyR1pVd1JqTGVIYzdPN29pZzVpX2RKY0FCcGtKU1d5R1lTMmhnZHRHNHB2blkzMndKeU9rN2ZLMGk4YW5vNkRYOThEUXdqMA?oc=5" target="_blank" rel="noopener">
+            <h3>Des PME beauceronnes reviennent à la charge pour les travailleurs étrangers</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="le tramway n a pas besoin de trappes a tickets" data-source="journal de quebec" data-date="2026-04-28T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxQZEk4RWVrSHN1R2xlV09pVWtnY2cxbDRkWVF2eDJlTEtQQmRSQzdEeHdmUnBfaVhGUDJVdWE1QUNhektndmhyYW5fdFdXZmJCN21xX3AzVGoxSk92bWM3N1VmSWdRazN2VWFJY2c0V0lhSXBuT3J6ckt1QkRZRWNrclpxNW9MenRUMlBJR1hWb1dmQQ?oc=5" target="_blank" rel="noopener">
+            <h3>Le tramway n’a pas besoin de trappes à tickets</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>28 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway : gatineau ensemble denonce un manque de transparece" data-source="radio-canada" data-date="2026-04-28T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxObzVJamRMVXluMWppLUVrU1M4VW50eXV6b3ZJQWdYS1RqT2I3SkpqVHF3bHdEUGZQWFJJMHhpczE1N0c1cl9HTWFSTFp1SEZURHdzOTA2MXY1YXY1amIxWm5BT1A2bDIzYWFTMkE0SmxvVUY5ZUZSNF9WMExsWFh2aTI3cnZtOWZlOVYtTUJQODhnc2FXTzhYRQ?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway : Gatineau ensemble dénonce un manque de transparece</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 avr. 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Ligne bleue">
+        <h2>Ligne bleue</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Ligne bleue" data-titre="voici lisette le tunnelier!" data-source="le devoir" data-date="2026-05-23T04:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBNbUdnQkRQTm9HaS1pcHpsclhFTnFqUk5uQ1JmWGFxdEp6SHppWHFhQnhNTmdJVkFoMDI3czhWbHJiTVczSHNWcUxTbGNFczM2d2hBbDFJZ0NxdzVaYldBOEwtbFRqYnZOX1F5X2dwTFFkTUVqeU5jVTVyVWo?oc=5" target="_blank" rel="noopener">
+            <h3>Voici Lisette le tunnelier!</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>23 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="metro de montreal | laval veut conserver le tunnelier apres 2028" data-source="la presse" data-date="2026-05-21T14:14:02+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxNSnZrVEtMMmk1NG52eEJOWkpBOWxiZl9DT2xpREZ3MjhsU3pNaXpPOEhPUmxQQXFEbGpVVklCVW4zamhsYlVhY2VZS3JIQTRRYlVIZlJkdG9Ba1hNRnBNZHFYSWRuUGE0d1A4ekYxN21OYVdWUGFNZ2Vrb1kyeVh2dHQ4VHBoeHp1ZEQ0a29ZNWVWMFQ1bnR4bnlTS1Awa2J4alFJeXdicmw2NzZuQW02OXdSaWU5Tm1vX2lqWWNadDRkQ0djQ3c?oc=5" target="_blank" rel="noopener">
+            <h3>Métro de Montréal | Laval veut conserver le tunnelier après 2028</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="ligne bleue du metro | dans le cœur du tunnelier" data-source="la presse" data-date="2026-05-20T09:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQODh5d201R05MM1N5MVV6WVdDQ3A0WTFvWmZfeEFtTExidUF6X0V4eGhxSjdwM0IzVDBuQXQ0bFlHT0dhLTUwTy0yUDRMMkxwSUxIRHlxeEJDbUpyS0QtVzhERWFEU1dibjNsYXRHZ2wyYkQ3MmJqMWNFb3dEYzdLS09HSkJlSDNyVmRfQk91dEwzR1ZLQzBCZHpyS2pZdnE2aUUyNm5NZkpkOUV4dEdWWXhR?oc=5" target="_blank" rel="noopener">
+            <h3>Ligne bleue du métro | Dans le cœur du tunnelier</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>20 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="grand prix du canada | montreal met l accent plus que jamais sur le metro" data-source="la presse" data-date="2026-05-19T20:04:57+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0gFBVV95cUxQVHh1U1VCdG4zUlBCOXZNSFl2SnNZUzhTa3ZMODlmcGFBWVVCWENwTWhSUVhHNVNNQUVQb3JBNU1xczg1eE9wZ1Jfa2syNUJjZEhHd056ZE15b2ZLZ3Fod0tRYkJINkdDWnlNTE1iMFRJRXpBbjFXMjNmQUZPMkxFUlpuWFp0N2lmY295dWZ6cmloelptZzhWQlpqLVRTRmFTWWd5YjlkaUxOZDVzaXBCUm5MMUxtN19EOWV3QjZ1M29MUEY2c2NfRVlVM2tiY1p4aVE?oc=5" target="_blank" rel="noopener">
+            <h3>Grand Prix du Canada | Montréal met l’accent plus que jamais sur le métro</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="le tunnelier lisette pret pour sa grande traversee de vertieres a anjou" data-source="radio-canada" data-date="2026-05-19T16:37:53+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNNlFLZm11bU8zVG82TGxsSlg3Y3hJLTU3dTEwNU00UnZOUDhZdEJwRGhvd24zREJ1YUt5WGtsa3BWUDJhUmhmbE8tZmhIaHFaOTVscEVQbk9DekhqRnF3Mlp0OEUxU21Nd1pKT2N4U2JxY3pnd3hPangyalFpQ0hhTGxGMGJxWkE0Vk9GU2VuRm5mTmJtVXp4Y2RXMlA?oc=5" target="_blank" rel="noopener">
+            <h3>Le tunnelier Lisette prêt pour sa grande traversée de Vertières à Anjou</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="prolongement de la ligne bleue | un tunnelier nomme lisette" data-source="la presse" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPZk5kNE4xSGNmcnZSVC0wN0NDRG4wakVyTTBBaDNpU19HbFpRakE3b0tkVkRxOTNIQlpTSVVBS0dRSnZNTzJoX25RanlXaURHX1ZZalpldThTcDBMSFRldDlSMDhyNjBmWU5LdUhKNnBTVF9ZY3BYc2N1alpwNEtXVkxEaHgwWVVVbHptRGZDN3Nrc0tHZGl4bC1fX1ZQT2szN1BoWDZwREFvLXF3anFDTjNxU0F6Rk8yV1R0NDYxVQ?oc=5" target="_blank" rel="noopener">
+            <h3>Prolongement de la ligne bleue | Un tunnelier nommé Lisette</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="le tunnelier «lisette» entreprend l excavation du tunnel de la ligne bleue du metro" data-source="le devoir" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMixwFBVV95cUxNdHhlYnR6WTdoR2wtWUhqM2p3STE0enVhNnJody1aa0xTTzVTeEQ2ZFkyMENYVzRCY1Naa2JBenBjcDZ4dVdaa09OeTBBREhrNnowQWs4dnVoeHAzOW5ISm04enNuMUt0MVBZOUJXY0lNS1haVDBXTHRzRG9nSmNYTVkxeEE0TnZud2dXTHNBdTd3cjV1ME9rUXZFZHlzQ1ZHdkJYQ1JWQklGbFZjVXY0VmNocXdWcHV5ZmhPaWNtSHh3eDROMUIw?oc=5" target="_blank" rel="noopener">
+            <h3>Le tunnelier «Lisette» entreprend l’excavation du tunnel de la ligne bleue du métro</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="metro de montreal | le service reprend sur la ligne verte" data-source="la presse" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivAFBVV95cUxQakIwalNuM3RpS2swSmRjb1VUZW1oM0w2bGZzdE1hRzJUb08zZVRVQ1JmRmk4Szk1OHVkYklKVklVQkUzeGZDZXo4T1pMdjA5dVZzVEtTa2ZRa1AxOERBclQtdGRNSEtYRGU5MC1RaGVTZXZhRjAzbnRNa1NyVDNCX2p3anBzLVdCUGJTM0pYa0pnbUxTbENOYmVxbXJRVVlaM0Rwa2pEcTlhd05pcjVvSEEwaTFoV29wQVh3MQ?oc=5" target="_blank" rel="noopener">
+            <h3>Métro de Montréal | Le service reprend sur la ligne verte</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="ce qu on suit ce mardi | inflation, tunnelier de la ligne bleue, grand prix du canada" data-source="la presse" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPLUhoRmlTMVZGOC0tWFR3TUdtRHc5RVNIbnZfTU0xVWxoaVhJcXFNQnlJNUVSOVBRS0VVaXAtYnFTTkdpNDRvYzlTMFJJWUhwNFlGc0MzYUZEVDN3LW9JWGp1OURhZFJRWmJYWG9BSWNaeHlRTUROV0tRR2llUmszcEtUOC05alVjRlZKZEJGYVF2anpVUy1SSl9LWnY5cnRRR1JwWDBzUTdZTkpuTlNSZUtRRWNYMWd5eERyU2pHUnFHMVpIUEhTZ3h1QQ?oc=5" target="_blank" rel="noopener">
+            <h3>Ce qu’on suit ce mardi | Inflation, tunnelier de la ligne bleue, Grand Prix du Canada</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="tout sur le tunnelier qui creusera le tunnel de la ligne bleue jusqu a anjou" data-source="le devoir" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiywFBVV95cUxOamRtcVhkWXZJRHJCUUYxMk5QZlB4WmNoTEtsWWZtVVdCb182aEk2blJxbDhaYXVmdWlxUmFKNmFfVVFuZk9zUlRkeDdpeWJFYV9QSndyek5LRW1FX2NYS1JZWkEwdEdqVDZLRURRNl9hcTBBVFdjYW4zWjkwMDQzRWtVdHFpVVpmSHY0VlZYZnp4aEI0MFFnNHRHWXNVWUN3YmRPM1Fza2hsWFUxaEczOXRXbnIyTVI2cVlQTEpET1g0bTdrTkZVSXZTZw?oc=5" target="_blank" rel="noopener">
+            <h3>Tout sur le tunnelier qui creusera le tunnel de la ligne bleue jusqu’à Anjou</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="a la decouverte du grand tunnelier du metro de montreal" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNeHdxc0ZkX1pJeXc3eEFfb3hnQzNveURoMHdjUWRoMkREZHI5MnVMUEl5UkJMci1iSHlkNzB5Q050NzE2QXk2dldrYU9oeW9EWWY4RkFIRF90Z3VSTFFFRURXOVIweGYwNXgxbXp5dXc3TmVJRnNXOTZNQ1NEbFc5ZjduMG8yOW5uWVEzM2FtU25ZOG9G?oc=5" target="_blank" rel="noopener">
+            <h3>À la découverte du grand tunnelier du métro de Montréal</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="en images | l immense tunnelier de la stm fascine sur les reseaux sociaux" data-source="journal de quebec" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOSllaNG52WHNVYnhNVzRoM0J5dGFPQ1RubldxaVRHcWhCRG1UaDJGT2hxOFJZZHYwSmYxU1dxZFVPVzBIamozeVFTUGNsYTVvbi1lVFg5bWI3emp1SVFBRlF6Wnl1Sk5VeWROZ3lEMEJvNmU3eUs3RjNhckZNYURzQU0wMGFxU2x3NXUwUThQdlJXaG5pRExMSnI2NE9RR25aeDhTUTNEWnhqMmtmMEdTWUxyWm8?oc=5" target="_blank" rel="noopener">
+            <h3>EN IMAGES | L&#x27;immense tunnelier de la STM fascine sur les réseaux sociaux</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="infoman - episode du jeudi 14 mai 2026" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxOWmZoZGNERV9LX1hNNnlub0kwUmd6dkFNLXNRNnhBM0F6ODRzS2E5NlMyVGIwYnhWOGlDWm92Z3ByM2Q0bUFYQWxNQWR2M0tSTUtjakxlbDlCSTRsNklrTnlhVGg2cnp4NDFCMG5sY1RTd3pseXpXQzBFeGpkZGsyRVZ0TGZJQlk?oc=5" target="_blank" rel="noopener">
+            <h3>Infoman - Épisode du jeudi 14 mai 2026</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="prolongement de la ligne bleue | le tunnelier entrera finalement en action" data-source="la presse" data-date="2026-05-13T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0wFBVV95cUxPbE9KbVNPajRLRmhFR2ZyMVpEVHZDWHYtLThyVjhoNGlRU2MzRDZBcW1QQ3IwNlBZVnpjQzQtSXpvRnlTN3pENmNyZUIwSHVYdkw0QnlOSFIzY3NhSXZBYkd6Z2dMTmpONEY1RmNwWEFtRlhQOGo1ZjBfNE9xUG10c2FST0hLQXpuODBYSnRkV1NTWVE2ckFlRGdMd2dyengyZW9LZXUtRVNibVA3OTVHcG1EZW1RVGNjY1VlMHRMNHo0X0Zna042aWFFVEQ1dDNKcWFF?oc=5" target="_blank" rel="noopener">
+            <h3>Prolongement de la ligne bleue | Le tunnelier entrera finalement en action</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>13 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="achalandage dans le metro | baisse dans les stations du centre-ville et de la ligne bleue" data-source="la presse" data-date="2026-05-09T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxOY3pwNUU4Nkl3U05yTnhxeFdIblZpdzd6NHZGY0V6LUFMRmJjeXpQMHlYNXFSZFdSMXB5dVpJSWQyOTRtQ0h2bXNhYy1vV1I1V2VWSnlrdXpzLXVaNHRZZTI1bXh4aE5XWlhTQnpkWjN4VXl6dWVBMTRjc1lvNl9fYkUtYTZwN2taYm52VmVGZzMzOTVkOVpDT2R1U2t3VUVfWk5rMENKU01ZQWVVLUo5SnhtS2ZLNzhYeVZsdnJ0MTNYaUtjTVNJMnRWSHA2d2IwZnNCNnA5ajRNZWRFRWVrc3VSNkpqTkk?oc=5" target="_blank" rel="noopener">
+            <h3>Achalandage dans le métro | Baisse dans les stations du centre-ville et de la ligne bleue</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>9 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="ligne bleue du metro: feu vert a un projet immobilier de 19 etages et 100 m$" data-source="le journal de montreal" data-date="2026-05-04T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPd251VkNIYkVvWFF6YmpWMkZmVnBqUE43cXRGak9HTkdjNjFpZXJJRVg5WDYyLUhCZFY4a3h4cnR5Wi1kdjhRQ19IcUFHQkx2ZGw3dkpreUNtcDZGX29aUzBBNGZFb3I3N0ZlbVE2SUJyZHZYRmk2SnppYktIOU5GZTFaNGUwTDk4R0V0blZTXy15OTRZLWI0SHB0eW5HNWVXX1lRbmpCX0dvcDZTUzhfTFM1SVhSMHBnWkhF?oc=5" target="_blank" rel="noopener">
+            <h3>Ligne bleue du métro: feu vert à un projet immobilier de 19 étages et 100 M$</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Journal de Montréal</span>
+            <span class="sep">/</span>
+            <time>4 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="TGV">
+        <h2>TGV</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="TGV" data-titre="un premier train a grande vitesse au canada" data-source="radio-canada" data-date="2026-05-19T21:11:46+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPSEk0dVZtX2VKaHlwV2hLS2tubU5hMWt5aTNJUk0ybmJEeDVULWprR2FHUTkzNFlQZHdKUTB0bUZxOXRqNnMtZG1SeDNndG0zMm1GekhHbVJ5c2h5WDVodTlURzdtVG9aY3M0STZDYU1VVXFXeW9aTElDYXM5MW03d3U1S2Vsd3c?oc=5" target="_blank" rel="noopener">
+            <h3>Un premier train à grande vitesse au Canada</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="le trace du tgv n est pas encore decide, assure steven mackinnon" data-source="radio-canada" data-date="2026-05-19T21:11:46+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPd1I3bV9jR0F0YWVyQzNtd0RScnZfb2JyaWV2b1RIY0NBQzhhR2kyVEV6VmdCNF84T0llUjBNektyazZqNVlCaHRCeDRhTEJlU0tsWEhJYmFTRVBiVWtmUWtzN0ZqQVhxaFRKbjM5QUVOZWFnZHh1czB0RnB3bGc0aXNMcV9lT2NuWGFYZml3?oc=5" target="_blank" rel="noopener">
+            <h3>Le tracé du TGV n’est pas encore décidé, assure Steven MacKinnon</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="un projet pilote d alto cause de l inquietude a ottawa" data-source="radio-canada" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOUjVEc3liVDNiLTBqTks3eTlRQ2JtZmJnSGd1ak5iSmwtQjNSOW1NUEFkdlRxeUtwX18zVGNfNXVsdDZmd0syNUpySkFUSWYwcHJ2VjFrbkdPYzBFLVhKUnZkcHBKNGdzRWQwVk9PODhpQVIyUEdUb1JvU1lqV1RGbW9SU1FrbGhRZEE?oc=5" target="_blank" rel="noopener">
+            <h3>Un projet pilote d’Alto cause de l’inquiétude à Ottawa</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="le tgv pourrait depasser les 200 g$, soit le double du maximum prevu, selon jean-denis garon" data-source="journal de quebec" data-date="2026-05-09T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPbzJLNjVPb1Yyd2pYc3oyVkRGa2FlRWhIMm1wSmw5VUZtZFJYRHV6V0ZjSjdmQTItakZHY3RtMnB2WlpWNzFSYmZuMzlDV21ETWZhdnFTWmZlRWc4M25fMS1NZUQ0NUJPQ2N6WVRyMjBZSVo2ZWV4WUVlNk8wV01xWG45ajJZWEZTallPS1I1OEtCelJPT1ZNY0pkMmVfMmQ5UDRVNGNkSmlXajV1ZUpHQ0tJQl93b2xlUW5LalEtNndRZUZtOEpVYmNkcjA?oc=5" target="_blank" rel="noopener">
+            <h3>Le TGV pourrait dépasser les 200 G$, soit le double du maximum prévu, selon Jean-Denis Garon</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>9 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="des agriculteurs de portneuf demandent « l arret immediat » du projet de tgv" data-source="radio-canada" data-date="2026-05-09T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNckV3WVgtSEFUdFBoVHFwcjVZNHRpRXR2bWJtemR4clBFcDdJa1JPLXNPZ2hMTlRsR0hiS1JTV3ZscHVxSTBmeDVUQzdpdjVoVzVmZ0JmbTZXN3BwdmZPcGktVXBsTHh4SlNQUU1qcGxHMEhSME56YmZZQ09NOFpKZjJvU3VQREZW?oc=5" target="_blank" rel="noopener">
+            <h3>Des agriculteurs de Portneuf demandent « l’arrêt immédiat » du projet de TGV</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>9 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="1700 proprietes touchees par la construction du tgv entre montreal et ottawa" data-source="radio-canada" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVWN5U3c2SXByUktwTlY1ek1ONXYzdEh4UFUwaHBGM1dNd1lpZ296Wk1UalRmanNPWUhLRkFob1ItQU5ZbTg1bjJTTkpkRDR4RnFER0NsLWFZdWkxLTlPYWRvNVR5OWJMbHJTRHRMVm51dkg3RVA3c21jbnRCR25iejdkV2NkZXRLeXctLWVGUXZ4Z25GejdLMg?oc=5" target="_blank" rel="noopener">
+            <h3>1700 propriétés touchées par la construction du TGV entre Montréal et Ottawa</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="tgv : la construction du trajet montreal-ottawa toucherait environ 1700 proprietes" data-source="radio-canada" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi2gFBVV95cUxOSzVwYUdyNFNkYUszSTAwX3ctWV96ek1fRG5Qdlg1TnV1S3dnSWotODZDeVB3Zm9RdmJBR2I1UWJwVGJCM1h1NlJNVl96dUJRUWFlX0NQRExTTHBueTJqX2NhNTdQMWZNbGJNX3Znclp1Q3RIcm1QaWxwQnUzYVQ3RTJDcjF6aHFzV3Q1QjZYMVlEMktfRldfR1M3REl5ZmJJTEYwblo4RXZlOHZINDNuU1FGZ1NxQ2YwWk1BenFCMllKd0NpVVdXUFJ6ekk0RHFTM19vYWI1eFlWdw?oc=5" target="_blank" rel="noopener">
+            <h3>TGV : la construction du trajet Montréal-Ottawa toucherait environ 1700 propriétés</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="etudes pour le futur tgv: des proprietaires quebecois refusent 1500$ pour l acces a leur terrain" data-source="le journal de montreal" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi1AFBVV95cUxQaVRGZUQtb0s1blptWjAxc202Y3VMQ2Q0MDE0RTZrY0Ewc2lGNG9hQTlDeHJ5NkRPdExFazFqZzRvWk1pWVQzUTJPeGp1cGJaT3g3dnNvVWNNQ2FtUGVnOXVjbW5YTnJLQ3BSVnJjZG9kYnBkUm9jbE9tX0lzTUU3enByT3BEQ0JiTU15TGRReGtEck1wN1Z5ZVpueHRWMHVHdHBlRHM5ZklYSS1jQlFTeWFFVXU4dXA3SUtDT2xUeXA4MmswTENKS2h5c1N4MVROdmliQg?oc=5" target="_blank" rel="noopener">
+            <h3>Études pour le futur TGV: des propriétaires québécois refusent 1500$ pour l’accès à leur terrain</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Journal de Montréal</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="la region de toronto pourrait accueillir deux gares du futur tgv" data-source="le devoir" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxPMU8zMGJHck9nWXZQUHBzX0gxYk1aNWNfZ3lla29tOTN3LXZaa2pBVmZHV1hDLXhPbk54Ujd5dl9STzIwQmF2aGU4clJxT2lmQi1rVUljcTRubTVCajNOWTZNTXBfZFU3WmE2NVdKd0xyNm54Rk0tS1Rsam5uWDZyS2NneTBRamUtazZJamppangxRnpZS01LRVltQVpNaWt1eGZFbHpBSi12RlpXWWNxWlZJbDYxUGpscHhz?oc=5" target="_blank" rel="noopener">
+            <h3>La région de Toronto pourrait accueillir deux gares du futur TGV</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="tgv: la gare du palais est pratiquement ecartee" data-source="journal de quebec" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPYl9KbGNmZkV0Q1FXcnFYYVJhSmVyTzZ3eXZIb3lZbXZyVTVYaWh3QnlkdmxkYVpQaUFEb05sRmd6d0ttQ3lNNzBNSGtSZUM4clJUczBhOHA3SmxVSmNHV3BjaHZJT3JPSkJuZnRwUHZFMk9tTXl3anlrOGZhVTJ1SUlBVmc2TG9VTUc4SzYxa1h6bHM?oc=5" target="_blank" rel="noopener">
+            <h3>TGV: la gare du Palais est pratiquement écartée</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="gare du tgv a ottawa : difficilement realisable, dit alto" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiogFBVV95cUxPdXhTWHkyVUxLeDNxQV92RlNSUVhnSVMydnVwaldQYWtEb1NCeFdQTXBZUVR1UUI3NVRrblF6TXJENnByeU8zdjNzTjItbWQwcjE3MXV1cFQ1ajRnRHFsekowaTBTOFBuR2NPVnhtdC0zWFdzS0lKZERjRUR2eTBnTVhZOUUyVXlUOHFZYTdUOXpnTk01ckxxZDQ5YWtseHVBdHc?oc=5" target="_blank" rel="noopener">
+            <h3>Gare du TGV à Ottawa : difficilement réalisable, dit Alto</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="selon le pdg d alto: marchand comprend l abandon de la gare du palais" data-source="journal de quebec" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxPMXFjM1V5T3hqd0djVXNzbWpZbjl2cEF5dklhbmh4NDVSbXJpX3RWYUZTMTNpY3JMUWFUQ3lRVWJacTZ3WUdsazFOb0JSV1g2QTE1VnFMbjNPX1o4VjJfMklDUjFMZUMzOTA1bk43d2k0TWd6NWJUOWhENG1ESzlpR0dRTGF1OHFDaC1GZy1BbVg3dGwxby1FQ0RlbDk5aW9WblI0UjdlYnRWYjZSRmc?oc=5" target="_blank" rel="noopener">
+            <h3>Selon le PDG d’Alto: Marchand comprend l’abandon de la gare du Palais</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="tgv a quebec : la gare du palais ne sera pas retenue" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMidkFVX3lxTE5fel9sb1ZWbEpHMXZqa3NMb3MxdkhNYkZ4ZE12QWowYUpKaHl0T2VSdlBMZGgzY2k5MEJtS1JXOGZIc3pJQWVuenJPTl83bmdDWDJXamRrcXFMVDhMZkRjclByNk1CVnY5SjhlNllOLTRYVFo0Wnc?oc=5" target="_blank" rel="noopener">
+            <h3>TGV à Québec : la gare du Palais ne sera pas retenue</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="tgv : la gare du palais de quebec officiellement ecartee" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxOSzVWUjVKaG9CUGkxMkt6ZTRRSXRhRkVMUWFYTEtVNzduZkVLT0pvUm90RUtDZ1JfQlZ2WXpoT0VJYWRhNm4zeFRoRmg4Y2lHaHRlOUNlS3h2empsQnVRZTBlWFBKVEZRbDVuYV96NmhyeXlmT19JYV9iRDlUWmdNckh2N1BvWXZEQl9rcURDd3dmbjBvSTlxcm1SVG56NDgzNTRjV0VSLXp4MjJWT0tuUG5ia1RYb0wzZDFPRjlBcw?oc=5" target="_blank" rel="noopener">
+            <h3>TGV : la gare du Palais de Québec officiellement écartée</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="comprendre comment fonctionnera l expropriation le long du trace du tgv?" data-source="radio-canada" data-date="2026-04-28T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPRG5aaEFkLXJTdkEwT2hDbkk3ZUhsTDRCYnBlcTZpcWU0ZmpGOEZ2T0pzcUExak5RR2xZRGNtQU5JZTl4YXVRYlk3SG9tZWZRR3dwQ2JwbVZlLUFhWGdVNVB4aEdmMGRJWkNPckkwYzdoSGRBLUJqUHVPWlhTeDNsY1lLUU10NmJ0bUt6UktpZWpuZlJXUmpQMGs5azNfV0FiWHNj?oc=5" target="_blank" rel="noopener">
+            <h3>Comprendre Comment fonctionnera l’expropriation le long du tracé du TGV?</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="le projet de tgv va trop vite, selon le bloc quebecois | le telejournal 18 h 30" data-source="radio-canada" data-date="2026-04-28T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNclMzOEpPMmhQWWtqVzI3RUs5b0JWcENnWEFVdk1NVExYZnpKdk9uZmFiU1VaVFdnS1BZX0ZnMkJoMkRXWGgwZTVyeTBKcnNZRm1aeXlqUUZ0dmJuNmJ3VzgyMG9Ba1NOSURmanpjLUFHUHB3NUU1UTRvSFpfdTFPQmRyaG1lbl9lNWxLX3d5elFXWnNEeE84VFdrcnhFbkF4R3V3c3dEMjR0ZEt1dEVUYm12aXhxRXBxYTQ4WVdqYw?oc=5" target="_blank" rel="noopener">
+            <h3>Le projet de TGV va trop vite, selon le Bloc Québécois | Le téléjournal 18 h 30</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 avr. 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="DMA">
+        <h2>DMA</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="DMA" data-titre="reseau routier mal en point : quebec se defend de cacher une facture de 31 milliards $" data-source="le journal de montreal" data-date="2026-05-27T16:29:38+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPbzVpOFlXQXFLT24wUG9mUU9uNWMxWF9kdy04NEk4Vnk0ajNEc0V1X1pVd0xFRFYzQjJ6ZW9BUE5veTJxOENncnN2cl9SUTdJc2NpcHBGMk16RkJRUHdtVk9hMjhjQXprWDlDNDNCMmdaWXpTM0JWZ3c5Z0dXMlp5UU45cjAtZWM4c3A0b1BHSm1qd0l1RVBvNkN0ekFyUzFUd193cnV2dVE3TUM2eU1jN3pwZXJjTmo5Wkhfb2xIaWRaaFJMSHc?oc=5" target="_blank" rel="noopener">
+            <h3>Réseau routier mal en point : Québec se défend de cacher une facture de 31 milliards $</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Journal de Montréal</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="DMA" data-titre="quebec accuse de cacher un trou de 6 milliards a des fins electoralistes" data-source="le devoir" data-date="2026-05-27T16:11:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxQWmc5TnVpNEZfbHYwSzRFWHBKNXJ4c3RabmtObjJXdFlUVmpBYlNhcUtieko2Y0dZa21jNmhlMnoxQmUzX2VBbjBMb2F6YllKZHdleFhDM3Itd0FWWW1pWE1zSldhV2xqRU85MDFzTjU3c3NRVjN5WTloaks5aWZrS2JmMXR4VEM0aEtCdzFWYnRfN0hNSTlxd0xIbWxOMU1Wb0NLUnNZcUtWT2tNcmxfVkZWcDVVaG5WemdHcmlR?oc=5" target="_blank" rel="noopener">
+            <h3>Québec accusé de cacher un trou de 6 milliards à des fins électoralistes</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="DMA" data-titre="le modele financier des villes du quebec n est plus soutenable, confirme un rapport" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxNbDJ3YlE5LVBSWk94RlFTUEY1YUhQQVF0dlp6OGZRMjN5WC1zVnZLdm03RnhfWGd2QkxHQ0lGWS1aTkZtLTFyaWN3TnFsUDZ0V0J5X2Z2ak04SDc2Y3lxU2F0R0tVOWI2QnlUd1R6OWtheDFyU3hMNUNqa211Yi1HVExRbDVoeDY4VUFwMEF5MXVpdVFibjVwN090WV96N3NB?oc=5" target="_blank" rel="noopener">
+            <h3>Le modèle financier des villes du Québec n’est plus soutenable, confirme un rapport</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="DMA" data-titre="augmenter les taxes municipales pour sauver les infrastructures" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi-AFBVV95cUxObG0xQUwzdlZGeERlNjQtR19Ubml5djRWa2tiZEtDYU9aUUYtbUMxcWJaNncwSkp5LThTQUU0V0t4UEFvNkpvRlM0MExiSF9jdVh4TTlTSlhnUEdfdG8tMkxPWnIwTFR3TzNrUGdvSFJNUGxqOXdBNm4yMzJIUHBJa29FZUdfYVBseUI1Z2ZfVjlENTJ1aGVWYndCa243bnNDandFWGoyMVVqUFFZOE12clNQX3I0QTlFc2xibVFZTUwxX3U1OXdzS3hZbThwcFJRSzRHSlF2Ty1vZy1KZE1DVWZ3ZE81b1JMUnBkYVgyYVVEdl8yeHpOZw?oc=5" target="_blank" rel="noopener">
+            <h3>Augmenter les taxes municipales pour sauver les infrastructures</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="DMA" data-titre="infrastructures : pas de hausse de taxes sans appui du provincial, dit bruno marchand" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxPdm0wdEcyTmJ3OTB4RUMxb2ZnQUthRlRnM0ZKOW9tckkySmtwWm4zSjJWYmZwUkVKWVU5N3hvc1E3bXBucGEtcTdBUGp0X0JVd2tyZG9mdjBJbXZ0SVF0WGxHZldkajN1ZUZZREhlMmxmZVNhRE13UjdkVWZuUUhZTFZtZDBhYW5GM0hEVTZxZWpZcllFSjVaRG9KdTFoOXA5TVppUXJJcw?oc=5" target="_blank" rel="noopener">
+            <h3>Infrastructures : pas de hausse de taxes sans appui du provincial, dit Bruno Marchand</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="DMA" data-titre="le fonds pour l entretien des routes du quebec se vide cinq fois plus vite qu il ne se remplit" data-source="le devoir" data-date="2026-05-07T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMitgFBVV95cUxQYXVzOXE2WEprLV8tWWc4R1hMYVhuMHpIbDZEM05oQXo5M2N2ak5KeElubkstVi1TQm9zcTNvSjdlRURaVGFRZExVeEdPZXdzQnlobU54VkNUMW1Nb2g4OXg4VHRKTVNOZ2RnSW10SjYwUDloNng3YmVhT0lHZVdUa211THJ3Qm1fTHRrNF8wZmZlV2ZVVnIyNUNhUzkzNnVoT2lwcUpWbDdvREF2bk03SENBUGMtZw?oc=5" target="_blank" rel="noopener">
+            <h3>Le fonds pour l’entretien des routes du Québec se vide cinq fois plus vite qu’il ne se remplit</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>7 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">
+        <h2>Pont de l&#x27;Île-d&#x27;Orléans</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Pont de l&#x27;Île-d&#x27;Orléans" data-titre="le chantier du pont de l ile entre dans sa phase la plus bruyante" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxNSkI2UmRkbnlwTGVsOXFfYmZsaEl2dWdncU1xLTdxQ2NRX3NXNlU0ZnJUWTJJRm9UaU04blpfRV91UzIyNnhTcklveWVUNXNlWGozZF9XZGlmOTVuNThYNTBpMXRNR0tkMFlmeUFHUEZEakNxZW9rR1FnUExLUWU1VEZPR0xHb2tMQW9mUkczU2dOdw?oc=5" target="_blank" rel="noopener">
+            <h3>Le chantier du pont de l’île entre dans sa phase la plus bruyante</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pont de l&#x27;Île-d&#x27;Orléans" data-titre="le chantier du pont de l ile entre dans sa phase la plus bruyante | le telejournal quebec" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQbmsxVWZtcEZ5N1JSM2NBaGdIV0VmOWZXS0E2ZDFER2tnSkxCX0lhTmFIeFR1Wm9UZHd3VGFNYlBXWXNUanJTYzNjQm9RVUdMVWdIT3hObzFIRkJSSUNETUVTRjU3ejFseHFGamZyYVFQX1RWRFEtMlhtT1ExREgtaU4wemF1ZnF0ZmJKN2xsLXdMVFJOTFY4ZWF0V1NJYVR3d1pkNzZMZ2pXUFJHU3YzMFpUMDByTHhISVE?oc=5" target="_blank" rel="noopener">
+            <h3>Le chantier du pont de l’île entre dans sa phase la plus bruyante | Le téléjournal Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pont de l&#x27;Île-d&#x27;Orléans" data-titre="episode du vendredi 8 mai 2026" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMinwFBVV95cUxONnY1NUxwWmlQTlBBTkZrMV9HM0ZYX1hMSEltcFFPSmdZVkRfN0tLZ3ZWOENRNG5Fd2tjX2U5MGYxbS1RUFFucEVNNnNsd2F0dk1MRF9UTGs3UUJPQl9GSmJKaDNva3B2WnlaeGpIbVZOZF9sQ3JaOXdaOWp3TjlxQ1Y4Z1dNWF9XQTlDemFvbUdzVUVxSnpab2JRSDBFRzQ?oc=5" target="_blank" rel="noopener">
+            <h3>Épisode du vendredi 8 mai 2026</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">
+        <h2>Pont-tunnel Louis-Hippolyte-La Fontaine</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine" data-titre="region metropolitaine de montreal | un long week-end de chantiers en vue" data-source="la presse" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxNS2lNUFAwZnZ3cTlBWU10YVRHZjQ3LUtfVzd2R0NncWtJcHZtSXBJZFRja21MVDAxQ240MUs1azFoek5Cb1JkMzhudDVKdTRRVUxNWXVFSkJhQkROVnR5MGVUQVM0bEd6Nml2bDNWOTA1VC1zS1FjTXBDVmVxdDFyNDU2UWtyU3FBcTJPUmtFRzZ0bVREbVBDQlZiMGtPTk40LTVUUzNta2c3eklJck52ZkpnZVBoWkNUTFptVTBCTzBNMVpEaUZWTTZKQWE5Z1RS?oc=5" target="_blank" rel="noopener">
+            <h3>Région métropolitaine de Montréal | Un long week-end de chantiers en vue</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine" data-titre="entraves routieres : plusieurs fermetures a prevoir pendant le long conge" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPakg1N01HbHA1TkFyTUIyc0FEVUxHOExqNG9JSEprQ1Z4MjZHNWp1elBQWG9HREpsWDBkNjkyN0N1Nmg2dnJiRkZtalRWUGFWUEhGakoyZlRhU3dGaFVnNnBUSldJRjlNb2FzdUk4aXh3SG9meHpqUmxUaVZ3Y0RQX0JsNnVpUGJxUkRRZTR3?oc=5" target="_blank" rel="noopener">
+            <h3>Entraves routières : plusieurs fermetures à prévoir pendant le long congé</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine" data-titre="le troisieme lien quebec–levis sera «le plus grand chantier» de la prochaine decennie, claironne simard" data-source="journal de quebec" data-date="2026-05-13T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxQUTFHUWFvUkFCNW9rdVdiX1FwaWZLZkxsWWVOTHFhNlQ3WkxDeEFsUlNmczRicHRHek14WjdqT0FLMjJDVGZ1dDhYRElydlRvQlJKR2pBWWJXZVQ2T01FWUtXZkNUT1ljMzZ5MGxOTHZwRHNSSy13N3hHa2hYSGFrQ1c0ZWlrMFEyYnJ4cklKTTdNSEF6QlA3V3ZTYlpFd0ZDNWxCTlExNGpJeTNnYVN3dDdDSTBxTnhPTVVXSnRqSDRXWVBCQnp4V0dvM0dmYnlRZHFBWGNuVHVMbW5Q?oc=5" target="_blank" rel="noopener">
+            <h3>Le troisième lien Québec–Lévis sera «le plus grand chantier» de la prochaine décennie, claironne Simard</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>13 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+  </main>
+  <footer>
+    Généré le 27 mai 2026 à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
+  </footer>
+
+<script>
+  const filtres = document.querySelectorAll('.filtre');
+  const blocs = document.querySelectorAll('.bloc');
+  const recherche = document.querySelector('.recherche');
+  const periode = document.getElementById('periode');
+  let projetActif = 'tous';
+
+  function appliquer() {
+    const q = recherche.value.toLowerCase().trim();
+    const jours = parseInt(periode.value, 10);
+    const limite = Date.now() - jours * 86400000;
+    blocs.forEach(bloc => {
+      let visibles = 0;
+      bloc.querySelectorAll('.carte').forEach(c => {
+        const okProjet = (projetActif === 'tous' || c.dataset.projet === projetActif);
+        const okTexte = !q || c.dataset.titre.includes(q) || c.dataset.source.includes(q);
+        const okDate = Date.parse(c.dataset.date) >= limite;
+        const visible = okProjet && okTexte && okDate;
+        c.classList.toggle('cache', !visible);
+        if (visible) visibles++;
+      });
+      bloc.classList.toggle('cache', visibles === 0);
+    });
+  }
+
+  filtres.forEach(b => b.addEventListener('click', () => {
+    filtres.forEach(x => x.classList.remove('actif'));
+    b.classList.add('actif');
+    projetActif = b.dataset.projet;
+    appliquer();
+  }));
+  recherche.addEventListener('input', appliquer);
+  periode.addEventListener('change', appliquer);
+</script>
+</body>
+</html>
