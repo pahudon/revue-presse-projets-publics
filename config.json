@@ -23,7 +23,8 @@
     {
       "nom": "Ligne bleue",
       "mots_cles": [
-        "ligne bleue métro Montréal"
+        "ligne bleue métro Montréal",
+        "\"ligne bleue\""
       ],
       "sources": [
         "Radio-Canada",
@@ -36,7 +37,8 @@
     {
       "nom": "TGV",
       "mots_cles": [
-        "TGV Alto"
+        "TGV",
+        "train Alto"
       ],
       "sources": [
         "Radio-Canada",
@@ -77,6 +79,20 @@
       "nom": "Pont-tunnel Louis-Hippolyte-La Fontaine",
       "mots_cles": [
         "chantier pont tunnel"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "PQI",
+      "mots_cles": [
+        "PQI",
+        "\"plan québécois des infrastructures\"\""
       ],
       "sources": [
         "Radio-Canada",
