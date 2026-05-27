@@ -26,13 +26,15 @@
   .sous { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }
   .sous .date { font-style: italic; }
   main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }
-  .barre { position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-bottom: 1px solid var(--ligne); }
+  .barre { position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--ligne); }
+  .rangee { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .rangee label { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-right: 4px; }
   .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }
   .filtre:hover, .filtre.actif { background: var(--encre); color: var(--papier); }
   .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }
-  .recherche { font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 220px; color: var(--encre); outline: none; }
+  .recherche { font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 260px; color: var(--encre); outline: none; }
   .recherche::placeholder { color: var(--gris); }
-  .periode { margin-left: auto; font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+  .periode { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
   .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
   .bloc { margin-top: 40px; }
   .bloc h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
@@ -59,29 +61,43 @@
     <h1>Grands projets publics au Québec</h1>
     <div class="sous">
       <span class="date">27 mai 2026</span>
-      <span>101 articles sur les 3 derniers mois</span>
-      <span>101 au total dans l'archive</span>
+      <span>102 articles sur les 3 derniers mois</span>
+      <span>102 au total dans l'archive</span>
     </div>
   </header>
   <main>
     <div class="barre">
-      <button class="filtre actif" data-projet="tous">Tous</button>
-        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">39</span></button>
-        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">17</span></button>
-        <button class="filtre" data-projet="TGV">TGV <span class="compte">24</span></button>
+      <div class="rangee">
+        <button class="filtre actif" data-projet="tous">Tous</button>
         <button class="filtre" data-projet="DMA">DMA <span class="compte">7</span></button>
+        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">17</span></button>
         <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">3</span></button>
         <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
         <button class="filtre" data-projet="PQI">PQI <span class="compte">0</span></button>
-        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">8</span></button>
-      <select class="periode" id="periode" title="Période affichée">
-        <option value="1">Dernières 24 h</option>
-        <option value="7">7 derniers jours</option>
-        <option value="14">14 derniers jours</option>
-        <option value="30">30 derniers jours</option>
-        <option value="90" selected>3 derniers mois</option>
-      </select>
-      <input class="recherche" type="search" placeholder="Chercher dans les titres...">
+        <button class="filtre" data-projet="TGV">TGV <span class="compte">24</span></button>
+        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">39</span></button>
+        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">9</span></button>
+      </div>
+      <div class="rangee">
+        <label for="tri">Ordre des thèmes :</label>
+        <select class="periode" id="tri">
+          <option value="alpha" selected>Ordre alphabétique</option>
+          <option value="nb">Par nombre d'articles</option>
+        </select>
+      </div>
+      <div class="rangee">
+        <label for="periode">Afficher les articles :</label>
+        <select class="periode" id="periode">
+          <option value="1">Dernières 24 h</option>
+          <option value="7">7 derniers jours</option>
+          <option value="14">14 derniers jours</option>
+          <option value="30">30 derniers jours</option>
+          <option value="90" selected>3 derniers mois</option>
+        </select>
+      </div>
+      <div class="rangee">
+        <input class="recherche" type="search" placeholder="Chercher dans les titres...">
+      </div>
     </div>
       <section class="bloc projet" data-projet="Tramway de Québec">
         <h2>Tramway de Québec</h2>
@@ -1112,6 +1128,16 @@
             <time>13 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Troisième lien" data-titre="milliard exige l expulsion de sona lakhoyan olivier du plq" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMingFBVV95cUxQaUJJanpyZVR1XzlxOVZCYXdLUnRxYUIzOGthSkhvU1hQSXJCR3V4aWNHbUdJYWIyS1JxREtMY0pSeVNUVVJtZTY3SjVwR29yVUJBY25oeUpHOXB1ZnlLU3Uxekw2eUdMMjB2YmVWZFpVSWU2cW96UnlmVlNnUmtrXzhsN2g2TXVfalZYS1UtLTBqRXBRUlI3QkxNUEZ3Zw?oc=5" target="_blank" rel="noopener">
+            <h3>Milliard exige l’expulsion de Sona Lakhoyan Olivier du PLQ</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Troisième lien" data-titre="3e lien: le corridor central ne soulevait «aucun enthousiasme» ni adhesion, dit charette" data-source="journal de quebec" data-date="2026-05-06T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxQWXFnS3Y5aHV6dEJzMHp4T1VMcWlvdkRRcVE2MUtsMTJtaUs3NzdURUdVTU14ZXI5WUtLTGoxTVltRWJjWWtabWhCaXVuZG5rLTNHcUhmYllsVVBnV0RFZ1hORlZVOXo1STdfTFprTWxWY1RpVTRMdnptNDU5cjNZc2Q4X1NyRVZneTRKQ1lxVUZjT200QmFNeXc4R3hFOExzRmhjMHRoUVZBQTZ1S3dJU3ppcGNNRE01dFd0QS1VSjhEcmZxbHQtRg?oc=5" target="_blank" rel="noopener">
             <h3>3e lien: le corridor central ne soulevait «aucun enthousiasme» ni adhésion, dit Charette</h3>
@@ -1144,6 +1170,8 @@
   const blocs = document.querySelectorAll('.bloc');
   const recherche = document.querySelector('.recherche');
   const periode = document.getElementById('periode');
+  const tri = document.getElementById('tri');
+  const conteneur = document.querySelector('main');
   let projetActif = 'tous';
 
   function appliquer() {
@@ -1160,8 +1188,21 @@
         c.classList.toggle('cache', !visible);
         if (visible) visibles++;
       });
+      bloc.dataset.visibles = visibles;
       bloc.classList.toggle('cache', visibles === 0);
     });
+    reordonner();
+  }
+
+  function reordonner() {
+    const mode = tri.value;
+    const tries = Array.from(blocs).sort((a, b) => {
+      if (mode === 'nb') {
+        return parseInt(b.dataset.visibles||0,10) - parseInt(a.dataset.visibles||0,10);
+      }
+      return a.dataset.projet.localeCompare(b.dataset.projet, 'fr', {sensitivity:'base'});
+    });
+    tries.forEach(bloc => conteneur.appendChild(bloc));
   }
 
   filtres.forEach(b => b.addEventListener('click', () => {
@@ -1172,6 +1213,10 @@
   }));
   recherche.addEventListener('input', appliquer);
   periode.addEventListener('change', appliquer);
+  tri.addEventListener('change', reordonner);
+
+  // Au chargement : trier les thèmes selon le menu (alphabétique par défaut).
+  appliquer();
 </script>
 </body>
 </html>
