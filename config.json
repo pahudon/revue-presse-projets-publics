@@ -101,6 +101,19 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "Troisième lien",
+      "mots_cles": [
+        "troisième lien"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
