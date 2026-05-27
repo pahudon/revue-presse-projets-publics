@@ -4,13 +4,16 @@
 Revue de presse quotidienne sur les grands projets publics au Québec.
 
 Comportement :
+  - lit la configuration des thèmes et des sources dans config.json ;
   - récupère les articles récents via les flux RSS de Google Actualités
-    (un flux par projet), uniquement pour une liste blanche de médias ;
+    (un flux par thème), filtrés selon les sources autorisées du thème ;
   - accumule tout dans une archive permanente (revue_data.json) sans doublon ;
-  - génère une page web (index.html) qui affiche les 3 derniers mois par projet.
+  - génère une page web (index.html) qui affiche les 3 derniers mois.
 
 Usage :
     python3 revue_presse.py
+    (le fichier config.json doit être présent ; le créer ou le modifier
+    avec config_builder.py)
 
 Dépendance :
     pip install feedparser
@@ -27,48 +30,13 @@ import feedparser
 # ===========================================================================
 # 1. CONFIGURATION
 # ===========================================================================
-
-# --- Projets suivis -------------------------------------------------------
-# Étiquette affichée -> liste de mots-clés (combinés avec OR).
-# Pour un sigle ambigu (REM, etc.), privilégie le nom complet.
-PROJETS = {
-    "Tramway de Québec": [
-        '"tramway de Québec"',
-        '"réseau structurant"',
-        '"RSTC"',
-    ],
-    "REM": [
-        '"Réseau express métropolitain"',
-        '"REM de l\'Est"',
-    ],
-    "Ligne bleue": [
-        '"prolongement de la ligne bleue"',
-        '"ligne bleue" métro Montréal',
-    ],
-    "TGV / Alto": [
-        '"train à grande vitesse" Québec',
-        '"Alto" train Québec Toronto',
-        '"TGF"',
-    ],
-}
-
-# --- Liste blanche des médias --------------------------------------------
-# Le script ne garde que les articles publiés par ces sources.
-# La comparaison est tolérante (accents, majuscules et apostrophes ignorés).
-# Pour ajouter ou retirer un média, modifie simplement cette liste.
-SOURCES_AUTORISEES = [
-    "Radio-Canada",
-    "La Presse",
-    "Le Devoir",
-    "Journal de Montréal",
-    "Journal de Québec",
-]
+# Les thèmes (avec leurs mots-clés et leurs sources autorisées) sont lus dans
+# config.json. Pour les modifier, lance config_builder.py.
 
 # --- Fenêtres de temps ----------------------------------------------------
-# Récupération à chaque exécution : filet de sécurité si tu sautes des jours.
-# Au premier lancement, ça détermine aussi jusqu'où on remonte pour démarrer
-# l'archive (Google limite la profondeur, donc l'archive se remplit surtout
-# au fil du temps, jour après jour).
+# Récupération à chaque exécution : filet de sécurité si une exécution est
+# sautée. Détermine aussi la profondeur initiale au tout premier lancement
+# (Google limite la profondeur ; l'archive se remplit surtout au fil du temps).
 FENETRE_FETCH_JOURS = 30
 
 # Ce qui s'affiche dans les sections par projet : les 3 derniers mois.
@@ -78,7 +46,7 @@ JOURS_AFFICHAGE = 90
 PARAMS_REGION = "hl=fr-CA&gl=CA&ceid=CA:fr"
 FICHIER_SORTIE = "index.html"
 FICHIER_ARCHIVE = "revue_data.json"
-FICHIER_CONFIG = "config.json"  # produit par l'éditeur config_builder.html
+FICHIER_CONFIG = "config.json"  # produit ou modifié par config_builder.py
 
 
 # ===========================================================================
@@ -104,31 +72,39 @@ def source_autorisee(nom_source, sources_ok):
 
 
 def charger_config():
-    """Charge les thèmes depuis config.json s'il existe, sinon utilise les
-    valeurs internes (PROJETS + SOURCES_AUTORISEES). Renvoie une liste de
-    dictionnaires : {nom, mots_cles, sources}, chaque thème ayant ses sources."""
+    """Charge les thèmes depuis config.json. Le fichier est obligatoire :
+    s'il est manquant, vide ou invalide, le script s'arrête avec un message
+    clair. Pour créer ou modifier ce fichier, lancer config_builder.py.
+    Renvoie une liste de dictionnaires {nom, mots_cles, sources}."""
     try:
         with open(FICHIER_CONFIG, "r", encoding="utf-8") as f:
             cfg = json.load(f)
-        base = cfg.get("sources_base", SOURCES_AUTORISEES)
-        themes = []
-        for p in cfg.get("projets", []):
-            themes.append({
-                "nom": p.get("nom", "Sans nom"),
-                "mots_cles": p.get("mots_cles", []),
-                "sources": p.get("sources") or base,
-            })
-        if themes:
-            print(f"  Configuration chargée depuis {FICHIER_CONFIG} : {len(themes)} thème(s).")
-            return themes
-        print(f"  {FICHIER_CONFIG} vide : utilisation des réglages internes.")
     except FileNotFoundError:
-        print(f"  Pas de {FICHIER_CONFIG} : utilisation des réglages internes.")
-    except (json.JSONDecodeError, KeyError) as err:
-        print(f"  {FICHIER_CONFIG} illisible ({err}) : utilisation des réglages internes.")
-    # Repli sur les valeurs internes
-    return [{"nom": nom, "mots_cles": mc, "sources": SOURCES_AUTORISEES}
-            for nom, mc in PROJETS.items()]
+        raise SystemExit(
+            f"Erreur : {FICHIER_CONFIG} introuvable dans le dossier courant. "
+            f"Lancer config_builder.py pour le créer."
+        )
+    except json.JSONDecodeError as err:
+        raise SystemExit(
+            f"Erreur : {FICHIER_CONFIG} illisible ({err}). "
+            f"Vérifier le fichier ou le recréer avec config_builder.py."
+        )
+
+    base = cfg.get("sources_base", [])
+    themes = []
+    for p in cfg.get("projets", []):
+        themes.append({
+            "nom": p.get("nom", "Sans nom"),
+            "mots_cles": p.get("mots_cles", []),
+            "sources": p.get("sources") or base,
+        })
+    if not themes:
+        raise SystemExit(
+            f"Erreur : {FICHIER_CONFIG} ne contient aucun thème. "
+            f"Lancer config_builder.py pour en ajouter."
+        )
+    print(f"  Configuration chargée depuis {FICHIER_CONFIG} : {len(themes)} thème(s).")
+    return themes
 
 
 # ===========================================================================
@@ -274,13 +250,11 @@ def generer_html(archive, projets):
     for p in par_projet:
         par_projet[p].sort(key=date_obj, reverse=True)
 
-    boutons = ['<button class="filtre actif" data-projet="tous">Tous</button>']
+    # Sections : générées dans l'ordre du fichier de configuration.
+    # Le menu « Ordre des thèmes » de la page les réordonne dans le navigateur
+    # (par défaut : ordre alphabétique).
     sections = []
     for projet, articles in par_projet.items():
-        boutons.append(
-            f'<button class="filtre" data-projet="{html.escape(projet)}">'
-            f'{html.escape(projet)} <span class="compte">{len(articles)}</span></button>'
-        )
         if articles:
             cartes = "\n".join(carte_html(a) for a in articles)
         else:
@@ -291,6 +265,15 @@ def generer_html(archive, projets):
 {cartes}
         </div>
       </section>""")
+
+    # Boutons de filtre : toujours en ordre alphabétique français,
+    # « Tous » en tête.
+    boutons = ['<button class="filtre actif" data-projet="tous">Tous</button>']
+    for projet, articles in sorted(par_projet.items(), key=lambda kv: normaliser(kv[0])):
+        boutons.append(
+            f'<button class="filtre" data-projet="{html.escape(projet)}">'
+            f'{html.escape(projet)} <span class="compte">{len(articles)}</span></button>'
+        )
 
     boutons_html = "\n        ".join(boutons)
     sections_html = "\n".join(sections)
@@ -324,13 +307,15 @@ def generer_html(archive, projets):
   .sous {{ display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }}
   .sous .date {{ font-style: italic; }}
   main {{ max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }}
-  .barre {{ position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; border-bottom: 1px solid var(--ligne); }}
+  .barre {{ position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--ligne); }}
+  .rangee {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }}
+  .rangee label {{ font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-right: 4px; }}
   .filtre {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }}
   .filtre:hover, .filtre.actif {{ background: var(--encre); color: var(--papier); }}
   .compte {{ font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }}
-  .recherche {{ font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 220px; color: var(--encre); outline: none; }}
+  .recherche {{ font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 260px; color: var(--encre); outline: none; }}
   .recherche::placeholder {{ color: var(--gris); }}
-  .periode {{ margin-left: auto; font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
+  .periode {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
   .periode:hover {{ background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }}
   .bloc {{ margin-top: 40px; }}
   .bloc h2 {{ font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
@@ -363,15 +348,29 @@ def generer_html(archive, projets):
   </header>
   <main>
     <div class="barre">
-      {boutons_html}
-      <select class="periode" id="periode" title="Période affichée">
-        <option value="1">Dernières 24 h</option>
-        <option value="7">7 derniers jours</option>
-        <option value="14">14 derniers jours</option>
-        <option value="30">30 derniers jours</option>
-        <option value="90" selected>3 derniers mois</option>
-      </select>
-      <input class="recherche" type="search" placeholder="Chercher dans les titres...">
+      <div class="rangee">
+        {boutons_html}
+      </div>
+      <div class="rangee">
+        <label for="tri">Ordre des thèmes :</label>
+        <select class="periode" id="tri">
+          <option value="alpha" selected>Ordre alphabétique</option>
+          <option value="nb">Par nombre d'articles</option>
+        </select>
+      </div>
+      <div class="rangee">
+        <label for="periode">Afficher les articles :</label>
+        <select class="periode" id="periode">
+          <option value="1">Dernières 24 h</option>
+          <option value="7">7 derniers jours</option>
+          <option value="14">14 derniers jours</option>
+          <option value="30">30 derniers jours</option>
+          <option value="90" selected>3 derniers mois</option>
+        </select>
+      </div>
+      <div class="rangee">
+        <input class="recherche" type="search" placeholder="Chercher dans les titres...">
+      </div>
     </div>
 {sections_html}
   </main>
@@ -384,6 +383,8 @@ def generer_html(archive, projets):
   const blocs = document.querySelectorAll('.bloc');
   const recherche = document.querySelector('.recherche');
   const periode = document.getElementById('periode');
+  const tri = document.getElementById('tri');
+  const conteneur = document.querySelector('main');
   let projetActif = 'tous';
 
   function appliquer() {{
@@ -400,8 +401,21 @@ def generer_html(archive, projets):
         c.classList.toggle('cache', !visible);
         if (visible) visibles++;
       }});
+      bloc.dataset.visibles = visibles;
       bloc.classList.toggle('cache', visibles === 0);
     }});
+    reordonner();
+  }}
+
+  function reordonner() {{
+    const mode = tri.value;
+    const tries = Array.from(blocs).sort((a, b) => {{
+      if (mode === 'nb') {{
+        return parseInt(b.dataset.visibles||0,10) - parseInt(a.dataset.visibles||0,10);
+      }}
+      return a.dataset.projet.localeCompare(b.dataset.projet, 'fr', {{sensitivity:'base'}});
+    }});
+    tries.forEach(bloc => conteneur.appendChild(bloc));
   }}
 
   filtres.forEach(b => b.addEventListener('click', () => {{
@@ -412,6 +426,10 @@ def generer_html(archive, projets):
   }}));
   recherche.addEventListener('input', appliquer);
   periode.addEventListener('change', appliquer);
+  tri.addEventListener('change', reordonner);
+
+  // Au chargement : trier les thèmes selon le menu (alphabétique par défaut).
+  appliquer();
 </script>
 </body>
 </html>"""
