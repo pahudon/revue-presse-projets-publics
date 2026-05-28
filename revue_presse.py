@@ -287,7 +287,7 @@ def generer_html(archive, projets):
 <title>Revue de presse : grands projets publics au Québec</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {{
     --encre: #1a1f2e; --papier: #f4f1ea; --carte: #fffefb;
@@ -295,7 +295,7 @@ def generer_html(archive, projets):
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
-    font-family: 'Spline Sans', sans-serif; background: var(--papier);
+    font-family: 'Jost', sans-serif; background: var(--papier);
     color: var(--encre); line-height: 1.5;
     background-image: radial-gradient(var(--ligne) 0.5px, transparent 0.5px);
     background-size: 22px 22px;
@@ -303,7 +303,7 @@ def generer_html(archive, projets):
   .ruban {{ height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-doux)); }}
   header {{ max-width: 1100px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }}
   .surtitre {{ font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; }}
-  h1 {{ font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }}
+  h1 {{ font-family: 'EB Garamond', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }}
   .sous {{ display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }}
   .sous .date {{ font-style: italic; }}
   main {{ max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }}
@@ -313,17 +313,15 @@ def generer_html(archive, projets):
   .filtre {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }}
   .filtre:hover, .filtre.actif {{ background: var(--encre); color: var(--papier); }}
   .compte {{ font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }}
-  .recherche {{ font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 260px; color: var(--encre); outline: none; }}
-  .recherche::placeholder {{ color: var(--gris); }}
   .periode {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
   .periode:hover {{ background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }}
   .bloc {{ margin-top: 40px; }}
-  .bloc h2 {{ font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
+  .bloc h2 {{ font-family: 'Jost', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
   .bloc h2::before {{ content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }}
   .cartes {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }}
   .carte {{ background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }}
   .carte:hover {{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }}
-  .carte h3 {{ font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.08rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }}
+  .carte h3 {{ font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }}
   .lien {{ text-decoration: none; }}
   .lien:hover h3 {{ color: var(--accent); }}
   .meta {{ margin-top: 12px; font-size: 0.8rem; color: var(--gris); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }}
@@ -368,9 +366,6 @@ def generer_html(archive, projets):
           <option value="90" selected>3 derniers mois</option>
         </select>
       </div>
-      <div class="rangee">
-        <input class="recherche" type="search" placeholder="Chercher dans les titres...">
-      </div>
     </div>
 {sections_html}
   </main>
@@ -381,23 +376,20 @@ def generer_html(archive, projets):
 <script>
   const filtres = document.querySelectorAll('.filtre');
   const blocs = document.querySelectorAll('.bloc');
-  const recherche = document.querySelector('.recherche');
   const periode = document.getElementById('periode');
   const tri = document.getElementById('tri');
   const conteneur = document.querySelector('main');
   let projetActif = 'tous';
 
   function appliquer() {{
-    const q = recherche.value.toLowerCase().trim();
     const jours = parseInt(periode.value, 10);
     const limite = Date.now() - jours * 86400000;
     blocs.forEach(bloc => {{
       let visibles = 0;
       bloc.querySelectorAll('.carte').forEach(c => {{
         const okProjet = (projetActif === 'tous' || c.dataset.projet === projetActif);
-        const okTexte = !q || c.dataset.titre.includes(q) || c.dataset.source.includes(q);
         const okDate = Date.parse(c.dataset.date) >= limite;
-        const visible = okProjet && okTexte && okDate;
+        const visible = okProjet && okDate;
         c.classList.toggle('cache', !visible);
         if (visible) visibles++;
       }});
@@ -424,7 +416,6 @@ def generer_html(archive, projets):
     projetActif = b.dataset.projet;
     appliquer();
   }}));
-  recherche.addEventListener('input', appliquer);
   periode.addEventListener('change', appliquer);
   tri.addEventListener('change', reordonner);
 
