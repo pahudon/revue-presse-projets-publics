@@ -114,6 +114,32 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "Projets d'intérêt national (gouvernement du Canada)",
+      "mots_cles": [
+        "projet d'intérêt national"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Pipeline en Alberta",
+      "mots_cles": [
+        "\"pipeline alberta\""
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
