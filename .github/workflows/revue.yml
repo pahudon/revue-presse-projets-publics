@@ -1,9 +1,11 @@
 name: Revue de presse quotidienne
 
 on:
-  # Lancement automatique chaque jour à 11 h UTC (7 h, heure de l'Est).
+  # Lancement automatique chaque jour à 11 h 23 UTC (7 h 23, heure de l'Est).
+  # Minute non ronde volontaire : les crons sur l'heure pile sont souvent
+  # retardés ou sautés par GitHub en période de charge.
   schedule:
-    - cron: "0 11 * * *"
+    - cron: "23 11 * * *"
   # Permet aussi de lancer le robot à la main depuis l'onglet Actions.
   workflow_dispatch:
 
