@@ -6,7 +6,7 @@
 <title>Revue de presse : grands projets publics au Québec</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Spline+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --encre: #1a1f2e; --papier: #f4f1ea; --carte: #fffefb;
@@ -14,7 +14,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Spline Sans', sans-serif; background: var(--papier);
+    font-family: 'Jost', sans-serif; background: var(--papier);
     color: var(--encre); line-height: 1.5;
     background-image: radial-gradient(var(--ligne) 0.5px, transparent 0.5px);
     background-size: 22px 22px;
@@ -22,7 +22,7 @@
   .ruban { height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-doux)); }
   header { max-width: 1100px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }
   .surtitre { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
-  h1 { font-family: 'Fraunces', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }
+  h1 { font-family: 'EB Garamond', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }
   .sous { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }
   .sous .date { font-style: italic; }
   main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }
@@ -32,17 +32,15 @@
   .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }
   .filtre:hover, .filtre.actif { background: var(--encre); color: var(--papier); }
   .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }
-  .recherche { font-family: inherit; font-size: 0.9rem; border: none; border-bottom: 1.5px solid var(--encre); background: transparent; padding: 6px 4px; width: 260px; color: var(--encre); outline: none; }
-  .recherche::placeholder { color: var(--gris); }
   .periode { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
   .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
   .bloc { margin-top: 40px; }
-  .bloc h2 { font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 600; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
+  .bloc h2 { font-family: 'Jost', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
   .bloc h2::before { content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }
   .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
   .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }
-  .carte h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 1.08rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }
+  .carte h3 { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }
   .lien { text-decoration: none; }
   .lien:hover h3 { color: var(--accent); }
   .meta { margin-top: 12px; font-size: 0.8rem; color: var(--gris); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
@@ -60,9 +58,9 @@
     <div class="surtitre">Veille quotidienne</div>
     <h1>Grands projets publics au Québec</h1>
     <div class="sous">
-      <span class="date">27 mai 2026</span>
-      <span>102 articles sur les 3 derniers mois</span>
-      <span>102 au total dans l'archive</span>
+      <span class="date">28 mai 2026</span>
+      <span>110 articles sur les 3 derniers mois</span>
+      <span>110 au total dans l'archive</span>
     </div>
   </header>
   <main>
@@ -74,9 +72,9 @@
         <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">3</span></button>
         <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
         <button class="filtre" data-projet="PQI">PQI <span class="compte">0</span></button>
-        <button class="filtre" data-projet="TGV">TGV <span class="compte">24</span></button>
-        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">39</span></button>
-        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">9</span></button>
+        <button class="filtre" data-projet="TGV">TGV <span class="compte">26</span></button>
+        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">42</span></button>
+        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">12</span></button>
       </div>
       <div class="rangee">
         <label for="tri">Ordre des thèmes :</label>
@@ -95,13 +93,20 @@
           <option value="90" selected>3 derniers mois</option>
         </select>
       </div>
-      <div class="rangee">
-        <input class="recherche" type="search" placeholder="Chercher dans les titres...">
-      </div>
     </div>
       <section class="bloc projet" data-projet="Tramway de Québec">
         <h2>Tramway de Québec</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Tramway de Québec" data-titre="tramway : gatineau veut des engagements clairs des partis a quebec" data-source="radio-canada" data-date="2026-05-27T22:33:03+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV3ZQaFRySjFHRVZwQV9OQ2RVLW5RYmRIM1ZRSEdLMk9zek5QRmFFSklMYzIzek43b1BqVC02RXBUeEx0Um1yS0ZSOEhlN3RBaWNDcF9iV3pwZVlhMllLS1RNaU4wOWZoYzc4XzRWTEdpc3dpX3phVFZWcmRLX1h4V2UxQ01DdWhxcHVR?oc=5" target="_blank" rel="noopener">
+            <h3>Tramway : Gatineau veut des engagements clairs des partis à Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Tramway de Québec" data-titre="bruno marchand appelle a «celebrer les victoires»" data-source="journal de quebec" data-date="2026-05-26T17:08:49+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNWFI0U3VySHFwYkwyR3NmTWY3bW9TNEM3WkFjSzlzY1lSYU9jRndhM2VBdE1NT3BBUEhZTVRTMG5nUGphZlVWbTJKSkE5SjBSeGRDWjV5Y3Y2a0tmMUNXMHROb0xSZDR1dkpPWHNzaHJGSmg2ck9FTTU5V05NOEVtUWpmVDFjTHJHMHVWd1p2Q0NfbkM2?oc=5" target="_blank" rel="noopener">
             <h3>Bruno Marchand appelle à «célébrer les victoires»</h3>
@@ -190,6 +195,16 @@
             <span class="source">Journal de Québec</span>
             <span class="sep">/</span>
             <time>13 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="9 mai 2026 : le tramway devient un projet « irreversible »" data-source="radio-canada" data-date="2026-05-09T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiogFBVV95cUxNdFZ5cndQcHc4a18xVHF4eEtReHMyM1oyRDUwYWs2cVlFVHRRX2dOSG8xTlczeC1CLTFOX0FJNUpMUEJ2ZVZpUHdRRlNpRVVlaV85LTFua1p1cGhNWXdNeHFBMWNPLVhSR0Zwanplb3RkY1V1LUEwY1dJWTBIUlVGMzBvcER6OGZ5WVhRZHhPbmlBSDdpOUZWRUIwX0o5c1A2R2c?oc=5" target="_blank" rel="noopener">
+            <h3>9 mai 2026 : Le tramway devient un projet « irréversible »</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>9 mai 2026</time>
           </div>
         </article>
         <article class="carte" data-projet="Tramway de Québec" data-titre="la force d inertie est puissante au quebec" data-source="journal de quebec" data-date="2026-05-08T07:00:00+00:00">
@@ -295,6 +310,16 @@
         <article class="carte" data-projet="Tramway de Québec" data-titre="tramway : entrevue avec le ministre benoit charette" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPdVBSVXdXdXhqc2JTSmpqbVhsbjRtZmtKVGcxR1JwWW1nOHFSVFJXQjRXSjRkUzNFNnJDSFBraFl5MFdRVm5ObnE0S1RaSDVpRUtYSG5iYlFlWlo3ay05T25TT09fNjlkOEVoOE1EeTZZV01Yb3V6Qkh1LW52WXdnbk1RVzhyd3BJWW1xdmhXOUJ5akNKbTIxVHkwUHoxY0YyWWltVHJTYzE5VmhGN2ZSOGQ5dHVnS2pqcnZBVmVTcw?oc=5" target="_blank" rel="noopener">
             <h3>Tramway : entrevue avec le ministre Benoit Charette</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>6 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="fin de la breve : tunnel du tramway : les travaux devances d un an. breve suivante" data-source="radio-canada" data-date="2026-05-06T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxQTHdFbE16ZGVtYUVidVpqOTV5T1F4Wk44NjJkaFRpd05kWWpMbVc1Ml9OSDg4VlpUMmJzU1hsTEFOckhqZ0RiYlBMWVZ3TTBGM291VXhETHV2UWI4ZkNCNmQybFJzR1BTS1hSRXE0WjhNV0FIQ3czVHRPaDB2NzFQVGxnQUdaeVZSSDQ2UlFxMzl6RHNNaXpDckNKSzM1U05yNm5V?oc=5" target="_blank" rel="noopener">
+            <h3>Fin de la brève : Tunnel du tramway : les travaux devancés d&#x27;un an. Brève suivante</h3>
           </a>
           <div class="meta">
             <span class="source">Radio-Canada</span>
@@ -672,6 +697,16 @@
       <section class="bloc projet" data-projet="TGV">
         <h2>TGV</h2>
         <div class="cartes">
+        <article class="carte" data-projet="TGV" data-titre="des drones d alto survoleront l est ontarien, les laurentides et la monteregie" data-source="radio-canada" data-date="2026-05-28T12:00:51+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOV0E3X212dGRUZEtBWmFFZkRJb3lHMFpySXgtME91NWJLMXVwRXJDYnhmSmtDVGYyYlVfaE1zUnNqbzhvT2p6NE1WSTdfV0ZySk1RR3J6bVd1X0VtWWd6VXNGanRqLW9RNHlMa0NzWTl0UXduTmxIRVNvYmp3NU94bTN5QXZMZ3IwclE?oc=5" target="_blank" rel="noopener">
+            <h3>Des drones d’Alto survoleront l’est ontarien, les Laurentides et la Montérégie</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="TGV" data-titre="un premier train a grande vitesse au canada" data-source="radio-canada" data-date="2026-05-19T21:11:46+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMihwFBVV95cUxPSEk0dVZtX2VKaHlwV2hLS2tubU5hMWt5aTNJUk0ybmJEeDVULWprR2FHUTkzNFlQZHdKUTB0bUZxOXRqNnMtZG1SeDNndG0zMm1GekhHbVJ5c2h5WDVodTlURzdtVG9aY3M0STZDYU1VVXFXeW9aTElDYXM5MW03d3U1S2Vsd3c?oc=5" target="_blank" rel="noopener">
             <h3>Un premier train à grande vitesse au Canada</h3>
@@ -708,6 +743,16 @@
           </a>
           <div class="meta">
             <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="paul bird sera le prochain p.-d.g. du port de montreal" data-source="le devoir" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxPaF9xWE5vU3dXLURmWWtBdW95V0lHQjczOHA4RDFLeTVBYXlTRTBWTlk1WUtrTDRqQkl5cjVrUFJpQ2RLWWQzWjYxbWo0ekJ2YlRhcnJaSDZBYWJxYmVpb0Jjay1SWERza1RVZG5MVi1zbThscmEzNzNPUVVjeUE5MGNBN3B5Q1o1OEE?oc=5" target="_blank" rel="noopener">
+            <h3>Paul Bird sera le prochain p.-d.g. du Port de Montréal</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
             <span class="sep">/</span>
             <time>15 mai 2026</time>
           </div>
@@ -1068,6 +1113,26 @@
       <section class="bloc projet" data-projet="Troisième lien">
         <h2>Troisième lien</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Troisième lien" data-titre="patrimoine mondial de l unesco: le 3e lien pourrait menacer le statut du vieux-quebec" data-source="journal de quebec" data-date="2026-05-28T04:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPZVhxYjNaX3djaGdnR0dCZ1JzMEtiem5sWHFqeWRJSHNYNjNZZzJ1b1VWZWdDbWFmZGNEcFN4LTdvSldaenlucUtZTlZQUnZrWl83ZGdfZWJmNFNBQ3AyNkM0ZXdWUllPdzVPUDN3RUpXX3FEYnBONnB1QmRIVzRkSExOd24zU0ZZTUlQRlI1d0E2WnpidFRveTBwUll4di1wdDF3dWh5azFFd0d3bUNrN3FrcnZYZzFtRFl6aGg1Y2c1UlIzOGc?oc=5" target="_blank" rel="noopener">
+            <h3>Patrimoine mondial de l’UNESCO: le 3e lien pourrait menacer le statut du Vieux-Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Troisième lien" data-titre="« impossible » de sacrifier la promenade samuel-de champlain pour un 3e lien" data-source="radio-canada" data-date="2026-05-27T20:39:59+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxORWVNcG01YkRGSkxOektRYUcyRWp3WFo0QU94akF4NHNyejlmck5GRlp2bUd3ZHVKa3FOcFhoNDBqNTNIMVJKd0xkOHIzY29FN1hJMk9kNDNMQnVhTTVjb09QeFRlM29UTXY5SGxfZkxSWHBscEJGRVFuZTlPdlJJS1IyaE56QQ?oc=5" target="_blank" rel="noopener">
+            <h3>« Impossible » de sacrifier la promenade Samuel-De Champlain pour un 3e lien</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Troisième lien" data-titre="3e lien a l est: la promenade samuel-de champlain ne doit pas ecoper, dit bruno marchand" data-source="journal de quebec" data-date="2026-05-27T17:05:14+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOV3U4YjVjM3M3alZkdWV5endWbG05M1p2X1AzLVZvUUdnV0FzMjQzRDNqTmtjYnNTVTNyNExsMW5OTTNpTjBZLWZOdV9WaGlBVzBJQ2xldjd4YkdobU4xWXhDQ3JiMVdsOWF1cTlHVjhrbGJmMnpyR09SbDlUQ0xiNE9xUFB6OWZLSDJ3SHlrRThfXzBmMWw2aUtSQm9fWHhpUk5jWQ?oc=5" target="_blank" rel="noopener">
             <h3>3e lien à l’est: la promenade Samuel-De Champlain ne doit pas écoper, dit Bruno Marchand</h3>
@@ -1158,33 +1223,40 @@
             <time>5 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Troisième lien" data-titre="discours inaugural de christine frechette | un peu trop de « politique gadget »" data-source="la presse" data-date="2026-05-05T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMizAFBVV95cUxQaF9NTzhCX1p1dXc2Nk1rNHg5RWhSYktQVEl5VGRPMXI4aDRHUThLTUEzajBBOW9FN0kwelEtWGtxS2syeC1sXy1md2JhVFQtZk5waXNtelI4a3FlWU1BZUc5QUVJZmtwaVU2UDdTbl9hNjl1QXZmQzJuOXBheWRVeUJXSk5pbk1BcS1NU01JZWFTN1JGWk82bTNja29EdVhUZ0JNbk90eXNGdjB5ZWZrM0F0ak10cmVvNWFxWS1PQWdzeWpISjdyNlliXzA?oc=5" target="_blank" rel="noopener">
+            <h3>Discours inaugural de Christine Fréchette | Un peu trop de « politique gadget »</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>5 mai 2026</time>
+          </div>
+        </article>
         </div>
       </section>
   </main>
   <footer>
-    Généré le 27 mai 2026 à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
+    Généré le 28 mai 2026 à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
   </footer>
 
 <script>
   const filtres = document.querySelectorAll('.filtre');
   const blocs = document.querySelectorAll('.bloc');
-  const recherche = document.querySelector('.recherche');
   const periode = document.getElementById('periode');
   const tri = document.getElementById('tri');
   const conteneur = document.querySelector('main');
   let projetActif = 'tous';
 
   function appliquer() {
-    const q = recherche.value.toLowerCase().trim();
     const jours = parseInt(periode.value, 10);
     const limite = Date.now() - jours * 86400000;
     blocs.forEach(bloc => {
       let visibles = 0;
       bloc.querySelectorAll('.carte').forEach(c => {
         const okProjet = (projetActif === 'tous' || c.dataset.projet === projetActif);
-        const okTexte = !q || c.dataset.titre.includes(q) || c.dataset.source.includes(q);
         const okDate = Date.parse(c.dataset.date) >= limite;
-        const visible = okProjet && okTexte && okDate;
+        const visible = okProjet && okDate;
         c.classList.toggle('cache', !visible);
         if (visible) visibles++;
       });
@@ -1211,7 +1283,6 @@
     projetActif = b.dataset.projet;
     appliquer();
   }));
-  recherche.addEventListener('input', appliquer);
   periode.addEventListener('change', appliquer);
   tri.addEventListener('change', reordonner);
 
