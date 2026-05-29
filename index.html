@@ -20,23 +20,35 @@
     background-size: 22px 22px;
   }
   .ruban { height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-doux)); }
-  header { max-width: 1100px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }
+  header { max-width: 1280px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }
   .surtitre { font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
   h1 { font-family: 'EB Garamond', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }
   .sous { display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }
   .sous .date { font-style: italic; }
-  main { max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }
-  .barre { position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--ligne); }
-  .rangee { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-  .rangee label { font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-right: 4px; }
-  .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }
+  .zone { max-width: 1280px; margin: 0 auto; padding: 28px 24px 80px; display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }
+  aside { position: sticky; top: 24px; display: flex; flex-direction: column; gap: 22px; }
+  main { min-width: 0; }
+  .controles { display: flex; flex-direction: column; gap: 14px; }
+  .controles label { display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 4px; }
+  .controles .periode { width: 100%; }
+  .themes { display: flex; flex-direction: column; gap: 8px; }
+  .themes-titre { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 2px; }
+  .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 14px; border-radius: 999px; transition: all 0.15s; text-align: left; }
   .filtre:hover, .filtre.actif { background: var(--encre); color: var(--papier); }
-  .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }
-  .periode { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
+  .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; float: right; line-height: 1.4; }
+  .periode { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 32px 7px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
   .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
-  .bloc { margin-top: 40px; }
+  .bloc { margin-top: 0; margin-bottom: 40px; }
+  .bloc:first-child { margin-top: 0; }
   .bloc h2 { font-family: 'Jost', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
   .bloc h2::before { content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }
+  @media (max-width: 820px) {
+    .zone { grid-template-columns: 1fr; gap: 24px; }
+    aside { position: static; }
+    .themes { flex-direction: row; flex-wrap: wrap; }
+    .filtre { text-align: center; }
+    .compte { float: none; }
+  }
   .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
   .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }
@@ -48,7 +60,7 @@
   .sep { opacity: 0.5; }
   .vide { color: var(--gris); font-style: italic; grid-column: 1 / -1; }
   .bloc.cache, .carte.cache { display: none; }
-  footer { max-width: 1100px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }
+  footer { max-width: 1280px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }
   footer code { background: #e8e3d8; padding: 1px 6px; border-radius: 4px; }
 </style>
 </head>
@@ -58,47 +70,81 @@
     <div class="surtitre">Veille quotidienne</div>
     <h1>Grands projets publics au Québec</h1>
     <div class="sous">
-      <span class="date">28 mai 2026</span>
-      <span>151 articles sur les 3 derniers mois</span>
-      <span>151 au total dans l'archive</span>
+      <span class="date">29 mai 2026</span>
+      <span>172 articles sur les 3 derniers mois</span>
+      <span>172 au total dans l'archive</span>
     </div>
   </header>
-  <main>
-    <div class="barre">
-      <div class="rangee">
+  <div class="zone">
+    <aside>
+      <div class="controles">
+        <div>
+          <label for="tri">Ordre des thèmes</label>
+          <select class="periode" id="tri">
+            <option value="alpha" selected>Ordre alphabétique</option>
+            <option value="nb">Par nombre d'articles</option>
+          </select>
+        </div>
+        <div>
+          <label for="periode">Afficher les articles</label>
+          <select class="periode" id="periode">
+            <option value="1">Dernières 24 h</option>
+            <option value="7">7 derniers jours</option>
+            <option value="14">14 derniers jours</option>
+            <option value="30">30 derniers jours</option>
+            <option value="90" selected>3 derniers mois</option>
+          </select>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-titre">Thèmes</div>
         <button class="filtre actif" data-projet="tous">Tous</button>
-        <button class="filtre" data-projet="DMA">DMA <span class="compte">7</span></button>
-        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">17</span></button>
-        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta <span class="compte">15</span></button>
-        <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">6</span></button>
+        <button class="filtre" data-projet="DMA">DMA <span class="compte">8</span></button>
+        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">22</span></button>
+        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta <span class="compte">17</span></button>
+        <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">7</span></button>
         <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
-        <button class="filtre" data-projet="PQI">PQI <span class="compte">0</span></button>
-        <button class="filtre" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)">Projets d&#x27;intérêt national (gouvernement du Canada) <span class="compte">21</span></button>
-        <button class="filtre" data-projet="TGV">TGV <span class="compte">27</span></button>
-        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">43</span></button>
-        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">12</span></button>
+        <button class="filtre" data-projet="PQI">PQI <span class="compte">2</span></button>
+        <button class="filtre" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)">Projets d&#x27;intérêt national (gouvernement du Canada) <span class="compte">22</span></button>
+        <button class="filtre" data-projet="TGV">TGV <span class="compte">29</span></button>
+        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">47</span></button>
+        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">15</span></button>
       </div>
-      <div class="rangee">
-        <label for="tri">Ordre des thèmes :</label>
-        <select class="periode" id="tri">
-          <option value="alpha" selected>Ordre alphabétique</option>
-          <option value="nb">Par nombre d'articles</option>
-        </select>
-      </div>
-      <div class="rangee">
-        <label for="periode">Afficher les articles :</label>
-        <select class="periode" id="periode">
-          <option value="1">Dernières 24 h</option>
-          <option value="7">7 derniers jours</option>
-          <option value="14">14 derniers jours</option>
-          <option value="30">30 derniers jours</option>
-          <option value="90" selected>3 derniers mois</option>
-        </select>
-      </div>
-    </div>
+    </aside>
+    <main>
       <section class="bloc projet" data-projet="Tramway de Québec">
         <h2>Tramway de Québec</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Tramway de Québec" data-titre="quebec refuse de s engager a construire un tramway a gatineau" data-source="radio-canada" data-date="2026-05-29T00:19:26+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQS3dpVEtFWHhjM3J4QjBfa2NFS0ExXzlXVzBWVjJHaDMtQ3paLWJ1ZE9VdklvN1dPd1lqVlBEWWU2bGJwSjJNYlFtNDRNcHM5U0ZPU29WdGdtUkVqR1BWaklXY3FEWWNacTlVZWNTRTB4b1B6UUljeWZ5SXN2LUdCY2UwQ3ljVVJINWNsZHBKZjdFaU9mVnJPMldzR3V0RzhCYVhyUWxxbE56OFRxS1E?oc=5" target="_blank" rel="noopener">
+            <h3>Québec refuse de s&#x27;engager à construire un tramway à Gatineau</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="benoit charette juge le tramway de gatineau trop cher" data-source="radio-canada" data-date="2026-05-29T00:11:39+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxQbWFDZ2U4Q051Uk5TRGk4a0NhVmxKaTNrV3VLTTNCWTlCcm0zSHpwcmxxVE01RmNQSEVDOEw5SGJ1bHpTZDhEVk11c0pqby1Pd19HbV9udHB4V3dlR1dQLTZ6NE16ZnhES2xOQmFtTDVKR2RoOWI5cEc4ME9WVWNCM2pmOA?oc=5" target="_blank" rel="noopener">
+            <h3>Benoit Charette juge le tramway de Gatineau trop cher</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="le gouvernement refuse de s engager en faveur d un tramway a gatineau" data-source="le devoir" data-date="2026-05-28T18:24:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMirgFBVV95cUxQQzllWXBpbzhxbXNiTFE1SkpySWlSc2hRMGZBWklnRWZPUlpkSWk4ejZZVkpTOXhKRmVnSnhQVFEzanlTb2dmNnR6VkRWcTRseHZJdU5rWS1WYVBWNWdzc2dMWjZjT2Ztd0tqNnkzM004UnFLa1BwZVEyNnlWUmZxdmNOcDROOXRYcGVFQjVWQkRaUXE0TnQtOUNvbzhqTTcyYWxndHR3TVlCdUJtYnc?oc=5" target="_blank" rel="noopener">
+            <h3>Le gouvernement refuse de s’engager en faveur d’un tramway à Gatineau</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Tramway de Québec" data-titre="tramway : gatineau veut des engagements clairs des partis a quebec" data-source="radio-canada" data-date="2026-05-27T22:33:03+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQV3ZQaFRySjFHRVZwQV9OQ2RVLW5RYmRIM1ZRSEdLMk9zek5QRmFFSklMYzIzek43b1BqVC02RXBUeEx0Um1yS0ZSOEhlN3RBaWNDcF9iV3pwZVlhMllLS1RNaU4wOWZoYzc4XzRWTEdpc3dpX3phVFZWcmRLX1h4V2UxQ01DdWhxcHVR?oc=5" target="_blank" rel="noopener">
             <h3>Tramway : Gatineau veut des engagements clairs des partis à Québec</h3>
@@ -197,6 +243,16 @@
             <span class="source">Journal de Québec</span>
             <span class="sep">/</span>
             <time>13 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="ou vont vos impots: mobilite infra quebec multiplie les contrats d accompagnement pour sa mise en place" data-source="journal de quebec" data-date="2026-05-12T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi3AFBVV95cUxOcGhLUFdpcmNybVpwazVwZ0xLa0U5YjlYTU5QQUFrVk9Tdl9ycEtLWkNNVXl4LV9PQTdOWl83VDNVNW1haW93cHBNZW1KR1poNjdrY3QzZDVxbWowb09VVXhaT0tOU1BPS3duQ1hVNlRra3hWWGpyMkR4cENkX3NuQ29zdmpFTkZoLUtSbGxTeTFLLVJ3VTJfYndWdTVfeUVzU00tZFBMTGk4R2ZtWElPSWhWRmZfQ3FlU1NZYTFCZHI5Vm40b2t1OEFNaFNRUTkyYTlYUlF5eDJ3MVFm?oc=5" target="_blank" rel="noopener">
+            <h3>Où vont vos impôts: Mobilité Infra Québec multiplie les contrats d’accompagnement pour sa mise en place</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>12 mai 2026</time>
           </div>
         </article>
         <article class="carte" data-projet="Tramway de Québec" data-titre="9 mai 2026 : le tramway devient un projet « irreversible »" data-source="radio-canada" data-date="2026-05-09T07:00:00+00:00">
@@ -534,6 +590,26 @@
       <section class="bloc projet" data-projet="Ligne bleue">
         <h2>Ligne bleue</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Ligne bleue" data-titre="la police de montreal remplace un signe controverse" data-source="radio-canada" data-date="2026-05-28T18:40:44+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikAFBVV95cUxONzVrWVQ3cjJvM0JqdEswWUh5dU9IOFBSSG01dHQ4NC10MzRpbGlxV0lrbVFmNGpiYWZXc3l3djFIT1dTaDViSE1DdDRMVS0yUEtySzF5VlQ4YTJ4VHlPdGNGSWNhaEZPMlM4c1UxOWlGTlBiY2twV2NxN1Z6eTFQOFpsd1FRV2E4Zlk5TFU2YkM?oc=5" target="_blank" rel="noopener">
+            <h3>La police de Montréal remplace un signe controversé</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="industrie de la construction | le seuil des 200 000 emplois depasse pour la premiere fois, selon la ccq" data-source="la presse" data-date="2026-05-25T15:12:32+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi7gFBVV95cUxQczJQWEp5VUFxRU5EU19KSEJHUFZ2bTZKd091dzJ0Zy1Oa1FrN1dRRFN0NFlhUG84dllHaTY5c1Z0amtvalpuTHJJc2hQLVdrNG1oZk9ndVQ3aFFMVmRlc0M4TjJTQ3c2VzBnMTBvMUNvRTNySjRDSV9aX1JuY2JHT0hvT3VUek9zd1U3VFhwV01yeEFrTkh2Q1J2dUVWcXoyeFBSRGljSVB5dVVoaHkzRVBVUENhd3FubE1LVnM0SjRJdVNQbGZJcnBlUTBodnR1cnZQNnFjem84RHdqVVNoNGZQTHo1MTFMbUJzVnRn?oc=5" target="_blank" rel="noopener">
+            <h3>Industrie de la construction | Le seuil des 200 000 emplois dépassé pour la première fois, selon la CCQ</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>25 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Ligne bleue" data-titre="voici lisette le tunnelier!" data-source="le devoir" data-date="2026-05-23T04:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBNbUdnQkRQTm9HaS1pcHpsclhFTnFqUk5uQ1JmWGFxdEp6SHppWHFhQnhNTmdJVkFoMDI3czhWbHJiTVczSHNWcUxTbGNFczM2d2hBbDFJZ0NxdzVaYldBOEwtbFRqYnZOX1F5X2dwTFFkTUVqeU5jVTVyVWo?oc=5" target="_blank" rel="noopener">
             <h3>Voici Lisette le tunnelier!</h3>
@@ -542,6 +618,16 @@
             <span class="source">Le Devoir</span>
             <span class="sep">/</span>
             <time>23 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="fin de la breve : lisette st-onge, premiere femme operatrice du metro de montreal. breve suivante" data-source="radio-canada" data-date="2026-05-21T19:22:40+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxNdmNaTElBMXJUOU5RYmthMlI4SU1BWnpWUWRNTkxKQzBiMjBTeW9QM0k1TWRoWWhvUWpCa3gtTk04Zms1anZtVWl4eVM2UzdVeTVRaVZ6amlhQVdlS3ZiZkhuWmtUUXZhaUp6SzRCMlJDWUp4RjNiS085c01ndUZuTm9lcUpLQXI0TmtIV1lLVlJqYjJ4YWpmbWltUnJndUl2VHExZk1B?oc=5" target="_blank" rel="noopener">
+            <h3>Fin de la brève : Lisette St-Onge, première femme opératrice du métro de Montréal. Brève suivante</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
           </div>
         </article>
         <article class="carte" data-projet="Ligne bleue" data-titre="metro de montreal | laval veut conserver le tunnelier apres 2028" data-source="la presse" data-date="2026-05-21T14:14:02+00:00">
@@ -634,6 +720,16 @@
             <time>15 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="transport collectif | incursion dans le nouveau rem de l ouest" data-source="la presse" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxOdVhIVXdhdlFuWk9Rdms3c0IwTnh6eU1STFZfU0lWQU02T2pSVHlTM0VQSmVGblVJdjNNTlE2eUlMQV9DU1B4NTVodEp5NUlDb0p3YzUzQmd3WFNseTlJWlhWY3kyTjJQVjVnQktuSy0tMTNZdmJIbk5WZV9tQ0FCMk0wNl9qV1hiT3dhcVhHdjBnUmJXRmoyWm9xbUpab3FoMEN0OWlxS1ZXSDl2eG5ZcndvdE5tak5OZlZRU0ZfNTR0UlE?oc=5" target="_blank" rel="noopener">
+            <h3>Transport collectif | Incursion dans le nouveau REM de l’Ouest</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Ligne bleue" data-titre="a la decouverte du grand tunnelier du metro de montreal" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNeHdxc0ZkX1pJeXc3eEFfb3hnQzNveURoMHdjUWRoMkREZHI5MnVMUEl5UkJMci1iSHlkNzB5Q050NzE2QXk2dldrYU9oeW9EWWY4RkFIRF90Z3VSTFFFRURXOVIweGYwNXgxbXp5dXc3TmVJRnNXOTZNQ1NEbFc5ZjduMG8yOW5uWVEzM2FtU25ZOG9G?oc=5" target="_blank" rel="noopener">
             <h3>À la découverte du grand tunnelier du métro de Montréal</h3>
@@ -684,6 +780,16 @@
             <time>11 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Ligne bleue" data-titre="transports en direct | les voyants au vert" data-source="la presse" data-date="2026-05-11T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxOdFlQTXZ0VE5XZkMxaW55M0JKanNrWGZfejh2SWttUm5FRU15azMzYlVXNDR6MzFUX2g4aHc2d3M5Z3NMaWNFMWJJM0RXR3FpYURuRWpRNlloampJVEc2ZjRsSHJaRXU2RkJ4RWRXa2pLQVdHZGlRWFQ1TlFrNWJoZVpBVHBzT0k1VUFJREFfTjN6bThhQThqTkFUVkUwQTlxcGhua1BaWHA?oc=5" target="_blank" rel="noopener">
+            <h3>Transports en direct | Les voyants au vert</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>11 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Ligne bleue" data-titre="achalandage dans le metro | baisse dans les stations du centre-ville et de la ligne bleue" data-source="la presse" data-date="2026-05-09T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMi5wFBVV95cUxOY3pwNUU4Nkl3U05yTnhxeFdIblZpdzd6NHZGY0V6LUFMRmJjeXpQMHlYNXFSZFdSMXB5dVpJSWQyOTRtQ0h2bXNhYy1vV1I1V2VWSnlrdXpzLXVaNHRZZTI1bXh4aE5XWlhTQnpkWjN4VXl6dWVBMTRjc1lvNl9fYkUtYTZwN2taYm52VmVGZzMzOTVkOVpDT2R1U2t3VUVfWk5rMENKU01ZQWVVLUo5SnhtS2ZLNzhYeVZsdnJ0MTNYaUtjTVNJMnRWSHA2d2IwZnNCNnA5ajRNZWRFRWVrc3VSNkpqTkk?oc=5" target="_blank" rel="noopener">
             <h3>Achalandage dans le métro | Baisse dans les stations du centre-ville et de la ligne bleue</h3>
@@ -709,6 +815,26 @@
       <section class="bloc projet" data-projet="TGV">
         <h2>TGV</h2>
         <div class="cartes">
+        <article class="carte" data-projet="TGV" data-titre="alto est prete a faire « n importe quoi », estime l ucfo" data-source="radio-canada" data-date="2026-05-29T10:08:53+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9sSjdGdmVOZGZ4Qkpaa3Vsc2J1eGxsd1BFMEJTQldUSGZkVkNISUJLZzBib3ExUDVPaUNmdUZ5STE0MzRQQ29fSmRrV3lGZExMUGNudVU2SFZNUm9BbWVYV1BvdHJncllERk1qckVhU2puTEFCVGVBbHZlTEk?oc=5" target="_blank" rel="noopener">
+            <h3>Alto est prête à faire « n’importe quoi », estime l’UCFO</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="TGV" data-titre="ce qu il faut savoir sur le nouveau tgv toronto-quebec" data-source="radio-canada" data-date="2026-05-29T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPaS1CMVBVWUs2Z1NvdUg3TEI0RHpWSnM4RnNDa3c4bmtKTGhqQ3NrUEhIcDBidExBakZ0TmNuZ0RaZ0dFMHZ0MXpZdnNxUnJMX2cxTDR0WU9vU0trUXpyMExMbnctRWk4RUVuTkNzRHNVSm04TjFFZnZWNE0yWUh1M1V6Z2ZQeXFiQXcyYko3ZkNtQzB1LUhidEY2enpIeHlmYWRnMWVTZTB6QkphNU1ac2xoUHFnZmdxenBBVWZsNDZaOHVBQmlTcE5B?oc=5" target="_blank" rel="noopener">
+            <h3>Ce qu’il faut savoir sur le nouveau TGV Toronto-Québec</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="TGV" data-titre="des drones d alto survoleront l est ontarien, les laurentides et la monteregie" data-source="radio-canada" data-date="2026-05-28T12:00:51+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOV0E3X212dGRUZEtBWmFFZkRJb3lHMFpySXgtME91NWJLMXVwRXJDYnhmSmtDVGYyYlVfaE1zUnNqbzhvT2p6NE1WSTdfV0ZySk1RR3J6bVd1X0VtWWd6VXNGanRqLW9RNHlMa0NzWTl0UXduTmxIRVNvYmp3NU94bTN5QXZMZ3IwclE?oc=5" target="_blank" rel="noopener">
             <h3>Des drones d’Alto survoleront l’est ontarien, les Laurentides et la Montérégie</h3>
@@ -984,6 +1110,16 @@
       <section class="bloc projet" data-projet="DMA">
         <h2>DMA</h2>
         <div class="cartes">
+        <article class="carte" data-projet="DMA" data-titre="tarification de l eau : le quebec est « mur pour une reflexion »" data-source="radio-canada" data-date="2026-05-28T22:25:59+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQQS1MV1hTOVF0WWRuNkZoVXpJaXZ2cE84cFNMdG0wdk1MVjh1RjdzdHNBYVp1RW00a2k3NUQyYjU3dlpkOHJqandhSmdydUFmNW1ySzFlZ212dXNmTkZadkFuanBqVXI1T0hDbGE2VUI5blZnOTVfV0RvemIwMWoxTlM0cEtsb3RqUUs3SDZVcERiXzdjME9YckREbDNySm8zYXVlZmpweG5FbW4yZmRJaldn?oc=5" target="_blank" rel="noopener">
+            <h3>Tarification de l’eau : le Québec est « mûr pour une réflexion »</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="DMA" data-titre="reseau routier mal en point : quebec se defend de cacher une facture de 31 milliards $" data-source="le journal de montreal" data-date="2026-05-27T16:29:38+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPbzVpOFlXQXFLT24wUG9mUU9uNWMxWF9kdy04NEk4Vnk0ajNEc0V1X1pVd0xFRFYzQjJ6ZW9BUE5veTJxOENncnN2cl9SUTdJc2NpcHBGMk16RkJRUHdtVk9hMjhjQXprWDlDNDNCMmdaWXpTM0JWZ3c5Z0dXMlp5UU45cjAtZWM4c3A0b1BHSm1qd0l1RVBvNkN0ekFyUzFUd193cnV2dVE3TUM2eU1jN3pwZXJjTmo5Wkhfb2xIaWRaaFJMSHc?oc=5" target="_blank" rel="noopener">
             <h3>Réseau routier mal en point : Québec se défend de cacher une facture de 31 milliards $</h3>
@@ -1079,6 +1215,16 @@
             <time>28 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Pont de l&#x27;Île-d&#x27;Orléans" data-titre="la mise en service du nouveau pont de l ile-d orleans encore reportee: un document evoque la fermeture du vieux pont apres 2027" data-source="journal de quebec" data-date="2026-05-28T15:12:11+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikAJBVV95cUxQWDctSGtWSnI1Y1hadzdPMkNrYVJDalRhYmpwWXJOZmhFdFFBRTJtcW0tUDZHcGk2UkV2OXl5YVE5RXQ1ZElIMnpfZkliVkR0N1VhRVppU3BxZW45SjNoVmkzWDRuTnBtUXhrUFpwZ1FGRHZSc1RJa0duZEcxdzU3RFBod2tHMWFaX1dhQW1VUDI5VDZUSGMzWlR1QTlsa1hiLTRheklDMnhYWjFiMjQ1aElpelQ2eG04a3hLb0IwV2hqenk1YnJqY1hDZHNDSks1NnIxRnB1d0VYaTVlcTFfQ3JUVmhCU0VobmtUVTZUSVdEUVlXUkcwMjdBQlhqU19zUnludHVua2hiZUZKdVpKNA?oc=5" target="_blank" rel="noopener">
+            <h3>La mise en service du nouveau pont de l’Île-d’Orléans encore reportée: un document évoque la fermeture du vieux pont après 2027</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Pont de l&#x27;Île-d&#x27;Orléans" data-titre="le nouveau pont de l ile-d orleans ne sera pas mis en service en 2028" data-source="journal de quebec" data-date="2026-05-28T14:55:30+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxPQWFQT1JQWHhSa1hmdmVjZGhjVnF3NUJCcWlmRnJTY193WGdWSU5zWGZpMFRGQ25yWGxuLTVFbnppUzBmMzJXa2VXTTVFY2FKbFFvZW5id05RNmx3dlRjcENnSEZkRFJhS0FpZmxfOEgyQ1o2dE9ydGxTdndpVUh4ZU9GSE9xdUhBb3FFdXdqbkxtQXBNUUFKSy1zZnJ2VC1vUm9kTnozREt3c3M?oc=5" target="_blank" rel="noopener">
             <h3>Le nouveau pont de l’Île-d’Orléans ne sera pas mis en service en 2028</h3>
@@ -1159,12 +1305,51 @@
       <section class="bloc projet" data-projet="PQI">
         <h2>PQI</h2>
         <div class="cartes">
-<p class="vide">Aucun article dans les 3 derniers mois.</p>
+        <article class="carte" data-projet="PQI" data-titre="stm : des retards d autorisation de financement coutent cher" data-source="radio-canada" data-date="2026-05-29T08:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMingFBVV95cUxQYTFnaVBQeFhrSGVwUUgxZHpaY3IwQ2JYSlpVVUZDM1RKSm5DZnRwNGJGOVIwWDlnbWVzZmJfNlVaZC1kWnNqZ3pDM1lQenZNS0t0OVpVZmdNMnJXbG5Ud1FzXzZYM1NkRkNlNHd4WXI0SmpaQWN5NHU2RlFxZ2lXTjVwbl9IUmY3ZDk3MFAyeU94dTBmMEZsLVZVaUEzQQ?oc=5" target="_blank" rel="noopener">
+            <h3>STM : des retards d’autorisation de financement coûtent cher</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="PQI" data-titre="plus de 142 m $ alloues au projet de rapibus a gatineau" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQY2t5RHdHX1pIQi1KNC1JQ2FpOExFRi0wdWpzY3RsaFBLSFZXbEUzX2ozWnc1N1NLSFdQamtUMGJiSW9sNVdxamRYR3BUTS04QVBpUGJIbHRiTWwzeGNRelVkREZOZ2paejY4RnNiSW93cXpGbmNEQU5qY3Y1ekFjOVFJNnFMdTRhLXhLWm1FUQ?oc=5" target="_blank" rel="noopener">
+            <h3>Plus de 142 M $ alloués au projet de Rapibus à Gatineau</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
         </div>
       </section>
       <section class="bloc projet" data-projet="Troisième lien">
         <h2>Troisième lien</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Troisième lien" data-titre="apres le troisieme lien, un autre probleme de pont pour la caq" data-source="journal de quebec" data-date="2026-05-29T04:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOelBwcE5JdHNUZUtmX2FsOEItWnU1dWd6dkJfVFRxNnZvVzNxcUVPU0ZteXpMZWJ6dkVZSGU4ZVZXN0wzQ1RGWElrRWZOSGp0U015WGIxcERKWGdmSzNvYnNwdFZnY18yU3BUR3hoLURjMDIwbnBKRUNqUHE2c2xTRS0yMlZJVl9sY2dNLXpyczFXNEU4WWpiZEdQaG5wc2xaZGZ1akV6VQ?oc=5" target="_blank" rel="noopener">
+            <h3>Après le troisième lien, un autre problème de pont pour la CAQ</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
+            <span class="sep">/</span>
+            <time>29 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Troisième lien" data-titre="l abaissement du tablier du pont de quebec promis par frechette en evaluation" data-source="radio-canada" data-date="2026-05-28T20:05:53+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMihgFBVV95cUxQUWk4dmh3R1JLVTJqWGRtRTZRUzg4anZsM1JVMXA2RkFfdThTdDd3dzZud1IxaWlpRW55OU1zVHpnOHdPVmtGUVVMU0hwTFd1bmNsUkdTenliV1MzY1JZR21leGppZG1xdTRMYWViQ0ZxOWJUbUVfVFNaa25zN1RMRW9wVExjdw?oc=5" target="_blank" rel="noopener">
+            <h3>L’abaissement du tablier du pont de Québec promis par Fréchette en évaluation</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Troisième lien" data-titre="patrimoine mondial de l unesco: le 3e lien pourrait menacer le statut du vieux-quebec" data-source="journal de quebec" data-date="2026-05-28T04:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMixgFBVV95cUxPZVhxYjNaX3djaGdnR0dCZ1JzMEtiem5sWHFqeWRJSHNYNjNZZzJ1b1VWZWdDbWFmZGNEcFN4LTdvSldaenlucUtZTlZQUnZrWl83ZGdfZWJmNFNBQ3AyNkM0ZXdWUllPdzVPUDN3RUpXX3FEYnBONnB1QmRIVzRkSExOd24zU0ZZTUlQRlI1d0E2WnpidFRveTBwUll4di1wdDF3dWh5azFFd0d3bUNrN3FrcnZYZzFtRFl6aGg1Y2c1UlIzOGc?oc=5" target="_blank" rel="noopener">
             <h3>Patrimoine mondial de l’UNESCO: le 3e lien pourrait menacer le statut du Vieux-Québec</h3>
@@ -1201,6 +1386,16 @@
           </a>
           <div class="meta">
             <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Troisième lien" data-titre="pour le 3e lien, la caq misera sur un corridor reliant la route lallemand a l autoroute dufferin-montmorency" data-source="journal de quebec" data-date="2026-05-27T04:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi4wFBVV95cUxPdW5jRHNId081aHRWZEZwSUppNDlIVURBcUJ4SWRCQXBTWi1uZnNlSU9oc2gyZ1RJMWNSTEROM29TU2pWSjVIb0phM3RBQ19DTDJZRnBmNHN4djVmeHFLRWZUaTBwaW0tZjd2Z2d0aEhQQnFtckxGZnlOa1RxTHE2V3hPRnFTOUlFbVlnbVhscW85VXMzdF9FbGkzcUZLb01jVkpQaDdVQTJHbmIyRTJaTVU4dVZVSHE1RjFQUExWM1F6LTlLYzhWWVNyYVlMRS1JQ0FVQ0ZZcEdGR2hKSzMyc29aTQ?oc=5" target="_blank" rel="noopener">
+            <h3>Pour le 3e lien, la CAQ misera sur un corridor reliant la route Lallemand à l’autoroute Dufferin-Montmorency</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Journal de Québec</span>
             <span class="sep">/</span>
             <time>27 mai 2026</time>
           </div>
@@ -1290,6 +1485,16 @@
       <section class="bloc projet" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)">
         <h2>Projets d&#x27;intérêt national (gouvernement du Canada)</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)" data-titre="securite et interet national | une etroite conception de la securite" data-source="la presse" data-date="2026-05-25T09:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiwAFBVV95cUxOZ3Z4YWI0ZUdXZFJjZ0VETktnTktHX0YwcmYxSC1lNXZ3RW9ZMEZkck9pNDdPcUdaSXNNNkZiMnc3QXFybXU5ekVLNnBkWHBGU0I5SjNNTkdfOG5nNFcwQmZDcXNyVmRaZXAxbWswekE1V3NHaHV3M0xtMUJWSEhKV0xENV95YlZNeUQtX3hSbzZvSWs5N0NKb05FVXk2eHY3VG5BUjh0Z3pTVWhyR2UzTXZQWXpmS05vU2pvTFh1dm4?oc=5" target="_blank" rel="noopener">
+            <h3>Sécurité et intérêt national | Une étroite conception de la sécurité</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>25 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)" data-titre="une rencontre avec l ombre du separatisme albertain" data-source="radio-canada" data-date="2026-05-24T19:27:52+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxQeU0wTXZRSTREZGgwa0gwREVIYmlXM3pNRlc3YlhrQU9JM3V2Nl9DYWM1TnRWRUlTRF9GRmZ6Q1FpZFZaNnJXSWZwb3FDVXF0VU0xZ01vY2tRRW1PN2oySER4SndFbkg3dEE2VGFjckdsMFM2RVYwUW5TUmVjcVd5elV4X0d5b2IxNWxhbmgxbEJQbm8?oc=5" target="_blank" rel="noopener">
             <h3>Une rencontre avec l’ombre du séparatisme albertain</h3>
@@ -1505,6 +1710,16 @@
       <section class="bloc projet" data-projet="Pipeline en Alberta">
         <h2>Pipeline en Alberta</h2>
         <div class="cartes">
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="bientot un nouveau pipeline canado-americain?" data-source="radio-canada" data-date="2026-05-28T19:47:30+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPVlBhc050Sy0tb2hDLXd6NnlmeVRVdjB3bU5RLUxJa0VKU1FUeU0tcGYzNTJLTG9Vdloxc0pXUkVhbC14UnFwcm1HMHJLb0g3a3VjMk9nU1c1QjJONEhtY09nbzNyZS04aHVaaXg1ZDVyei0wV29iOUdTT0xUeXhCWnl3dDFEakIxMkFrRFBNUEkwU0FMYlZnWUpVS0RkTElHdjRV?oc=5" target="_blank" rel="noopener">
+            <h3>Bientôt un nouveau pipeline canado-américain?</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Pipeline en Alberta" data-titre="plus de 10 ans de tensions entre l alberta et la colombie-britannique" data-source="radio-canada" data-date="2026-05-27T19:41:55+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc0FEWGlzY29hQWJjSU5GOEloVHd2ZWItZ29VUTdpWXhDTEp3ZHc2elRheVJ3UjVsYVhOdGs4UlVJejBNTHRRanhZUUVQejBFMWRPM3JUVVZidFJlTUlrTGF4QWNHTUpKYjAwZlBJdzNfVFBTY0FOZDVhRnF2UVdpTEFEaVhWa2tv?oc=5" target="_blank" rel="noopener">
             <h3>Plus de 10 ans de tensions entre l’Alberta et la Colombie-Britannique</h3>
@@ -1635,6 +1850,16 @@
             <time>2 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="la premiere ministre de l alberta, danielle smith, salue l octroi du permis pour le pipeline canada–etats-unis" data-source="le devoir" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ0ZzMG9KV0hQb3VySU9UaVVfb0ttcGdHc2JqTTVqUERFRHY4OXFhSXdCNHROQnVPSkUwbTF0LWEwRHh4VVA4TmY1cFpHVjMxS3c1TWUwQ2R2T0NMVmNNNmN1d0pzRjNWNWxvUW82cUx6UWRSMERpOEZTMHkxM182MVZMVWlPZU9PaXh5TlRPd19VRDREallpZVE1aUFjeWo5UVFhRENVVQ?oc=5" target="_blank" rel="noopener">
+            <h3>La première ministre de l’Alberta, Danielle Smith, salue l’octroi du permis pour le pipeline Canada–États-Unis</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Pipeline en Alberta" data-titre="extension du pipeline bridger | danielle smith salue l octroi du permis" data-source="la presse" data-date="2026-04-30T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSF9JRGFsQkl3MndCVkg4U1A0OVlUeC0yZU45RDVLZUpkSUNmUmg3dEhIekJCblJXS29QdG0xRDdmM0JPTjNmQ2ZBMXR2YWFEUjJROXdhUC05eUxDMXhLeldFb3NONFJRSk14MTlEUWZSakw0X3pwMjRZaDlRTWdDVW4zdGd1eGtpLTlEMTdZOFNxRTNXS25pb0hGazFHTUREYjh1S2kydnZWaDU5OVNCRVNjbWg1QkJu?oc=5" target="_blank" rel="noopener">
             <h3>Extension du pipeline Bridger | Danielle Smith salue l’octroi du permis</h3>
@@ -1657,9 +1882,10 @@
         </article>
         </div>
       </section>
-  </main>
+    </main>
+  </div>
   <footer>
-    Généré le 28 mai 2026 à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
+    Généré le 29 mai 2026 à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
   </footer>
 
 <script>
