@@ -5,7 +5,7 @@ on:
   # Minute non ronde volontaire : les crons sur l'heure pile sont souvent
   # retardés ou sautés par GitHub en période de charge.
   schedule:
-    - cron: "*/5 * * * *"
+    - cron: "*/59 * * * *"
   # Permet aussi de lancer le robot à la main depuis l'onglet Actions.
   workflow_dispatch:
 
