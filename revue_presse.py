@@ -301,23 +301,35 @@ def generer_html(archive, projets):
     background-size: 22px 22px;
   }}
   .ruban {{ height: 6px; background: linear-gradient(90deg, var(--accent), var(--accent-doux)); }}
-  header {{ max-width: 1100px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }}
+  header {{ max-width: 1280px; margin: 0 auto; padding: 48px 24px 28px; border-bottom: 2px solid var(--encre); }}
   .surtitre {{ font-size: 0.74rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); font-weight: 600; }}
   h1 {{ font-family: 'EB Garamond', serif; font-weight: 600; font-size: clamp(2rem, 5vw, 3.4rem); line-height: 1.05; margin: 10px 0 14px; letter-spacing: -0.01em; }}
   .sous {{ display: flex; flex-wrap: wrap; gap: 16px; align-items: baseline; color: var(--gris); font-size: 0.92rem; }}
   .sous .date {{ font-style: italic; }}
-  main {{ max-width: 1100px; margin: 0 auto; padding: 28px 24px 80px; }}
-  .barre {{ position: sticky; top: 0; z-index: 5; background: var(--papier); padding: 18px 0 14px; margin-bottom: 8px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid var(--ligne); }}
-  .rangee {{ display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }}
-  .rangee label {{ font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-right: 4px; }}
-  .filtre {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 6px 14px; border-radius: 999px; transition: all 0.15s; }}
+  .zone {{ max-width: 1280px; margin: 0 auto; padding: 28px 24px 80px; display: grid; grid-template-columns: 240px 1fr; gap: 36px; align-items: start; }}
+  aside {{ position: sticky; top: 24px; display: flex; flex-direction: column; gap: 22px; }}
+  main {{ min-width: 0; }}
+  .controles {{ display: flex; flex-direction: column; gap: 14px; }}
+  .controles label {{ display: block; font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 4px; }}
+  .controles .periode {{ width: 100%; }}
+  .themes {{ display: flex; flex-direction: column; gap: 8px; }}
+  .themes-titre {{ font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 2px; }}
+  .filtre {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 14px; border-radius: 999px; transition: all 0.15s; text-align: left; }}
   .filtre:hover, .filtre.actif {{ background: var(--encre); color: var(--papier); }}
-  .compte {{ font-size: 0.7rem; opacity: 0.7; margin-left: 3px; }}
-  .periode {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 5px 28px 5px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
+  .compte {{ font-size: 0.7rem; opacity: 0.7; margin-left: 3px; float: right; line-height: 1.4; }}
+  .periode {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 32px 7px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
   .periode:hover {{ background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }}
-  .bloc {{ margin-top: 40px; }}
+  .bloc {{ margin-top: 0; margin-bottom: 40px; }}
+  .bloc:first-child {{ margin-top: 0; }}
   .bloc h2 {{ font-family: 'Jost', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
   .bloc h2::before {{ content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }}
+  @media (max-width: 820px) {{
+    .zone {{ grid-template-columns: 1fr; gap: 24px; }}
+    aside {{ position: static; }}
+    .themes {{ flex-direction: row; flex-wrap: wrap; }}
+    .filtre {{ text-align: center; }}
+    .compte {{ float: none; }}
+  }}
   .cartes {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }}
   .carte {{ background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }}
   .carte:hover {{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }}
@@ -329,7 +341,7 @@ def generer_html(archive, projets):
   .sep {{ opacity: 0.5; }}
   .vide {{ color: var(--gris); font-style: italic; grid-column: 1 / -1; }}
   .bloc.cache, .carte.cache {{ display: none; }}
-  footer {{ max-width: 1100px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }}
+  footer {{ max-width: 1280px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }}
   footer code {{ background: #e8e3d8; padding: 1px 6px; border-radius: 4px; }}
 </style>
 </head>
@@ -344,31 +356,36 @@ def generer_html(archive, projets):
       <span>{len(archive)} au total dans l'archive</span>
     </div>
   </header>
-  <main>
-    <div class="barre">
-      <div class="rangee">
+  <div class="zone">
+    <aside>
+      <div class="controles">
+        <div>
+          <label for="tri">Ordre des thèmes</label>
+          <select class="periode" id="tri">
+            <option value="alpha" selected>Ordre alphabétique</option>
+            <option value="nb">Par nombre d'articles</option>
+          </select>
+        </div>
+        <div>
+          <label for="periode">Afficher les articles</label>
+          <select class="periode" id="periode">
+            <option value="1">Dernières 24 h</option>
+            <option value="7">7 derniers jours</option>
+            <option value="14">14 derniers jours</option>
+            <option value="30">30 derniers jours</option>
+            <option value="90" selected>3 derniers mois</option>
+          </select>
+        </div>
+      </div>
+      <div class="themes">
+        <div class="themes-titre">Thèmes</div>
         {boutons_html}
       </div>
-      <div class="rangee">
-        <label for="tri">Ordre des thèmes :</label>
-        <select class="periode" id="tri">
-          <option value="alpha" selected>Ordre alphabétique</option>
-          <option value="nb">Par nombre d'articles</option>
-        </select>
-      </div>
-      <div class="rangee">
-        <label for="periode">Afficher les articles :</label>
-        <select class="periode" id="periode">
-          <option value="1">Dernières 24 h</option>
-          <option value="7">7 derniers jours</option>
-          <option value="14">14 derniers jours</option>
-          <option value="30">30 derniers jours</option>
-          <option value="90" selected>3 derniers mois</option>
-        </select>
-      </div>
-    </div>
+    </aside>
+    <main>
 {sections_html}
-  </main>
+    </main>
+  </div>
   <footer>
     Généré le {date_titre} à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
   </footer>
