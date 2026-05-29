@@ -290,8 +290,8 @@ def generer_html(archive, projets):
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {{
-    --encre: #0f172a; --papier: #ffffff; --carte: #ffffff;
-    --accent: #1e40af; --accent-doux: #3b82f6; --gris: #64748b; --ligne: #e2e8f0;
+    --encre: #0f172a; --papier: #ffffff; --carte: #f5f7fa;
+    --accent: #1e40af; --accent-doux: #2563eb; --gris: #64748b; --ligne: #e2e8f0;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
