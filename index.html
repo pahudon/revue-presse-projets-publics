@@ -9,8 +9,8 @@
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --encre: #1a1f2e; --papier: #f4f1ea; --carte: #fffefb;
-    --accent: #9a3b2e; --accent-doux: #c46a4a; --gris: #6b6a64; --ligne: #ddd8cc;
+    --encre: #0f172a; --papier: #ffffff; --carte: #ffffff;
+    --accent: #1e40af; --accent-doux: #3b82f6; --gris: #64748b; --ligne: #e2e8f0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -51,7 +51,7 @@
   }
   .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
-  .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(26,31,46,0.10); }
+  .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.10); }
   .carte h3 { font-family: 'EB Garamond', serif; font-weight: 600; font-size: 1.2rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }
   .lien { text-decoration: none; }
   .lien:hover h3 { color: var(--accent); }
@@ -61,7 +61,7 @@
   .vide { color: var(--gris); font-style: italic; grid-column: 1 / -1; }
   .bloc.cache, .carte.cache { display: none; }
   footer { max-width: 1280px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }
-  footer code { background: #e8e3d8; padding: 1px 6px; border-radius: 4px; }
+  footer code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -105,6 +105,7 @@
         <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">7</span></button>
         <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
         <button class="filtre" data-projet="PQI">PQI <span class="compte">2</span></button>
+        <button class="filtre" data-projet="Projets d&#x27;intérêt national">Projets d&#x27;intérêt national <span class="compte">0</span></button>
         <button class="filtre" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)">Projets d&#x27;intérêt national (gouvernement du Canada) <span class="compte">22</span></button>
         <button class="filtre" data-projet="TGV">TGV <span class="compte">30</span></button>
         <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">48</span></button>
@@ -1502,6 +1503,187 @@
         </article>
         </div>
       </section>
+      <section class="bloc projet" data-projet="Projets d&#x27;intérêt national">
+        <h2>Projets d&#x27;intérêt national</h2>
+        <div class="cartes">
+<p class="vide">Aucun article dans les 3 derniers mois.</p>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Pipeline en Alberta">
+        <h2>Pipeline en Alberta</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="bientot un nouveau pipeline canado-americain?" data-source="radio-canada" data-date="2026-05-28T19:47:30+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPVlBhc050Sy0tb2hDLXd6NnlmeVRVdjB3bU5RLUxJa0VKU1FUeU0tcGYzNTJLTG9Vdloxc0pXUkVhbC14UnFwcm1HMHJLb0g3a3VjMk9nU1c1QjJONEhtY09nbzNyZS04aHVaaXg1ZDVyei0wV29iOUdTT0xUeXhCWnl3dDFEakIxMkFrRFBNUEkwU0FMYlZnWUpVS0RkTElHdjRV?oc=5" target="_blank" rel="noopener">
+            <h3>Bientôt un nouveau pipeline canado-américain?</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>28 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="plus de 10 ans de tensions entre l alberta et la colombie-britannique" data-source="radio-canada" data-date="2026-05-27T19:41:55+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc0FEWGlzY29hQWJjSU5GOEloVHd2ZWItZ29VUTdpWXhDTEp3ZHc2elRheVJ3UjVsYVhOdGs4UlVJejBNTHRRanhZUUVQejBFMWRPM3JUVVZidFJlTUlrTGF4QWNHTUpKYjAwZlBJdzNfVFBTY0FOZDVhRnF2UVdpTEFEaVhWa2tv?oc=5" target="_blank" rel="noopener">
+            <h3>Plus de 10 ans de tensions entre l’Alberta et la Colombie-Britannique</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="qu est-ce que le projet de captage de carbone pathways en alberta, qui accompagne un eventuel pipeline?" data-source="le devoir" data-date="2026-05-25T22:03:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOZHZxd0hXTjN5YnZROTU5Y1pmWGxXc2dUb21YNDdfUUhzZU52SU0xb1JYb1dVQ2F3LUNjM1EyaW9NMDJMNEU1eEpXc2UzbnhBaHJDdk16VUpQZVNkT3RuMURyejlaR2Iwb01JRHlSVlFFQVg5Vk5sQWtuT2hnY0hyQVk2ZlhxUDF4S3hFSFQxRkhTckt0VnhRajA0OHFfYlhjZzZhX0tB?oc=5" target="_blank" rel="noopener">
+            <h3>Qu’est-ce que le projet de captage de carbone Pathways en Alberta, qui accompagne un éventuel pipeline?</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>25 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="conference des premiers ministres de l ouest" data-source="radio-canada" data-date="2026-05-25T12:22:26+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNWmswMm5wU1I0aDI4ZFI5Uy1HN09BNTh6UE5DYXc1S0pKbVF2ZTJOWDlUbkRMakJrS3FGZlBNREFRcmNORThUM2trR2oxRDdud29EVHlJaF9Fb1VOSWJFUDZJVjZfWXI4ZENRU2VLOTZsNlhmckZMSnViMDVkRDRXRVNOUDc0N1IzNDVEenVCV3lyOEJSZEtPS005ZUVmLTh2YzVvekp6RXZnNTNCTHI1MGNCWGVfX3VGZnh5NTFR?oc=5" target="_blank" rel="noopener">
+            <h3>Conférence des premiers ministres de l’Ouest</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>25 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="objectifs revus a la baisse dans l entente ottawa-alberta sur les sables bitumineux" data-source="le devoir" data-date="2026-05-22T22:45:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2NFdWhaYUdSRlcyLXZMTGFjVEhPX3hmV1VCRHR1d2VhNE5TbGV4YWZTTmVMMlpvVnROb1ktMjN1TmxzVFcyMWVKSlFUUFVITDhkRGVPdG9OLTdHRG9JNmVvaFV1Tm5NbmVrdkxKVXhTQnpCc3N4LWdqUnRSaG9ueC0yUENmSHhRRlNsNXVXLUZUVEJIdG50VngzLUhqVm5NWjRNcE1CMA?oc=5" target="_blank" rel="noopener">
+            <h3>Objectifs revus à la baisse dans l’entente Ottawa-Alberta sur les sables bitumineux</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>22 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="entente avec l alberta : le malaise se repand chez les liberaux" data-source="radio-canada" data-date="2026-05-22T08:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQTlVvaUNIemdTWURJamIzRWhiVU1UUEV5QnlVTGhiZzJzTlBtZ2prNFhBZ1plRmdBXy12ZVpFRDJxWUdRNVpuSUVScmJ5QmRfaUJNZDRPN0lTVmZLMFNaV0Z2WnBNQndVOE1OckNoYjF4RzBTYUxIaHpRNnkteG9fOTkwSE5iUU5yT3c?oc=5" target="_blank" rel="noopener">
+            <h3>Entente avec l’Alberta : le malaise se répand chez les libéraux</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>22 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="l alberta prete a plus de concessions pour un pipeline | rci" data-source="radio-canada" data-date="2026-05-21T19:29:08+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPenQ5UEdZbEJRS2MtWi0zUHM2b1RYNWxkTWRtbFhBbVlVRFhXdE9WSkJrRGRIVWI0NnlJZEwwT1ljTTdkRGJyY2ZZZTFzUk5GcEozQW9pdXpTUmZib3lCcDJqTi1WbEY2YVB0aTBldll6b0YzUnR6R1ZiWlJkMS11ZEk0TjdHNmFIUkdUZEltNy1PZw?oc=5" target="_blank" rel="noopener">
+            <h3>L’Alberta prête à plus de concessions pour un pipeline | RCI</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="entente ottawa-alberta : construction d un oleoduc prevue des 2027" data-source="radio-canada" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUllBVlBDa0RKVkYzNTM2WXJTYzB4aDBvVXl6Zk9ibDRzWUZXUzBoYmpZem8wMU91YmxDWDE0T3I1Mko4SjRKVTlyRGZ3TGNtNk9Id1FuTlp6VEE2dnB3eUtPMGxSVWZIMVlDckFHcWNlVWg0MkdtUHNrZDZ0T1IwQnFCUUxRYk1TdF91ZWYzM2F3ZjVhUWoyNGNWam13Nk80N2JHVDVfbkRlTTcwMXJJTFRqSEp0ZG40SXF6VDFwWEJOY2c?oc=5" target="_blank" rel="noopener">
+            <h3>Entente Ottawa-Alberta : construction d’un oléoduc prévue dès 2027</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="accord sur un pipeline : opposition de la c.-b." data-source="radio-canada" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxOLVBWSXBOTEF0OC1fQ3pNV29samFzOTNkSHo5RTNSYlJLMmJFMDdUaFgxcVAwaXNvVGtTMV9LVEdEaWZYSG8wS1pfSTVqdWZkd3pDX045eTlDdVdKUVYwT1BtakNOSWJKZEo5WFNKUDVIc0JPcDBvdlA0bHpjd2VnZDhfOS1BNmNmUWNOUmRtWXFUTW9zLWM1WFVHRmVfcktlaTltT3kzV2RSTXZLQXJnQUd4dXkxc1BMZS15cS1tdDM3dkM5Tl9xalJ3U2lvcGk2SW82N2lKaUFkVGhrTFgyZTA5R2NhQQ?oc=5" target="_blank" rel="noopener">
+            <h3>Accord sur un pipeline : opposition de la C.-B.</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="trans mountain estime que le pipeline devrait appartenir a ottawa" data-source="radio-canada" data-date="2026-05-11T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPbmRCU3QwSWVEaHZiVmQ5Sng4NUxRVWtSZFBVR1ZKcUZlTS1fWjN4QjdrMGdlS2RTajhfOE5yYUtscXlCcE5OeFRuM3E0d283RVNMN1N6ZTh2TWpHZ3ZXWEw0TG1EenNzZmJmcmcydm94SVlDNVlnSmx6VUxnZzA2d2F3?oc=5" target="_blank" rel="noopener">
+            <h3>Trans Mountain estime que le pipeline devrait appartenir à Ottawa</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>11 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="apres des progres pour un pipeline, danielle smith vante le federalisme cooperatif" data-source="le devoir" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOY3R6dXZlcm41RnhjME5oeGQ1NUlKWDl5TmxOUzBtbFZ2MUQzekhJZFQzY2Vsd1FOVHFDejRHQ2J6NXNhNEdvT3dpUmhxVW5KaTlha0lNSldNV1ZoMUF2UjBzQ2pMaHJDYzBZZGRCa2ZXOXhFQjl1a21TUy01VUdYcW5rT0hFN3BONy1sOFo1MU51N3pqTVdDLVNFZU1ONUJ0MzNnMm1lUkI4bTBYNHFpcGN3?oc=5" target="_blank" rel="noopener">
+            <h3>Après des progrès pour un pipeline, Danielle Smith vante le fédéralisme coopératif</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="smith et carney n ont rien conclu lors de leur rencontre" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOY1dIaG8tUnZpNzdjV3R1cHZjcGxsM1RQdDV2NUo4SGFMVXl4ZFV0cEJnQlZ5Rk5sLWFjcTBCam1icG5zUXFaRS02LWVHVV9IenhubjA2VUprX0ZWbGMxNF82eXNoMnNUb2hBcFM3OEtPQWljczFadHcwWDB2V3picmdfVHdZcmxqbGc?oc=5" target="_blank" rel="noopener">
+            <h3>Smith et Carney n’ont rien conclu lors de leur rencontre</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>8 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="episode du jeudi 7 mai 2026" data-source="radio-canada" data-date="2026-05-07T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQZG4zYVNQYU9yRHE5U1Qwak5IQ1BZcEdOaFI5UHhiWm5EY0MwbmxjM1A2WFdrRFJFbEZ4V0xNZi05czI4cWxBNGxHYVdqZGlCZHVRUHlvQUVUMXBZUzVsamNldHphalJoR3lYOGFwcDZMU3hJbVp3X1dneDBpNmFoUU0tdVpQMmJwdDdlWHFYaWwxSWpBMkZtOWhXX0kwdVR0?oc=5" target="_blank" rel="noopener">
+            <h3>Épisode du jeudi 7 mai 2026</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>7 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="l oleoduc de l alberta est « probable », dit carney" data-source="radio-canada" data-date="2026-05-02T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE4xbjFWX2hVQ1FFODVzLTFUdlN2cFZyakp3MFdCdHJidXEtNXVOSFlidEpDN044Y2FCT3R2ZHpoZHRhVUV6N3p0S0g0d3RIVC1jSndjWTVraTF4eUEzUXN4eFcxRmUxYWJxcmNWcDlaZmdpUjVGVmhZMW80eU4?oc=5" target="_blank" rel="noopener">
+            <h3>L’oléoduc de l’Alberta est « probable », dit Carney</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>2 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="la premiere ministre de l alberta, danielle smith, salue l octroi du permis pour le pipeline canada–etats-unis" data-source="le devoir" data-date="2026-05-01T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ0ZzMG9KV0hQb3VySU9UaVVfb0ttcGdHc2JqTTVqUERFRHY4OXFhSXdCNHROQnVPSkUwbTF0LWEwRHh4VVA4TmY1cFpHVjMxS3c1TWUwQ2R2T0NMVmNNNmN1d0pzRjNWNWxvUW82cUx6UWRSMERpOEZTMHkxM182MVZMVWlPZU9PaXh5TlRPd19VRDREallpZVE1aUFjeWo5UVFhRENVVQ?oc=5" target="_blank" rel="noopener">
+            <h3>La première ministre de l’Alberta, Danielle Smith, salue l’octroi du permis pour le pipeline Canada–États-Unis</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>1 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="extension du pipeline bridger | danielle smith salue l octroi du permis" data-source="la presse" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSF9JRGFsQkl3MndCVkg4U1A0OVlUeC0yZU45RDVLZUpkSUNmUmg3dEhIekJCblJXS29QdG0xRDdmM0JPTjNmQ2ZBMXR2YWFEUjJROXdhUC05eUxDMXhLeldFb3NONFJRSk14MTlEUWZSakw0X3pwMjRZaDlRTWdDVW4zdGd1eGtpLTlEMTdZOFNxRTNXS25pb0hGazFHTUREYjh1S2kydnZWaDU5OVNCRVNjbWg1QkJu?oc=5" target="_blank" rel="noopener">
+            <h3>Extension du pipeline Bridger | Danielle Smith salue l’octroi du permis</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="trump autorise un oleoduc avec le canada" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOczZ3bUl0ZGljNDBBOUlYdUMyNjlxUGFVVDIzaVJDQmRQbzZlV3FDZjF0QTFXREg2VVZWekNZVzdybTJ3ek1CMXlqWlNCWXBoMks4SFpmZmRWX3Azak1wZmQxaDhaWmtnSThid1NyZ2w1dlhITldvTWJRT3RsTjMtZVVFZw?oc=5" target="_blank" rel="noopener">
+            <h3>Trump autorise un oléoduc avec le Canada</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>30 avr. 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
       <section class="bloc projet" data-projet="Projets d&#x27;intérêt national (gouvernement du Canada)">
         <h2>Projets d&#x27;intérêt national (gouvernement du Canada)</h2>
         <div class="cartes">
@@ -1723,181 +1905,6 @@
             <span class="source">La Presse</span>
             <span class="sep">/</span>
             <time>5 mai 2026</time>
-          </div>
-        </article>
-        </div>
-      </section>
-      <section class="bloc projet" data-projet="Pipeline en Alberta">
-        <h2>Pipeline en Alberta</h2>
-        <div class="cartes">
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="bientot un nouveau pipeline canado-americain?" data-source="radio-canada" data-date="2026-05-28T19:47:30+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPVlBhc050Sy0tb2hDLXd6NnlmeVRVdjB3bU5RLUxJa0VKU1FUeU0tcGYzNTJLTG9Vdloxc0pXUkVhbC14UnFwcm1HMHJLb0g3a3VjMk9nU1c1QjJONEhtY09nbzNyZS04aHVaaXg1ZDVyei0wV29iOUdTT0xUeXhCWnl3dDFEakIxMkFrRFBNUEkwU0FMYlZnWUpVS0RkTElHdjRV?oc=5" target="_blank" rel="noopener">
-            <h3>Bientôt un nouveau pipeline canado-américain?</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>28 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="plus de 10 ans de tensions entre l alberta et la colombie-britannique" data-source="radio-canada" data-date="2026-05-27T19:41:55+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxQc0FEWGlzY29hQWJjSU5GOEloVHd2ZWItZ29VUTdpWXhDTEp3ZHc2elRheVJ3UjVsYVhOdGs4UlVJejBNTHRRanhZUUVQejBFMWRPM3JUVVZidFJlTUlrTGF4QWNHTUpKYjAwZlBJdzNfVFBTY0FOZDVhRnF2UVdpTEFEaVhWa2tv?oc=5" target="_blank" rel="noopener">
-            <h3>Plus de 10 ans de tensions entre l’Alberta et la Colombie-Britannique</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>27 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="qu est-ce que le projet de captage de carbone pathways en alberta, qui accompagne un eventuel pipeline?" data-source="le devoir" data-date="2026-05-25T22:03:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOZHZxd0hXTjN5YnZROTU5Y1pmWGxXc2dUb21YNDdfUUhzZU52SU0xb1JYb1dVQ2F3LUNjM1EyaW9NMDJMNEU1eEpXc2UzbnhBaHJDdk16VUpQZVNkT3RuMURyejlaR2Iwb01JRHlSVlFFQVg5Vk5sQWtuT2hnY0hyQVk2ZlhxUDF4S3hFSFQxRkhTckt0VnhRajA0OHFfYlhjZzZhX0tB?oc=5" target="_blank" rel="noopener">
-            <h3>Qu’est-ce que le projet de captage de carbone Pathways en Alberta, qui accompagne un éventuel pipeline?</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Le Devoir</span>
-            <span class="sep">/</span>
-            <time>25 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="conference des premiers ministres de l ouest" data-source="radio-canada" data-date="2026-05-25T12:22:26+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNWmswMm5wU1I0aDI4ZFI5Uy1HN09BNTh6UE5DYXc1S0pKbVF2ZTJOWDlUbkRMakJrS3FGZlBNREFRcmNORThUM2trR2oxRDdud29EVHlJaF9Fb1VOSWJFUDZJVjZfWXI4ZENRU2VLOTZsNlhmckZMSnViMDVkRDRXRVNOUDc0N1IzNDVEenVCV3lyOEJSZEtPS005ZUVmLTh2YzVvekp6RXZnNTNCTHI1MGNCWGVfX3VGZnh5NTFR?oc=5" target="_blank" rel="noopener">
-            <h3>Conférence des premiers ministres de l’Ouest</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>25 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="objectifs revus a la baisse dans l entente ottawa-alberta sur les sables bitumineux" data-source="le devoir" data-date="2026-05-22T22:45:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOU2NFdWhaYUdSRlcyLXZMTGFjVEhPX3hmV1VCRHR1d2VhNE5TbGV4YWZTTmVMMlpvVnROb1ktMjN1TmxzVFcyMWVKSlFUUFVITDhkRGVPdG9OLTdHRG9JNmVvaFV1Tm5NbmVrdkxKVXhTQnpCc3N4LWdqUnRSaG9ueC0yUENmSHhRRlNsNXVXLUZUVEJIdG50VngzLUhqVm5NWjRNcE1CMA?oc=5" target="_blank" rel="noopener">
-            <h3>Objectifs revus à la baisse dans l’entente Ottawa-Alberta sur les sables bitumineux</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Le Devoir</span>
-            <span class="sep">/</span>
-            <time>22 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="entente avec l alberta : le malaise se repand chez les liberaux" data-source="radio-canada" data-date="2026-05-22T08:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQTlVvaUNIemdTWURJamIzRWhiVU1UUEV5QnlVTGhiZzJzTlBtZ2prNFhBZ1plRmdBXy12ZVpFRDJxWUdRNVpuSUVScmJ5QmRfaUJNZDRPN0lTVmZLMFNaV0Z2WnBNQndVOE1OckNoYjF4RzBTYUxIaHpRNnkteG9fOTkwSE5iUU5yT3c?oc=5" target="_blank" rel="noopener">
-            <h3>Entente avec l’Alberta : le malaise se répand chez les libéraux</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>22 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="l alberta prete a plus de concessions pour un pipeline | rci" data-source="radio-canada" data-date="2026-05-21T19:29:08+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMikgFBVV95cUxPenQ5UEdZbEJRS2MtWi0zUHM2b1RYNWxkTWRtbFhBbVlVRFhXdE9WSkJrRGRIVWI0NnlJZEwwT1ljTTdkRGJyY2ZZZTFzUk5GcEozQW9pdXpTUmZib3lCcDJqTi1WbEY2YVB0aTBldll6b0YzUnR6R1ZiWlJkMS11ZEk0TjdHNmFIUkdUZEltNy1PZw?oc=5" target="_blank" rel="noopener">
-            <h3>L’Alberta prête à plus de concessions pour un pipeline | RCI</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>21 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="entente ottawa-alberta : construction d un oleoduc prevue des 2027" data-source="radio-canada" data-date="2026-05-15T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiwwFBVV95cUxPUllBVlBDa0RKVkYzNTM2WXJTYzB4aDBvVXl6Zk9ibDRzWUZXUzBoYmpZem8wMU91YmxDWDE0T3I1Mko4SjRKVTlyRGZ3TGNtNk9Id1FuTlp6VEE2dnB3eUtPMGxSVWZIMVlDckFHcWNlVWg0MkdtUHNrZDZ0T1IwQnFCUUxRYk1TdF91ZWYzM2F3ZjVhUWoyNGNWam13Nk80N2JHVDVfbkRlTTcwMXJJTFRqSEp0ZG40SXF6VDFwWEJOY2c?oc=5" target="_blank" rel="noopener">
-            <h3>Entente Ottawa-Alberta : construction d’un oléoduc prévue dès 2027</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>15 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="accord sur un pipeline : opposition de la c.-b." data-source="radio-canada" data-date="2026-05-15T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMi5gFBVV95cUxOLVBWSXBOTEF0OC1fQ3pNV29samFzOTNkSHo5RTNSYlJLMmJFMDdUaFgxcVAwaXNvVGtTMV9LVEdEaWZYSG8wS1pfSTVqdWZkd3pDX045eTlDdVdKUVYwT1BtakNOSWJKZEo5WFNKUDVIc0JPcDBvdlA0bHpjd2VnZDhfOS1BNmNmUWNOUmRtWXFUTW9zLWM1WFVHRmVfcktlaTltT3kzV2RSTXZLQXJnQUd4dXkxc1BMZS15cS1tdDM3dkM5Tl9xalJ3U2lvcGk2SW82N2lKaUFkVGhrTFgyZTA5R2NhQQ?oc=5" target="_blank" rel="noopener">
-            <h3>Accord sur un pipeline : opposition de la C.-B.</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>15 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="trans mountain estime que le pipeline devrait appartenir a ottawa" data-source="radio-canada" data-date="2026-05-11T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPbmRCU3QwSWVEaHZiVmQ5Sng4NUxRVWtSZFBVR1ZKcUZlTS1fWjN4QjdrMGdlS2RTajhfOE5yYUtscXlCcE5OeFRuM3E0d283RVNMN1N6ZTh2TWpHZ3ZXWEw0TG1EenNzZmJmcmcydm94SVlDNVlnSmx6VUxnZzA2d2F3?oc=5" target="_blank" rel="noopener">
-            <h3>Trans Mountain estime que le pipeline devrait appartenir à Ottawa</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>11 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="apres des progres pour un pipeline, danielle smith vante le federalisme cooperatif" data-source="le devoir" data-date="2026-05-08T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMisgFBVV95cUxOY3R6dXZlcm41RnhjME5oeGQ1NUlKWDl5TmxOUzBtbFZ2MUQzekhJZFQzY2Vsd1FOVHFDejRHQ2J6NXNhNEdvT3dpUmhxVW5KaTlha0lNSldNV1ZoMUF2UjBzQ2pMaHJDYzBZZGRCa2ZXOXhFQjl1a21TUy01VUdYcW5rT0hFN3BONy1sOFo1MU51N3pqTVdDLVNFZU1ONUJ0MzNnMm1lUkI4bTBYNHFpcGN3?oc=5" target="_blank" rel="noopener">
-            <h3>Après des progrès pour un pipeline, Danielle Smith vante le fédéralisme coopératif</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Le Devoir</span>
-            <span class="sep">/</span>
-            <time>8 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="smith et carney n ont rien conclu lors de leur rencontre" data-source="radio-canada" data-date="2026-05-08T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiigFBVV95cUxOY1dIaG8tUnZpNzdjV3R1cHZjcGxsM1RQdDV2NUo4SGFMVXl4ZFV0cEJnQlZ5Rk5sLWFjcTBCam1icG5zUXFaRS02LWVHVV9IenhubjA2VUprX0ZWbGMxNF82eXNoMnNUb2hBcFM3OEtPQWljczFadHcwWDB2V3picmdfVHdZcmxqbGc?oc=5" target="_blank" rel="noopener">
-            <h3>Smith et Carney n’ont rien conclu lors de leur rencontre</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>8 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="episode du jeudi 7 mai 2026" data-source="radio-canada" data-date="2026-05-07T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQZG4zYVNQYU9yRHE5U1Qwak5IQ1BZcEdOaFI5UHhiWm5EY0MwbmxjM1A2WFdrRFJFbEZ4V0xNZi05czI4cWxBNGxHYVdqZGlCZHVRUHlvQUVUMXBZUzVsamNldHphalJoR3lYOGFwcDZMU3hJbVp3X1dneDBpNmFoUU0tdVpQMmJwdDdlWHFYaWwxSWpBMkZtOWhXX0kwdVR0?oc=5" target="_blank" rel="noopener">
-            <h3>Épisode du jeudi 7 mai 2026</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>7 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="l oleoduc de l alberta est « probable », dit carney" data-source="radio-canada" data-date="2026-05-02T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMifEFVX3lxTE4xbjFWX2hVQ1FFODVzLTFUdlN2cFZyakp3MFdCdHJidXEtNXVOSFlidEpDN044Y2FCT3R2ZHpoZHRhVUV6N3p0S0g0d3RIVC1jSndjWTVraTF4eUEzUXN4eFcxRmUxYWJxcmNWcDlaZmdpUjVGVmhZMW80eU4?oc=5" target="_blank" rel="noopener">
-            <h3>L’oléoduc de l’Alberta est « probable », dit Carney</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>2 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="la premiere ministre de l alberta, danielle smith, salue l octroi du permis pour le pipeline canada–etats-unis" data-source="le devoir" data-date="2026-05-01T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ0ZzMG9KV0hQb3VySU9UaVVfb0ttcGdHc2JqTTVqUERFRHY4OXFhSXdCNHROQnVPSkUwbTF0LWEwRHh4VVA4TmY1cFpHVjMxS3c1TWUwQ2R2T0NMVmNNNmN1d0pzRjNWNWxvUW82cUx6UWRSMERpOEZTMHkxM182MVZMVWlPZU9PaXh5TlRPd19VRDREallpZVE1aUFjeWo5UVFhRENVVQ?oc=5" target="_blank" rel="noopener">
-            <h3>La première ministre de l’Alberta, Danielle Smith, salue l’octroi du permis pour le pipeline Canada–États-Unis</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Le Devoir</span>
-            <span class="sep">/</span>
-            <time>1 mai 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="extension du pipeline bridger | danielle smith salue l octroi du permis" data-source="la presse" data-date="2026-04-30T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxOSF9JRGFsQkl3MndCVkg4U1A0OVlUeC0yZU45RDVLZUpkSUNmUmg3dEhIekJCblJXS29QdG0xRDdmM0JPTjNmQ2ZBMXR2YWFEUjJROXdhUC05eUxDMXhLeldFb3NONFJRSk14MTlEUWZSakw0X3pwMjRZaDlRTWdDVW4zdGd1eGtpLTlEMTdZOFNxRTNXS25pb0hGazFHTUREYjh1S2kydnZWaDU5OVNCRVNjbWg1QkJu?oc=5" target="_blank" rel="noopener">
-            <h3>Extension du pipeline Bridger | Danielle Smith salue l’octroi du permis</h3>
-          </a>
-          <div class="meta">
-            <span class="source">La Presse</span>
-            <span class="sep">/</span>
-            <time>30 avr. 2026</time>
-          </div>
-        </article>
-        <article class="carte" data-projet="Pipeline en Alberta" data-titre="trump autorise un oleoduc avec le canada" data-source="radio-canada" data-date="2026-04-30T07:00:00+00:00">
-          <a class="lien" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOczZ3bUl0ZGljNDBBOUlYdUMyNjlxUGFVVDIzaVJDQmRQbzZlV3FDZjF0QTFXREg2VVZWekNZVzdybTJ3ek1CMXlqWlNCWXBoMks4SFpmZmRWX3Azak1wZmQxaDhaWmtnSThid1NyZ2w1dlhITldvTWJRT3RsTjMtZVVFZw?oc=5" target="_blank" rel="noopener">
-            <h3>Trump autorise un oléoduc avec le Canada</h3>
-          </a>
-          <div class="meta">
-            <span class="source">Radio-Canada</span>
-            <span class="sep">/</span>
-            <time>30 avr. 2026</time>
           </div>
         </article>
         </div>
