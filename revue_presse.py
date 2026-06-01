@@ -287,7 +287,7 @@ def generer_html(archive, projets):
 <title>Revue de presse : grands projets publics au Québec</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {{
     --encre: #0f172a; --papier: #ffffff; --carte: #f5f7fa;
@@ -295,7 +295,7 @@ def generer_html(archive, projets):
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
-    font-family: 'Inter', sans-serif; background: var(--papier);
+    font-family: 'IBM Plex Sans', sans-serif; background: var(--papier);
     color: var(--encre); line-height: 1.5;
     background-image: radial-gradient(var(--ligne) 0.5px, transparent 0.5px);
     background-size: 22px 22px;
@@ -321,7 +321,7 @@ def generer_html(archive, projets):
   .periode:hover {{ background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }}
   .bloc {{ margin-top: 0; margin-bottom: 40px; }}
   .bloc:first-child {{ margin-top: 0; }}
-  .bloc h2 {{ font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
+  .bloc h2 {{ font-family: 'IBM Plex Sans', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }}
   .bloc h2::before {{ content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }}
   @media (max-width: 820px) {{
     .zone {{ grid-template-columns: 1fr; gap: 24px; }}
