@@ -140,6 +140,32 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "Port de Montréal (Contrecœur)",
+      "mots_cles": [
+        "Expansion Port de Montréal Contrecœur"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Nouveau Monde Graphite",
+      "mots_cles": [
+        "\"Nouveau Monde Graphite\""
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
