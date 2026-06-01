@@ -6,15 +6,15 @@
 <title>Revue de presse : grands projets publics au Québec</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {
-    --encre: #0f172a; --papier: #ffffff; --carte: #f5f7fa;
-    --accent: #1e40af; --accent-doux: #2563eb; --gris: #64748b; --ligne: #e2e8f0;
+    --encre: #1c1c1c; --papier: #ffffff; --carte: #efefef;
+    --accent: #0c4466; --accent-doux: #2b6a92; --gris: #6b6b6b; --ligne: #dcdcdc;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Inter', sans-serif; background: var(--papier);
+    font-family: 'IBM Plex Sans', sans-serif; background: var(--papier);
     color: var(--encre); line-height: 1.5;
     background-image: radial-gradient(var(--ligne) 0.5px, transparent 0.5px);
     background-size: 22px 22px;
@@ -40,7 +40,7 @@
   .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
   .bloc { margin-top: 0; margin-bottom: 40px; }
   .bloc:first-child { margin-top: 0; }
-  .bloc h2 { font-family: 'Inter', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
+  .bloc h2 { font-family: 'IBM Plex Sans', sans-serif; font-size: 1.5rem; font-weight: 500; padding-bottom: 8px; margin-bottom: 18px; border-bottom: 1px solid var(--ligne); position: relative; }
   .bloc h2::before { content: ""; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background: var(--accent); }
   @media (max-width: 820px) {
     .zone { grid-template-columns: 1fr; gap: 24px; }
@@ -51,7 +51,7 @@
   }
   .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
-  .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.10); }
+  .carte:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(28,28,28,0.10); }
   .carte h3 { font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 1.2rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }
   .lien { text-decoration: none; }
   .lien:hover h3 { color: var(--accent); }
@@ -61,7 +61,7 @@
   .vide { color: var(--gris); font-style: italic; grid-column: 1 / -1; }
   .bloc.cache, .carte.cache { display: none; }
   footer { max-width: 1280px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }
-  footer code { background: #f1f5f9; padding: 1px 6px; border-radius: 4px; }
+  footer code { background: #efefef; padding: 1px 6px; border-radius: 4px; }
 </style>
 </head>
 <body>
@@ -71,8 +71,8 @@
     <h1>Grands projets publics au Québec</h1>
     <div class="sous">
       <span class="date">1 juin 2026</span>
-      <span>192 articles sur les 3 derniers mois</span>
-      <span>192 au total dans l'archive</span>
+      <span>199 articles sur les 3 derniers mois</span>
+      <span>199 au total dans l'archive</span>
     </div>
   </header>
   <div class="zone">
@@ -101,9 +101,11 @@
         <button class="filtre actif" data-projet="tous">Tous</button>
         <button class="filtre" data-projet="DMA">DMA <span class="compte">9</span></button>
         <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">24</span></button>
-        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta <span class="compte">22</span></button>
+        <button class="filtre" data-projet="Nouveau Monde Graphite">Nouveau Monde Graphite <span class="compte">4</span></button>
+        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta <span class="compte">23</span></button>
         <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">11</span></button>
         <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">3</span></button>
+        <button class="filtre" data-projet="Port de Montréal (Contrecœur)">Port de Montréal (Contrecœur) <span class="compte">2</span></button>
         <button class="filtre" data-projet="PQI">PQI <span class="compte">3</span></button>
         <button class="filtre" data-projet="Projets d&#x27;intérêt national">Projets d&#x27;intérêt national <span class="compte">23</span></button>
         <button class="filtre" data-projet="TGV">TGV <span class="compte">31</span></button>
@@ -1990,6 +1992,16 @@
             <time>15 mai 2026</time>
           </div>
         </article>
+        <article class="carte" data-projet="Pipeline en Alberta" data-titre="a 130 $ la tonne, la taxe carbone albertaine serait inequitable, dit david eby" data-source="radio-canada" data-date="2026-05-13T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNdlNhMVlQV1pkV21VMXNObFRtQ3JiTnRKUkFmcnlUNmJyYjdVTW1aZ0x2eU5mQzFmaGx1M2VXWXIwV0NyY1QzdTZQSE91anhocnVnRW1XclM2UVNqbHRiUVZsaVNZRGpoY1VZMFZxQkw2c2pnNVlrRHowLS1PQkt2Z1RBLVhkSmFOOVNsVHBwR3B2V00?oc=5" target="_blank" rel="noopener">
+            <h3>À 130 $ la tonne, la taxe carbone albertaine serait inéquitable, dit David Eby</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>13 mai 2026</time>
+          </div>
+        </article>
         <article class="carte" data-projet="Pipeline en Alberta" data-titre="trans mountain estime que le pipeline devrait appartenir a ottawa" data-source="radio-canada" data-date="2026-05-11T07:00:00+00:00">
           <a class="lien" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxPbmRCU3QwSWVEaHZiVmQ5Sng4NUxRVWtSZFBVR1ZKcUZlTS1fWjN4QjdrMGdlS2RTajhfOE5yYUtscXlCcE5OeFRuM3E0d283RVNMN1N6ZTh2TWpHZ3ZXWEw0TG1EenNzZmJmcmcydm94SVlDNVlnSmx6VUxnZzA2d2F3?oc=5" target="_blank" rel="noopener">
             <h3>Trans Mountain estime que le pipeline devrait appartenir à Ottawa</h3>
@@ -2078,6 +2090,76 @@
             <span class="source">Radio-Canada</span>
             <span class="sep">/</span>
             <time>30 avr. 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Port de Montréal (Contrecœur)">
+        <h2>Port de Montréal (Contrecœur)</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Port de Montréal (Contrecœur)" data-titre="contrecœur subit les contrecoups du conflit en iran" data-source="la presse" data-date="2026-05-16T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMisAFBVV95cUxOZ19fdTN5My1YVHlRbEhELTlDSHRZOUhwby1aZXQyT2dTdHB6TXlFUEc4NE54d2xlZTFTUTY3MUNGTkFwSmVvemRwZjE2YmhDQnlzMXhCWjhLWlY5UDcxME01cDRxMFpNQ3JhTm9yNHRsVHY3b2tEU3VqNDFUaTlIU2dGaE9ZTVYwa3ZFOW9FZlUtc015NDhSMkk5aVFVd05UTkZ0NERTeGlvemlPQW9RSw?oc=5" target="_blank" rel="noopener">
+            <h3>Contrecœur subit les contrecoups du conflit en Iran</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>16 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Port de Montréal (Contrecœur)" data-titre="ancien architecte de l expansion a contrecœur | le port de montreal a son capitaine" data-source="la presse" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxORTBvSGZsQ2doN21DdnZMTmRzMm90RUdTa1ZxbUNkbFZtUXFBR2hVWnB4S093UTR6RElzVHpDTUpXM2VwcGd1LTFyc0xXS1A3dTVLVmxUVW03aTl6dUtQYjV1YTliQWJ6YU9fY3loVG9WUURuaDVITEZpZFFKUGRPOElhemRrQVlPSU1HeklDQ1VVdkV3VTY4NDMzVTYxMW0tVmpjSmN5U2QtZXFBUHdkbVdmN3JyOEVQbnFoWDhqekt3WnNpblhtaERR?oc=5" target="_blank" rel="noopener">
+            <h3>Ancien architecte de l’expansion à Contrecœur | Le Port de Montréal a son capitaine</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Nouveau Monde Graphite">
+        <h2>Nouveau Monde Graphite</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Nouveau Monde Graphite" data-titre="dependance energetique: le quebec doit reprendre le controle" data-source="le journal de montreal" data-date="2026-05-21T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNVzhoQzd6R3ByVFJRU1BZVUxTNGxYclpTX0tOQk5XZ3BBSk1NSVZHSjRUUUxIS3k2dDlpSDNzb3ZRNW5Sb0tkSmlJRTkxNE5GanNYSDNnS3h2QXVTWHoxeGUtc19WWHpLVVNobkR1NEJJdWlYS2dXX0ZuMEFuanJPYVc0VGRtR192VG92RzRHMjBFMmluLU5aYjlyWUE2aHRsV1RjeEl5cw?oc=5" target="_blank" rel="noopener">
+            <h3>Dépendance énergétique: le Québec doit reprendre le contrôle</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Journal de Montréal</span>
+            <span class="sep">/</span>
+            <time>21 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Nouveau Monde Graphite" data-titre="le projet nouveau monde graphite accelere par le federal" data-source="radio-canada" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNYTVHaWo3RkoxaHl6dXV3M0NYSnM1aTRobWFmLXFYdmhCZkxXT3NFRk9IaW9jdnhIVzhkekZfODdRVFNzdmtHZFhJRXBCZE5oS0VJemJUdDFPWWh1ZXN5RHJ3UFNZdUVzZzdXc2VUMWtSbmtuWTVscU03VXZRU3BGNTRKSHd4R0dPbTNhU0ZDZGJzSDVXSUtNTFdGYy1kUVhoTmJr?oc=5" target="_blank" rel="noopener">
+            <h3>Le projet Nouveau Monde Graphite accéléré par le fédéral</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Nouveau Monde Graphite" data-titre="quebec double sa participation dans nouveau monde graphite" data-source="le journal de montreal" data-date="2026-05-19T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQY29EcXd6R1k2S0szUnJVZEJ1ems5eXMxRmVQV280cUM1VU1wbGxzY3l3NEVoQWhKSkw1N3g4NlVfOTVFVzhiWUM5VlJlcE95RWQ3WTZHaWlfREl4Qk80QnRNWWZHZEdqSTE4aUpIdWp1QmZEMzdPUHFUR1ViWW5VRE9BQ3ZOUjRPRmNQUTdCZGpqRzFCNlRNdXVNdy1pTjZqQ2F2M0lrUjM?oc=5" target="_blank" rel="noopener">
+            <h3>Québec double sa participation dans Nouveau Monde Graphite</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Journal de Montréal</span>
+            <span class="sep">/</span>
+            <time>19 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Nouveau Monde Graphite" data-titre="revers de la filiere batterie | nouveau monde graphite a eu de la « chance dans la malchance », selon son pdg" data-source="la presse" data-date="2026-05-15T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi9AFBVV95cUxPY080blRLREZmZ05GOHZMZXI1aUpmOVF0dURoNVJMUmtuRm1jLUZxWXlTS1pRMU5TaFZmdWcyN0hqSzgyUTZxUFVtSXJ2U0YtNVpCcTNta3htNzBFQWhKODVpaThSdEJoZG5UN0xsNkNFdVl3VFJJaWNJVmt1TjlrT1VGU2VXQWQ1RmgyX29CZmhIdExyMGJIUmpPYXNoTDB0Z0ppNFJhV1JDN0R2ZGdqVk4tS3l3eV93ZElQaFpHSEdkaU5WanNQS281aXNkdDZWY3dUaDNVUWFFRTJ4QTM2ZDNhMUNsUTJLQXBaNjhfNUNGaVR1?oc=5" target="_blank" rel="noopener">
+            <h3>Revers de la filière batterie | Nouveau Monde Graphite a eu de la « chance dans la malchance », selon son PDG</h3>
+          </a>
+          <div class="meta">
+            <span class="source">La Presse</span>
+            <span class="sep">/</span>
+            <time>15 mai 2026</time>
           </div>
         </article>
         </div>
