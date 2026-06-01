@@ -290,8 +290,8 @@ def generer_html(archive, projets):
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <style>
   :root {{
-    --encre: #0f172a; --papier: #ffffff; --carte: #f5f7fa;
-    --accent: #1e40af; --accent-doux: #2563eb; --gris: #64748b; --ligne: #e2e8f0;
+    --encre: #1c1c1c; --papier: #ffffff; --carte: #efefef;
+    --accent: #0c4466; --accent-doux: #2b6a92; --gris: #6b6b6b; --ligne: #dcdcdc;
   }}
   * {{ box-sizing: border-box; margin: 0; padding: 0; }}
   body {{
@@ -332,7 +332,7 @@ def generer_html(archive, projets):
   }}
   .cartes {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }}
   .carte {{ background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }}
-  .carte:hover {{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15,23,42,0.10); }}
+  .carte:hover {{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(28,28,28,0.10); }}
   .carte h3 {{ font-family: 'IBM Plex Serif', serif; font-weight: 500; font-size: 1.2rem; line-height: 1.25; color: var(--encre); margin-top: 4px; }}
   .lien {{ text-decoration: none; }}
   .lien:hover h3 {{ color: var(--accent); }}
@@ -342,7 +342,7 @@ def generer_html(archive, projets):
   .vide {{ color: var(--gris); font-style: italic; grid-column: 1 / -1; }}
   .bloc.cache, .carte.cache {{ display: none; }}
   footer {{ max-width: 1280px; margin: 0 auto; padding: 24px; border-top: 1px solid var(--ligne); color: var(--gris); font-size: 0.8rem; }}
-  footer code {{ background: #f1f5f9; padding: 1px 6px; border-radius: 4px; }}
+  footer code {{ background: #efefef; padding: 1px 6px; border-radius: 4px; }}
 </style>
 </head>
 <body>
