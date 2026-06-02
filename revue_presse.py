@@ -24,6 +24,7 @@ import json
 import unicodedata
 import urllib.parse
 from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 
 import feedparser
 
@@ -216,7 +217,7 @@ MOIS_COURT = ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.",
 
 
 def date_courte(dt):
-    local = dt.astimezone()
+    local = dt.astimezone(ZoneInfo("America/Montreal"))
     return f"{local.day} {MOIS_COURT[local.month - 1]} {local.year}"
 
 
@@ -240,7 +241,10 @@ def generer_html(archive, projets):
 
     noms_projets = [t["nom"] for t in projets]
 
-    aujourdhui = datetime.now().astimezone()
+    # Heure locale de Québec, peu importe le fuseau du serveur qui exécute
+    # le script (le robot GitHub tourne en UTC, sans cette conversion la date
+    # du pied de page change trop tôt, le soir d'avant).
+    aujourdhui = datetime.now(ZoneInfo("America/Montreal"))
     date_titre = f"{aujourdhui.day} {MOIS_LONG[aujourdhui.month - 1]} {aujourdhui.year}"
 
     # Sections par projet (3 derniers mois)
