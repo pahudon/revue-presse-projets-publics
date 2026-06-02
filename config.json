@@ -166,6 +166,19 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "Bureau des grands projets",
+      "mots_cles": [
+        "Bureau des grands projets BGP"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
