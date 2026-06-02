@@ -269,10 +269,10 @@ def generer_html(archive, projets):
     # Boutons de filtre : toujours en ordre alphabétique français,
     # « Tous » en tête.
     boutons = ['<button class="filtre actif" data-projet="tous">Tous</button>']
-    for projet, articles in sorted(par_projet.items(), key=lambda kv: normaliser(kv[0])):
+    for projet, _articles in sorted(par_projet.items(), key=lambda kv: normaliser(kv[0])):
         boutons.append(
             f'<button class="filtre" data-projet="{html.escape(projet)}">'
-            f'{html.escape(projet)} <span class="compte">{len(articles)}</span></button>'
+            f'{html.escape(projet)}</button>'
         )
 
     boutons_html = "\n        ".join(boutons)
@@ -316,7 +316,6 @@ def generer_html(archive, projets):
   .themes-titre {{ font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 2px; }}
   .filtre {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 14px; border-radius: 999px; transition: all 0.15s; text-align: left; }}
   .filtre:hover, .filtre.actif {{ background: var(--encre); color: var(--papier); }}
-  .compte {{ font-size: 0.7rem; opacity: 0.7; margin-left: 3px; float: right; line-height: 1.4; }}
   .periode {{ font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 32px 7px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }}
   .periode:hover {{ background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }}
   .bloc {{ margin-top: 0; margin-bottom: 40px; }}
@@ -327,8 +326,8 @@ def generer_html(archive, projets):
     .zone {{ grid-template-columns: 1fr; gap: 24px; }}
     aside {{ position: static; }}
     .themes {{ flex-direction: row; flex-wrap: wrap; }}
+    .themes-titre {{ width: 100%; }}
     .filtre {{ text-align: center; }}
-    .compte {{ float: none; }}
   }}
   .cartes {{ display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }}
   .carte {{ background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }}
