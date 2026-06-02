@@ -35,7 +35,6 @@
   .themes-titre { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gris); font-weight: 600; margin-bottom: 2px; }
   .filtre { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 14px; border-radius: 999px; transition: all 0.15s; text-align: left; }
   .filtre:hover, .filtre.actif { background: var(--encre); color: var(--papier); }
-  .compte { font-size: 0.7rem; opacity: 0.7; margin-left: 3px; float: right; line-height: 1.4; }
   .periode { font-family: inherit; font-size: 0.86rem; cursor: pointer; border: 1px solid var(--encre); background: transparent; color: var(--encre); padding: 7px 32px 7px 14px; border-radius: 999px; outline: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; background-image: linear-gradient(45deg, transparent 50%, var(--encre) 50%), linear-gradient(135deg, var(--encre) 50%, transparent 50%); background-position: calc(100% - 14px) 50%, calc(100% - 9px) 50%; background-size: 5px 5px, 5px 5px; background-repeat: no-repeat; }
   .periode:hover { background-color: var(--encre); color: var(--papier); background-image: linear-gradient(45deg, transparent 50%, var(--papier) 50%), linear-gradient(135deg, var(--papier) 50%, transparent 50%); }
   .bloc { margin-top: 0; margin-bottom: 40px; }
@@ -46,8 +45,8 @@
     .zone { grid-template-columns: 1fr; gap: 24px; }
     aside { position: static; }
     .themes { flex-direction: row; flex-wrap: wrap; }
+    .themes-titre { width: 100%; }
     .filtre { text-align: center; }
-    .compte { float: none; }
   }
   .cartes { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
   .carte { background: var(--carte); border: 1px solid var(--ligne); border-radius: 8px; padding: 18px 20px; transition: transform 0.15s, box-shadow 0.15s; }
@@ -71,8 +70,8 @@
     <h1>Grands projets publics au Québec</h1>
     <div class="sous">
       <span class="date">2 juin 2026</span>
-      <span>215 articles sur les 3 derniers mois</span>
-      <span>215 au total dans l'archive</span>
+      <span>228 articles sur les 3 derniers mois</span>
+      <span>228 au total dans l'archive</span>
     </div>
   </header>
   <div class="zone">
@@ -99,18 +98,19 @@
       <div class="themes">
         <div class="themes-titre">Thèmes</div>
         <button class="filtre actif" data-projet="tous">Tous</button>
-        <button class="filtre" data-projet="DMA">DMA <span class="compte">11</span></button>
-        <button class="filtre" data-projet="Ligne bleue">Ligne bleue <span class="compte">25</span></button>
-        <button class="filtre" data-projet="Nouveau Monde Graphite">Nouveau Monde Graphite <span class="compte">4</span></button>
-        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta <span class="compte">25</span></button>
-        <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans <span class="compte">13</span></button>
-        <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine <span class="compte">4</span></button>
-        <button class="filtre" data-projet="Port de Montréal (Contrecœur)">Port de Montréal (Contrecœur) <span class="compte">2</span></button>
-        <button class="filtre" data-projet="PQI">PQI <span class="compte">3</span></button>
-        <button class="filtre" data-projet="Projets d&#x27;intérêt national">Projets d&#x27;intérêt national <span class="compte">23</span></button>
-        <button class="filtre" data-projet="TGV">TGV <span class="compte">32</span></button>
-        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec <span class="compte">55</span></button>
-        <button class="filtre" data-projet="Troisième lien">Troisième lien <span class="compte">18</span></button>
+        <button class="filtre" data-projet="Bureau des grands projets">Bureau des grands projets</button>
+        <button class="filtre" data-projet="DMA">DMA</button>
+        <button class="filtre" data-projet="Ligne bleue">Ligne bleue</button>
+        <button class="filtre" data-projet="Nouveau Monde Graphite">Nouveau Monde Graphite</button>
+        <button class="filtre" data-projet="Pipeline en Alberta">Pipeline en Alberta</button>
+        <button class="filtre" data-projet="Pont de l&#x27;Île-d&#x27;Orléans">Pont de l&#x27;Île-d&#x27;Orléans</button>
+        <button class="filtre" data-projet="Pont-tunnel Louis-Hippolyte-La Fontaine">Pont-tunnel Louis-Hippolyte-La Fontaine</button>
+        <button class="filtre" data-projet="Port de Montréal (Contrecœur)">Port de Montréal (Contrecœur)</button>
+        <button class="filtre" data-projet="PQI">PQI</button>
+        <button class="filtre" data-projet="Projets d&#x27;intérêt national">Projets d&#x27;intérêt national</button>
+        <button class="filtre" data-projet="TGV">TGV</button>
+        <button class="filtre" data-projet="Tramway de Québec">Tramway de Québec</button>
+        <button class="filtre" data-projet="Troisième lien">Troisième lien</button>
       </div>
     </aside>
     <main>
@@ -153,6 +153,16 @@
           </a>
           <div class="meta">
             <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>1 juin 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Tramway de Québec" data-titre="des travaux entre l universite et holland des septembre" data-source="radio-canada" data-date="2026-06-01T20:06:20+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPZEVQdF9RZUFXTlVhbTZITFdxWFlaeGl6OUhDVDFiLUVXLVhCWkxWOHZFR1lndzI5TG1Ja0psQzlSZlNsR0FraFJkUnY4X19pUXd2R0NIWjRHWVMtQzNibGgyYkF6bXlmc0c5T3E2YlI0T2s3a1hmX1JZYlRmUEpUM2JaTl8zOFBlQl9r?oc=5" target="_blank" rel="noopener">
+            <h3>Des travaux entre l’université et Holland dès septembre</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
             <span class="sep">/</span>
             <time>1 juin 2026</time>
           </div>
@@ -2320,6 +2330,131 @@
             <span class="source">La Presse</span>
             <span class="sep">/</span>
             <time>15 mai 2026</time>
+          </div>
+        </article>
+        </div>
+      </section>
+      <section class="bloc projet" data-projet="Bureau des grands projets">
+        <h2>Bureau des grands projets</h2>
+        <div class="cartes">
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="les traces potentiels du projet de pipeline albertain" data-source="radio-canada" data-date="2026-06-01T08:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPWU9PMXJZWTg0M2UyX1JlYnFSTFN0SVNnSHFYNlFpREJJckFUeFVqUGJJNG80bTh3OTE5SGNKZHlySWlzSm9zQTNCWER6MGJqVnBJZFZDb25PRkw5SEhYRkVlVGJPbkxFVXNDYVVzek4zWDk1Wjh0aGo1WlNhcl8tNzJNcjNHTDRldVJNYVotUVRtRWdEUlpNRk9HT3lGTEl1TGxzcmVJZ2JWZ2hO?oc=5" target="_blank" rel="noopener">
+            <h3>Les tracés potentiels du projet de pipeline albertain</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>1 juin 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="catherine mckenna salue le courage de steven guilbeault face au lobby des energies fossiles" data-source="le devoir" data-date="2026-05-27T15:07:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxONk1kaTBYangwSXFCYmRRMGtfdjVWR3YzV01saEVXbkNGQ0x0MkxjUnpvR01pYjBGdEN6N1Yxc3pJbEczcV9vcy0wemh2bTMzalo3UXU5UmhGSXVlTVQ2LW1vT09WNEJvTDJwYmRxblR0aTd6d3NpamIwX1NEOXZNRVlFWXBvYW9zSXhqREFnTS1HbXFwaURmZlJfT3VSZlZUZWtReUpSSzk3RFFVQmNUTmM1Rzg3Nkt5Y1FSNFRVY3Q0U1Z4ZjJUWGxWZ2c1Zy1N?oc=5" target="_blank" rel="noopener">
+            <h3>Catherine McKenna salue le courage de Steven Guilbeault face au lobby des énergies fossiles</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>27 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="une entente sera signee entre le canada et l allemagne pour une exportation de gnl" data-source="radio-canada" data-date="2026-05-26T20:49:40+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMijgFBVV95cUxPNHFsTFlBUFdZRi1Td1FVaHJveU9Dc1VYMDhfZGp3aUY0RGRtVWIwdTRQSTdEZWxwbmhxb2FqRDZ5aHNNV2JEc0ZCTUI3T3Y3YlJlTFhLeXU1Y1FwVjl3d0Rxek5GNTlpYUE5SHVIUlhtdU9Mbkh2T0FEVTFrTldOWDlpS3JHLTdOX0JGS213?oc=5" target="_blank" rel="noopener">
+            <h3>Une entente sera signée entre le Canada et l’Allemagne pour une exportation de GNL</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>26 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="des annonces federales comme si le canada etait en guerre" data-source="radio-canada" data-date="2026-05-23T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxPbXpkZENXU25WeHl0aFpYYUYxNkVUaEpZTVcySUxtdVRrWUNZNmRmV2NKeUFtclc5ZjQ2TmVnZUZrRWJTTmxJNU1ZTWVLY1pjbGdra2FNQmlNWWtIWllOcDZtQS15VnJyREE4NG9kanVObF9nUEZtSm84cFI2Ym9rTms4M1N5anpzeVpj?oc=5" target="_blank" rel="noopener">
+            <h3>Des annonces fédérales comme si le Canada était en guerre</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>23 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="le canada abandonne la station de nanisivik, au nunavut" data-source="radio-canada" data-date="2026-05-23T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMimgFBVV95cUxOdkl6YUY5bE5zS0RyV243cThWaUFycGNtc0dibHNtOXpvaGR1b3JNUHFyd09HdkRHZHU2OXI2cWVMN1hKWG9uM1plS1FFa1VGSkFYU1U5TTNvYkNUdXQwU1JXQ1hMNFBHVlRhUmNmVjRObnRtT0FTMFRiRVJ3d2FjcUU0Z2pPVHdiNVpVQTNOWVhuV1pDRDI1akN3?oc=5" target="_blank" rel="noopener">
+            <h3>Le Canada abandonne la station de Nanisivik, au Nunavut</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>23 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="ottawa investit 55 millions $ dans les infrastructures en arctique" data-source="radio-canada" data-date="2026-05-20T22:41:15+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiugFBVV95cUxQQ1VRMXd3d0VTcEJxRWJacU05WlVHZE42eVdjUXNPcTZiUVZzYjNlenQ3VTA2WE5sTE1oSmVvams5anA4TTN1WEcyYkY2YS1vWXZ6QmNvUS02UGxzMkZEeXoyRDVyRWEtcElJSV9zX1IwXzZvdWNoSUJxVy1jLWhDUmR4eWdrcmU0RVBjejdYdDRoVmZQdjlYUU11OVZiaUVWTzg3VWd6cFJGMUtKRFRjdzlrMThtWUlUVmc?oc=5" target="_blank" rel="noopener">
+            <h3>Ottawa investit 55 millions $ dans les infrastructures en Arctique</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>20 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="ottawa promet des investissements rapides aux t.n.-o." data-source="radio-canada" data-date="2026-05-20T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikAFBVV95cUxPSmJ6Rld4WDROM1U2dlVJdzBkUmJKbDVneWkyMy1wWG55X0hWczZMWnI0ckV5ZjA0a1dxbVdlSWRkVWdia1dfTlllX01aNnA0UWdnb2lfeE9mRWx3SGFhcjlNMXJMVDdvWWluemZxd3NDMDA3TjZMeURYTEx6NjFWVkdfMTBLMktHSWFwcTU0R3I?oc=5" target="_blank" rel="noopener">
+            <h3>Ottawa promet des investissements rapides aux T.N.-O.</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>20 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="mark carney en c.-b. pour tenter de rassurer david eby et les entrepreneurs" data-source="radio-canada" data-date="2026-05-20T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxQMFpCc19QSkxJdEQtcXRKSkhpN1Q0dnhvODFobGxjd01lT2RPd0ZDM0ctZkswMnpfbjBaNXd4a2lFOWJQd05JRFJoUlVIVnRUYTAtVlRmVzFYZmgzclVrSmxOcTE0R3N5VnYwd1hrS3dydnBfWjZ5cERUMng1ZzZlRGxB?oc=5" target="_blank" rel="noopener">
+            <h3>Mark Carney en C.-B. pour tenter de rassurer David Eby et les entrepreneurs</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>20 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="eby prevoit une decision sur lng canada phase 2 en 2026" data-source="radio-canada" data-date="2026-05-14T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMif0FVX3lxTFAwa2hpd3ZwUjFjZTNkak9SOFgyeWVNSUZQMjRsMEN4SEZ3SHkzVVlHVGtKU0dOLUMwU0ktTWtvOG02Z0FVOHhUSF9WZWFFaTMyVWVDUG9XZ09LRVdqSzA2MUd1Y3QxenNnZG9EMTJkNm9rNlR5TVF5aGljV3V4VTg?oc=5" target="_blank" rel="noopener">
+            <h3>Eby prévoit une décision sur LNG Canada phase 2 en 2026</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>14 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="marinvest energy fait rejouer «la cassette» de gnl quebec, denonce un chef autochtone" data-source="le devoir" data-date="2026-05-09T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOUzZmZFRNd2JSS0ZiTnFvVXcwcllRTTEzQVJfbmdEWHJqR1RDWTBiNS0xTjY1ZFRjQWNaNndNcXUwRHVES0ZVbzZTUkE2UDRNcV8wV3lCZmFqWFRHeTRvYmprd1VWemxWVzF2S0NyOGVmQVpGcjNFMWdudHFCYm1ZVHMyWVZFVGh1eDdMVkRDNEpjZmNkeTktTkF3aDA5cTdsOW1TZ3NVMUhzMzFZcVlFaDVrOGcyT3VadDhLNmFRTjQxMHNDZVlJdG5n?oc=5" target="_blank" rel="noopener">
+            <h3>Marinvest Energy fait rejouer «la cassette» de GNL Québec, dénonce un chef autochtone</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>9 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="le fonds pour un canada fort doit accelerer, et non ralentir, la transition energetique" data-source="le devoir" data-date="2026-05-04T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxNUWN4a1ZCN0lwblduVlhCaWlGTnJlWDY5c2hwNjFRa0dGRTYzOUdoZjN5YmIxY1NrV1hNWVFqNzlzOXdFRkFHZHJqTS1rcmZ0djFTRWdKa0VsV0RLMGdxX3A4X2JHRlV2MGc4aFRIbWpBdVJuTmRRLVQtY2NZVUF0dlFhVmdBNTEtcWwzTTZQMk15bWVaX2FRd0RQREt6QlAta0hLWnRPX2MxQlA4eGQ3WTFNWFJIZFIzWEZaQVJkOA?oc=5" target="_blank" rel="noopener">
+            <h3>Le Fonds pour un Canada fort doit accélérer, et non ralentir, la transition énergétique</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Le Devoir</span>
+            <span class="sep">/</span>
+            <time>4 mai 2026</time>
+          </div>
+        </article>
+        <article class="carte" data-projet="Bureau des grands projets" data-titre="l acces au logement se deteriore plus rapidement dans la region de montreal" data-source="radio-canada" data-date="2026-05-04T07:00:00+00:00">
+          <a class="lien" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxPN3pXVTlla0VNRGlhU0FQZUZueG84OVJua2plbk50TVZqVG9la1Y3UnNjeUVaUnRyY3R3NDVpX2tIUWpoZzhVMXFtbnlOM2x6WVNQUW5wMnNpX2JmRzNIcl8tVy1CSjd5MFBPci1lTDdNeTlja2xERVl4Q08xZGhVS0I5ZklYZF9uQTUwcUhiWXZIaHM?oc=5" target="_blank" rel="noopener">
+            <h3>L’accès au logement se détériore plus rapidement dans la région de Montréal</h3>
+          </a>
+          <div class="meta">
+            <span class="source">Radio-Canada</span>
+            <span class="sep">/</span>
+            <time>4 mai 2026</time>
           </div>
         </article>
         </div>
