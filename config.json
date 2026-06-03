@@ -179,6 +179,32 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "Churchill Falls",
+      "mots_cles": [
+        "\"Churchill Falls\""
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Dossier santé numérique",
+      "mots_cles": [
+        "\"Dossier santé numérique\""
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
