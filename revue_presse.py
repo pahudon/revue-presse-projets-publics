@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Revue de presse quotidienne sur les grands projets publics au Québec.
+Revue de presse quotidienne sur les grands projets publics.
 
 Comportement :
   - lit la configuration des thèmes et des sources dans config.json ;
@@ -288,7 +288,7 @@ def generer_html(archive, projets):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Revue de presse : grands projets publics au Québec</title>
+<title>Revue de presse : grands projets publics</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -351,8 +351,8 @@ def generer_html(archive, projets):
 <body>
   <div class="ruban"></div>
   <header>
-    <div class="surtitre">Veille quotidienne</div>
-    <h1>Grands projets publics au Québec</h1>
+    <div class="surtitre">Revue de presse</div>
+    <h1>Grands projets publics</h1>
     <div class="sous">
       <span class="date">{date_titre}</span>
       <span>{total_recents} article{'s' if total_recents != 1 else ''} sur les 3 derniers mois</span>
@@ -390,7 +390,7 @@ def generer_html(archive, projets):
     </main>
   </div>
   <footer>
-    Généré le {date_titre} à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
+    Cette page a été créée par Pierre-André Hudon, professeur agrégé au département de management de l'Université Laval. Elle a été générée le {date_titre} à partir des flux Google Actualités. L'éditeur <code>config_builder.py</code> permet de modifier les projets et les sources (fichier <code>config.json</code>). L'archive complète est conservée dans <code>revue_data.json</code>.
   </footer>
 
 <script>
