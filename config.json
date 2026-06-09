@@ -205,6 +205,20 @@
         "Journal de Montréal",
         "Journal de Québec"
       ]
+    },
+    {
+      "nom": "F-35",
+      "mots_cles": [
+        "F-35 F 35",
+        "Gripen"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
     }
   ]
 }
