@@ -92,7 +92,7 @@
       "nom": "PQI",
       "mots_cles": [
         "PQI",
-        "\"plan québécois des infrastructures\"\""
+        "\"plan québécois des infrastructures\""
       ],
       "sources": [
         "Radio-Canada",
@@ -105,7 +105,8 @@
     {
       "nom": "Troisième lien",
       "mots_cles": [
-        "troisième lien"
+        "\"troisième lien\"",
+        "\"3e lien\""
       ],
       "sources": [
         "Radio-Canada",
@@ -211,6 +212,21 @@
       "mots_cles": [
         "F-35 F 35",
         "Gripen"
+      ],
+      "sources": [
+        "Radio-Canada",
+        "La Presse",
+        "Le Devoir",
+        "Journal de Montréal",
+        "Journal de Québec"
+      ]
+    },
+    {
+      "nom": "Aéroports de Montréal",
+      "mots_cles": [
+        "\"Aéroports de Montréal\" chantier projet",
+        "\"aéroport de Montréal\" chantier projet",
+        "\"Montréal-Trudeau\" projet chantier"
       ],
       "sources": [
         "Radio-Canada",
