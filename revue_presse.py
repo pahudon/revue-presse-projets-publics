@@ -38,7 +38,7 @@ import feedparser
 # Récupération à chaque exécution : filet de sécurité si une exécution est
 # sautée. Détermine aussi la profondeur initiale au tout premier lancement
 # (Google limite la profondeur ; l'archive se remplit surtout au fil du temps).
-FENETRE_FETCH_JOURS = 30
+FENETRE_FETCH_JOURS = 90
 
 # Ce qui s'affiche dans les sections par projet : les 3 derniers mois.
 JOURS_AFFICHAGE = 90
