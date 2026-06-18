@@ -4450,5 +4450,901 @@
     "source": "Le Devoir",
     "date": "2026-06-02T23:18:02+00:00",
     "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "Tramway : deux grands contrats accordés à deux consortiums",
+    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPT2E1c25udEMyQTRzc3pDMk43WXJxTzBLcTZhR1NDLVVpM1RCcGtWLWM0WmRZMFh3bFlCSFFMVVctU1k0SUdLNURXd1lYdS1sN05oNl93M05Zd3l5dE5DRVhqNV96UnYySllIeWVra3lBeU9QSGFYVWZyZTdEeFNFcjF6YV8wRHpXQ2M0?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Tramway : pas de travaux lourds avant la fin de l’été sur René-Lévesque",
+    "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQTmx6VXZJdS1rNENXdHo4WnQyMHkzRmlfMGwxbG1TckRYc1BXREtObmhKMjViS0xkNzNrM20wOHRCMkJuLURCa3JvODN3ekZXTlhMYnZyWWlLVTlkRm1VZVhmZ011dE5SS3U1OW1kRlYxTENpMGxPMWprVVVZcXE0eTc3c1dYNzQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Tramway de Québec: trois démolitions pour réaliser la station D’Youville",
+    "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNSGVaQzRjd2RMYlAwNXpWTmlJUFVBYkZHLWc4aUFNOU1IM0RFMnJYbUtCWk11SUVGZVpoQkNQY294TDNTUlR6eFJDR2JTeU1pdkhwOW9SQnk0VENKUlA2N2JrSENfMmxhUTR4Z1lPclIzdGk1UFNxX2ZCOG1icVhZd3hadGpnMFJvcXFQdnF1RlBsd1dfX284emstdEQ4eG1PTnJyV1o0aXFvQUc4VS1YdWtJTQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Financement du Tramway : « il y a une enveloppe de 25 milliards », rappelle Ottawa",
+    "lien": "https://news.google.com/rss/articles/CBMifEFVX3lxTE80LVFQVDk0enA0eGYwSV9uZDM2WkZWc1g2NEJDcG5YQWl6cjBnc3paTmxQUXkydUV5MHlXX0RST2Uxc3RoVmprRlE4WEF6LVFIUDc4WGwwQlRaVXh5YlVnc2VBRExtaGNvbUQ3X2YteHQ1SmZPVkVYY3NhTE8?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Chantiers du tramway : les journées de « chaos » sont inévitables",
+    "lien": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRFBWaVhVU2ZhWHB5aV9Xd3JKc2JEcWQ1SlA5YXJmRW9QNWhiTU9Qei1wQ0lHN2hMYS1LZ1hVU3NFclhfYnQyaURLMjJQVVpoWmRNV3otZ3NwUHFXMTRWeTNzNDJHZnBqZG1qR2Z4MHN1OU1MZHZuaFlDVTNhX0o0S2oxcDBoYVRBeDEwYm5zU1dvSzFPTXRmQnZtRXFPRWdXRkE?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-24T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Tramway : l’opposition éclairée par CDPQI, mais toujours inquiète pour le financement",
+    "lien": "https://news.google.com/rss/articles/CBMimAFBVV95cUxPVzFhdGVIcWRwZHZTbHJXZWJOMWMxY0o4YUg0SVhPbVk4NnBGampSOWZySEYwOGVEVGc3dUt5OGl3WnhaZEU2SnZsdEt1aWpoajJCbmpuVWdQV3FIUzVHbU5nR3dJc2pLckcyRHl5UVZVdWdlaDA1M1NNRlBWT29FMEtRS0k2VFRWN2tRd0JLelBCR2JKRlBnTw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-09T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "L’abattage d’arbres pour faire place au tramway de Québec suscite l’indignation citoyenne",
+    "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOaThvMmxxM1RiV1dSdE1FTG5pdVhTZ29VWUM2dS1hN0xYQkZULWV5YkVwTlEwOXE0d3JMd1RMemhYd0dKUHRrWkVPLW9pd05Ec3pKLTNwWTV0aWc1cWx4UDYzeUVrdjhUcmlvTTF3Y2lnUjVrNGxMWHd6WWdYZGVub3F2Q04yN3ljbW5FRDNWU0w2LTBmTjJaUnpBelpwN21GbHJYNjJHMlRtbkhTazNGU0hDUkxWc1Y2YWFnNFJwRWFMSUhVNlFVNjR3SVJVc1luNVE?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-20T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Chantier du tramway: bilan positif, mais «chaos» inévitable",
+    "lien": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOcFBPRW8xdFRhRXRwVjM1NUU2QTVrU2lsbTZfcXlGNHFMRmtjN1lPSUVkbUN3WmRua05zNlQxRmtXYzY5N3dnTkhNLVI3aGJMczdpSl95ekZ1bDJUbFVhX1h4aWs0clNBMkZkMUVFeEpuTklhSWxleVVLTVVvN1lnVWQ2Q3lpcjZ1REV3VlFNZTBrSlA0ZnRadUpSRnNKOUE?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-24T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Congestion sur le boulevard Laurier: les automobilistes incités à adapter leurs déplacements pour les travaux du tramway",
+    "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPOTJJWWZjWmVVbUhoeGo2bThueWMzbTlpSW5LNENHcGVQMERJV200QlNzbkwxU2JIb3F0Z2dYSFM4OFF4MUlYeW9RVGkyX0NJTDU3SkVKaG1GMEk0V1Z3b1RXQnVGc1NBR2g2V21feEo0TGRVTEc5WmFSYVVCQVhvWnJic0Y5TTF3dTVYUHUzNHhMQ2JyMnlnVXNsVQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-21T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Julien accuse Drainville de faire de « l’esbroufe » sur le tramway",
+    "lien": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPc3JaQUp2Vm5IRThRdnd6cDNRS0xJSGF0cERkZmQ1VUxrRF9Ld3czNm9sWVI4ZHY2ZEI1dTU2emxBM3JzdS1ld1ZfYUNpMUkzSkJEdF9DbzY5SW8wMkNiTnR0b0tJMFRzd19fLWxwbDh4OFZUS3F1eUVhTlNSbU13WWlmT1FYNzFQemx2R0xXd3hxNEFBY2NHODBBek5aSElFR3BfVWtPNjA2UQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-01T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Transport : Québec s’entend avec Ottawa pour moins de 7 M$",
+    "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNb1duTG14SjlkaXZkV05WbEt5TVlyb1hSUXhhUWZXMW9leDNXM05TVnpwTGlILWpZVjN4NmxyZUlQRHo5S3lxaW5aR0F3dUxyRFE0UTlzanE3aWdyZzlSQ3ptYnM4eU92Ny1hVk84VlFZWnJuZ1F5WFAyVDlseDJEZkFsZ1dickd4MW1nU3VCWQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Coût et financement du tramway: Joël Lightbound doit donner l’heure juste",
+    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPbWw4eE1wMkdMWUVYVnpxOHVrYU5GNTdXLW1qTHRzNVNGS2dmRWtfQm1mcjZBTnROWHFxS3lYOHhCd05saVRIZ1d6YjlVSmR2LVFhbjM0YzVSSkJCN0s1VDNzSnFXWHI5VTlKU3Y5cG45T0tlcUk3VDQ5X3VlMjM5OEh0R01MRlR2VkRCeEt3Q2VYVjRRZUdsYlBJQUJmLW5sOVU0cjlxazY2dFNFZUU1U09oY20?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Trois bâtiments bientôt démolis pour préparer la station D’Youville du tramway",
+    "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPN3Y0Z1JkZEZQTW5ubWc1VXE1a2tFZzR0WUQ2SVlRQmV5XzZreTU1WWNEX21rMGVhRV93bVVMOHMtV0s2Zk9WSUQzN0YtOV9sOEtXQVJtam1XWWJ4cUVPbm9Wc1JKakNXMjRSeF82OU9BS3dPajlza01fWE9IRnJpUHBUeUlQQ0t0MUlfYzdWRDRTZw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Fréchette aux commandes: «Très bonne nouvelle pour le tramway», dit Marchand",
+    "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOakZRY05Cd2dJMTlNRHRfOXVXUWxfWjZjRHlVQnU5RVVvUEJjTmtlTEdEWUM3T2UxaUNJRWI4ZlVhOFpqaHVmTVdNdHM2eDYwNng3aDJhUGt5bDhMNEdDQ05fRW5nSlF1U3c5ekZEdUZzQks4b0VyRjZsMHE0NGlUQ0FtX2UyQVlpWnpZTFIwY2l0RXZoN0JrNlluLXRMMkFNS3cta3FLVjY0VGhDM09Yd0JuWmNrQQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-13T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Coupe d’arbres du tramway : Duhaime interpelle Drainville",
+    "lien": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNcHB6RWxwaFUxVXF6SGZySjZJVGU0YXpwV1BfYlMzdkd1d0h1NnJRejBDRk5zbTlDRXdwaFNhOFdadDVWZzdUUkN3Wk5ZZ3JKcVhJd1ktcGVORGJHT2dKYW94WGdvUlVQMmZIZmx3Z1dNY1ZiRThIWk53MG9Na2ROWnVLSUxFUlhGNGhQbg?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-24T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Geneviève Guilbault ne veut plus parler du tramway de Québec",
+    "lien": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNY2hUU1ptbC1LMlItWlJQYXpCTmNmemU0V2Rfc1JJS0VsLUhXWUFwamZpNGpCQ1QyYm4xa21JOENCNG1xMWh4RFJHVUs3ajgyVXkyU2k1X3d2LU1vMGlfZEdlSFU0Q1FyUFl1b0JZdTZoRjBBVmZSaVZpSk9XTTVRSGdHRDNPdw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-27T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Trois jours de préavis pour des changements permanents: le chantier du tramway «part mal» pour des commerces de la haute-ville",
+    "lien": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPVEkwWFJxd2pPcWpSbVdpRk15VXRxc3lNUDhfUE1pVzBNdTV4UWhyNWRMOVFtaTNCZy1mdXRSX2tfdzk4STU3VlhfMjVUNUZjTmJUZkFzNHYtcVNOQ2xwWjMxVTZmVTBha193Ykdsak1ieE5TNHdIZW5pWGpraWktX0xOOThlbl95WE80Z0VVMVNIS3dnNEVTVmVXM3d6ck9UQ1lldUx3NEdyc2xfMkpPM0c4dE5wcExVNWJxVGhrcE9uSHJSRDMyN0l5MTVDei1PN3l1bFdSSW1BQXlQdUtQczlwZDJfMEROc3hvSFh6YmI1Z09pdVlJ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Le boulevard René-Lévesque fermé à la circulation dès la fin de l’été à Québec pour les travaux du tramway",
+    "lien": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVVYxcnlvYzNDYVRDQUt1X0oxRGtHeURlZ28yNjlTZzZwLUVvMG45SF9TeFVtdUNiamVyM2xvV1BGeHJJVGc0eVJ5T3VrZEMtT3EwZkdoMFRDN3hpTTRJR01TTGtRbV93VjlWX3FpMjJOcGFUQVZYZDRQTW8xRmFtRU5faGtGN2RFZ3hBSmhDazNNd0ZLaEJiRFBPNFBKcURhS1BNMEk1bnpyaXVicS1hb3dvcnBlMC0wOFdtUw?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Malgré Drainville et Duhaime: le tramway est «irréversible», répète Marchand",
+    "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQQ1dzbDZ0ZUp5Uy1pY2RORUVBbHpFVTJTS3ZmY0t6cUNrMVV3RHI0NkZ3RVVHZGRxN1QwTlJzR1NpaHFTbkZKWFQ0b3FZblRpVG1rXzktRmlOVktZU0xwWjlkX0tPZlFTdC1QczRGZ1lHZVRGNktTajJwMGlybEJnUUlOd0F4VS1MSHEySjdneGNDcW5ZMk5WdkVITkdUTzloOC1zc0lzZXRsaU9qN0lpZXQyakE5Zw?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Respect Citoyens veut le montage financier final du tramway avant les coupes d’arbres",
+    "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOVWw0M2FRbEdyUmVBc3Rtd1BCemJXQWN4bE1tZzEtWDRuY1ZhdUJQTGNzZXlTS01jNUhFS2I5MEZ5MGowVFppczNFWjFHQU45Rmc3cE1wQmNMUDc1X1hfd3BjVTV6bUZHNFBraTlhNjI5ZVQwb0NTUklETWZINXY3SEpJdlZwVU5mWHcxU054aFpMSlhEcEpVMFV0alQ4aVlaOFZvRkMyeDQ4aTQ3aEdONEE3c3hvdG5q?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-25T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Démolition de bâtiments pour la station D’Youville: la preuve que le tramway avance, selon Marchand",
+    "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNQ3QxdHJvQlBrdFpnVHR2SGxYUGJ0TmZ2ZFlFZ2ZUY2JUTE9aSGxPemhvSVJXWXhpQWxHcUQ3U0pRb1NYY2I3ekhVbGNwZHVGeF9mcFZxb2hSRFRuUGpjUlVtdzNuV29EUncxM0h0YnhmSkNIeE9RVVAyUmtVeFcxV2FkdWh1VmtWdzJLOUpxV0M3LTlnWHBlQXpwejFDbXhsTmhHdG15WGdmeHN1elFMVDhlZk8wVGlneDQteUJwSGs5UWE4SWc?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-09T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Travaux du tramway : faut-il attendre avant d’abattre les arbres?",
+    "lien": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOQ0E4dURRYWtHc2lWZEJRUmFYbzRmNW1rcTJhejZuOFNjUEhyNnYzakJfaFlIVUczZ0FKeWN2Z19TMDk2N3FkTHhwTUc0UlVkOEoxTmttcFNka3Y4d2xzTWxFbFQydEtyU2FSQVpLQkdSa0ZDX2NocEUwQ0xwSXl6Z05NMHVNYXhsMnJ0QXM5ZTFaZDZxdVhOX2pQQmIxejV5X1hEUnozbVlQYkItdUNZQzlQSmp0YXB0aTRRd1k5UHpCai0tNTVzeQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-30T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Un faux départ pour le mégachantier du tramway",
+    "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNVNyVkhVSFoxeld1dTF0NFZEUnlfMzVDZGl4bWNMNUVPQzU1TUNGVGtXTkF0TmkwM3hRQUxsQWg2OVNjVXlkWm5mSUN0cGV2TnUxNWszVEJnd2wxelpJY0xVeWt5T0lkdkxDc2twWmRHMzJud1dRdGJkRHp2ay1Hd0R0NDBIUS1yZTZSX1pqaU1iQ1U?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Boulevard René-Lévesque: les arbres seront abattus à partir de l’été",
+    "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVHE0ZkVtTlRmb0o3a0FiMm9vTTFJQTRCZ2VJNC00ek9rbEJpajZLU2V6QmRRVW51RFZpXzhtNi1RSklBVHNNVUhKWjZmQU1zOEp0NE15VDFENlhVTU1rV3EwUFc2MExtNjAtOUdFSExOeDRIZDFZNTVxRWhVM2lraFZkQTNLVTh2aTY3MUZoLWJjTHF5VmI0WTQ0eHdPX0pwQ1I2U0tWQzdkQ3VOTkE?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Un tronçon du chemin des Quatre-Bourgeois fermé jusqu’en décembre",
+    "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQN0lsZDQtcTRnc3FqRDlLR21lWHUwZlgyT1NyNHItZHh2NmY2bS1tdTZZOEwwaHo1YkRiOVd6ZFZ6cndGc1pScWlyNFNrb2ppN2s0NlhmRnhFdWdzVHVaWm9FRDhfNC1NeHZQX2dQUjVacHJ0SGFCUGtnS0R6R2syZUhYVVZCTU5MdVE?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-16T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Tramway : des centaines de citoyens manifestent pour dénoncer les coupes d’arbres",
+    "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNX1k4MW9DTm1zelc5TVlXQW5PWjJGYnd1NnVGNWY4WTNJLXlzMWdoV1J0ellQNkctOGRkQ1FQLXZJcHV3T1dmdlRBR0JGOThTU0hDaS1kZkI5V0dtSHBJZDVoWnc1Ry1xanRONVZvbkZlLXlFRzFRemFnc2VlNWU1bzc5U29jYVE?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-28T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "L’organisme Québec désire son tramway réclame une station au Grand Théâtre",
+    "lien": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNck1pbWJXY2RMSWdwWmtmSzE5dDJFQU5NY1dTRkpUUkg0VWVGVHg3RFJKMjZKSGg0c1B0TENRai1ndDd0MFRxLTZpUnU0ZUJnR09OZzgtRjdJU0ItR3phTlNQSzNzOVkwR05CelNlS2dXX3JoTGFpelZ3TFFfVGdaOWRleF81WjhlOGx5eTdKSWRjYXprUXlVdERlR2hDVTdUZ1VKLWhIenphSzFfZkFSMERFUGhhdw?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-27T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Geneviève Guilbault évite soigneusement de parler du tramway",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQYjJyY3VvSXd3YnJabktuME9KMFQtQXlKMGxjY3p3YmV1UjFzOEtFS2puSjZoRktSVF9xT1hCeUFEWl9OUGp5aWF4MnpvMG1malpYSzk4bF8wZXA5UF9mdE1nVHdva2tMQnY5ZjNaTXhJQWYxVW8yWXF1Vk4tTEVNaGZPM0lnSmw3dG1UTjdGRTAtSzVPdEJzMy1SVU15OUdnZm1mYmNR?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-27T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Si telle est la volonté de Québec: le gouvernement Carney «peut augmenter» sa participation au tramway",
+    "lien": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxOQ0FDZUxJRDJTcGUxYllYYVFMRzhEMVZLaTRadFZEdVJhSFNtcDdNcjZjY216VzU4SFV3TTBtVlpMOXpGNHZqQVpYQ3RGemxER25tQ2RxbzdqdVNpem9aalFJSy1VWEdLM015Q244R1JVR3VhRDF3ZFIxMktuQmZHUEt2czZOS1VEWmowRThONkNXSGI4c1lmSzFjQTJJejNnOG5Sd21lYjRTTVBFMlBFLXAyVnF5UTdfR19ObXRPQU9WM0JId0lUTk9uNGlReExiVHJXT0lQaEFjQQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "Abattage d’arbres pour le tramway: Drainville veut d’abord le financement d’Ottawa",
+    "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQbE1CZWlmM3FKdXNRS3YyWV92Q096U3N0YWlKZEJTRnNVd0NNUzFIc1ZCemRuZTVxelllaVE5WV9ERjF1X2JsS2FTZm1NeVdQSk56ZzB5bkdhMHdZWm85NGFCd3pjZmJjSjRMcWhrQ05ZV1VqRGpWUFhMT3V4V1Mtc2JMemQ2VENzdzRBT0dfUThPU0pwX0MwbWpKMkRJVFZzaE9pWHh5TG5ZRXFs?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-01T07:00:00+00:00",
+    "projet": "Tramway de Québec"
+  },
+  {
+    "titre": "La STM ferme trois édicules de métro",
+    "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQUklzNmtRdzNmNmxQWkZjejZZaG9MNU1pbWJoWFlVc21OVFpkbFlYYXd2TjZ2ZGxYRVhEa0lVSExXWXRNTjhrbXQzWXppZ1FTZlpNXzZ2OGd1akZBVUtjNWZkM3pvTDRZMjN0aDZLRUhMNFJScE1GMWhWaGViSVZmOUVrWjZ1R3kxblQtUU1jR3dYeTg5blJXa3BB?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "Ligne bleue"
+  },
+  {
+    "titre": "Itinérance à Montréal | La STM ferme plusieurs entrées de métro",
+    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPcXFTalVENkVEUXZMVkh6YVQwWTN1ZFR4UG9ZcEpjS0hPMlFXX19VaTJfNzhub3pVYjN3by00QzZ5em41dkt4Q2VidWhCMFBNc3AyUDZ6bkczcDJMUFFGYms4TG11WjZUZXVDTW1GM0p5WGJTalFsOFZJRWdhT051SzBiT2FnX1QwT29MQ2xzb0FGdDdFelEwcjhGMTV3M1daSFc0RlRDVEY3Szhkajh3T0F2ZFFjRk5QMTRFazZfX3c5TDlB?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "Ligne bleue"
+  },
+  {
+    "titre": "Projet de TGV : Alto demandera l’accès aux terrains privés le long du tracé potentiel",
+    "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPMW5CRjlaWUllYVR2a1ZfR3dmdzJVaVhDWGpGQWlOOWxMLWhTdTlBc1VOdG5ZRUhqUGloZXhSeXlub0tkeUFZeTBUbUdCYUVucnFqYV9za2Z1ZXdaRy02b25YdGpadHlRTFg2Qzlaa2Y1LWhXSGlfdHVKZUNjei1uV3o3Q05ETm8?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-23T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "L’UPA s’oppose maintenant au TGV d’Alto et n’exclut pas des contestations judiciaires",
+    "lien": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQVXRxQ211Z3F0aXI5d0l3aDdndWp3WXJUX3RDenowTzBOaEgtOWd3YVlaTldmZm9aSGE0dFlWc3pzU09zMEMwc2VyZ3BmNmpCUlpRaWVqVjBuMldFQmZHS2p4cHZjbXZOejhkenc3RGhNeHVWQWR3VmdmX0F0QWVBQnExY0pyV252NHk0ajVSZ1lXY3MwNjJCRks2N3FaVGdhaTFNRng3WXM3MkxvSjRVNTdVNHNRdFduY2x3eFhnM1JMUQ?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-28T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "TGV Alto: Blanchet accuse le gouvernement Carney d'agir de manière «autoritaire»",
+    "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNNzlsbVNVeV8xN1JtQzVpZFhnWEJJZDZ6WUxWUWpDbDRPNTBvVmJpT3FWeWFObnF1NUZyUGE3c2tmVzR3Y3NBeTdrcUUxVVg0blZLbHVxelhUeVlKNjRXSXBlLTNMS2VqN2ZXanR1dDVCelBqZURlYzc2SEl6MjZ4Sll2ZFowcEk4MkFmUEtuYktWbV9pTFR3YVFTTjk2VlZLbEpCR19lNkNhVW9JbHdlOWhXcmJjZV9DZUI5ZGNR?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-01T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Projet de TGV entre Québec et Toronto | Division aux Communes, malgré un fort appui de la population",
+    "lien": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOMEduUDdMbktfMjBwVDVNb2FIZU5vcFlQSVBLMHo1M3BzTjhYR0tvaDQwRUxsQk9lNlczcEs3dENJazBubWdydmxaajFJZFRiQUxiTkljMmlwZWRVdWF6cUVKMVliLUhKandTbTdtSHg5aDQ1dVRWdzZFclhaR2xzQWJtVzZpTGZEOU1yU3JSUGQ4NGR5aDJwY2Z3anMxbHFwRzdRNUVJa3NCeGdjSTRRTFBkZVg1ZTBBNk5mNnFSMFZ6Q2ZYZ1lvZDVqM1FGQXlnZ1hRVmNZSlJrcEk1MGc?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-02T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Pierre Poilievre milite contre le projet de TGV entre Québec et Toronto",
+    "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOdjJubU55SHRXdnVHY2lTbXBOUFpUdGstNzNyRDN6djdNZVFDb0p6OFZUQ0FCSUZWeGhETXRQMFJpaFphX0hDdUtJQkREZVVXTDhMQ2hYZDl4QnVVcmo0R2JKZmg1SDdfX1JXeWRaUkJLU1p5YVJqQXNhNXNVUGFYTFkydVUzZndSTGVVY1JPaXhqalNqYmlXLWN2anlXVF9DR05Vd2hWdGFGTzVBVkJqRXptQW5JdXNr?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-03-31T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "La résistance s’organise contre le projet de TGV",
+    "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNeUlTaTlIV0dPUHFYbXRqZVk5Rnk0LUlxdmhmdlotbjctNTVOQk8xVVdfc3JHb08yZFdtc2EtUjMzbm1HTHVwelh2NGFpX3BzZXlIZWRweWJvaERlT1J1YVFCc2NVMFhWUTJvenBBNThxbm1uNENhQ0xEMHRTaUhTYnpQTVA4RG4tUkNpRHZkWnY2NmM?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-16T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Alto | Train à grande vitesse : un projet économique structurant pour le Canada",
+    "lien": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPeDhPNUdTRjZtNkxiQU84QzItckRnOHdSNjNtWVBPOVVFVW9EYXZSRERmNEVRUXZld1pmNzI1WnQyWDVlaGc5clBMZ1pfOTVJTC1GVzV5REFQMExzMmMxVGlHdDFNNW9WV2JoOWY5ZkFnRUNKakFObTVza05SNEZraTNpeHBlU1VKN19EUG1kaThGTFNNMUNTNTJwTnFudGFMRGhzU2lZY2oyR2lLSGxtT3NGcy1kazBZSzA0?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-23T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Après les éoliennes, l’utilisation des terres mauriciennes par Alto inquiète",
+    "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNUWVpRlJ0czNrVmV1NGVhU3E0TGV3Tl9yekM2Yk1XWVZuelZ3Ny1kdzhGUUZyRTNUWkM5NzI0RmxDOWZjRW1vams0aXJTV0ZCSF85Y0lPeFF5dllrMWl5RG1pUUYydVAzbnY4VjFka2dRTFh2ZW5CdWF1UTRoSmY1cFFJVk90eU1HbktCUGV0Yw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Gatineau veut une connexion directe à la future gare de TGV",
+    "lien": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPOE0xaDM4amg0N3RmVzg4MVQzVHppNVBkTU1KTi0xTTM3Z2FUWmp4V0lvZVBUWTZDOTFYV0xsYm4zQnF3VjdwdWNOZy1BV1p0RXNJb2RKeXg4RjE2RVQ0U2JJLXh2MHVsZ3NaTFlpVUFRWUxJMkhkZDJsb0VvZmxUcHlKWXdfc2VpVDAwVQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-24T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Champagne ne peut pas participer au projet de TGV",
+    "lien": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPWFM0NjdzWlVnamk4M0NDRThZTW8xdWRzRDYxRUxtVGU2ajVST1FwVWtfdG45SFdvbzU1S3d5QTNnZUZBNThYZDZCX0VhV25BTDBfYkNGT05NSnMxdVNlMGxnSkNMSG9wQXo5dkdkZUNyRHN3N3FTN3pJRGtuNFhBTFJKbGhzV09oaXFGQQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "L’UPA de la Capitale-Nationale–Côte-Nord demande de revoir le projet de TGV Alto",
+    "lien": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPNTZ1OTlPQ05ZUG0zRW40ZHp6SGFnTVp4a2o0V09Ma0hSbFBwcngxYVN4WnE1T29wNDVoeEFWbHA3R0U2ekhiQmdjN0xSbVBFakNYcDVzT3I0VFpfdGViMnprWFY0WDlEdFJEWldaSE8yMGcyTHVaX21jbW1MNklmb3czbUt6VXAtZTh1VXFkSi1icVBqNWlmRkdvOWpTcjNUSENsY0hCaGRqZnlBTHhhbVJWQ005cDVHcFBjbVNkNTA?oc=5",
+    "source": "Le Journal de Montréal",
+    "date": "2026-05-04T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Le train à grande vitesse n’est pas un pari",
+    "lien": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPaHprN3Y1eVdlcFRqTVMtNi0tLWk4VEQzVVVpZ2NuV0J0Si1iU0ZEZ054eGhiVnFvWnpPN2dSMXFabkxTRGs5LVh4Nm13SVNja3Q0RUtWckZRVTRzaUFqalctb0V1NV9Gc2RkS0R1ekNtNmNKWUNuaDY3WTZGcnA5MnlPVmo3c3dBd1NhWTdCS0Y5ZjZ5cTFGRjVQVFN5NXg2OVE?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-17T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Le TGV entre Québec et Toronto sème le doute sur un projet de ferme porté par une jeune famille",
+    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQM3I5WVVJdTdKWjdpNWVYdG1GYWgtZTFxSEV0VjZzSlVLWjF1UDdkbjRqaGFWVFlCZ3lub013ZlNDR3BHZFdjRXk0a2t5c2tvaTUtTzgzbEtTZllXZEVfRTVEa19VYU9ZbUt6YmRhc0E2QnBoM25XTGpqWE12ZENIOXNialVPVTB5UlBkdFh4QklCODNFb3dZU2VPb2N2bmpWS3YxOWJucFdKcWZJbWVnUkhLeWI?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-10T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Le Bloc considère le TGV comme l’enjeu principal dans Terrebonne",
+    "lien": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQVUh3TGgwQjRaV0NKZ2xFV0ZfMDlOTHgzNWV4VXpiaWticlJfaWUydDJDcFVubERMY2dDamNpWVgxX1BETjRJYmtEZnBkOGt3ZFYwZmRRcWQ3M3JfVEwydDRTM2c5N1VmZDI0QTE0akt5VjdtZnFyVFFuMVRRM09NbWMzMzAxYVZjak5TclhkdlF4VDFDNjlja2piRQ?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-01T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Mark Carney défend le projet de train à grande vitesse entre Toronto et Québec",
+    "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNazVaQXVrRUxDbVdRbHJ2Q1l2Y1ZqV3p5VHlheGZNOFVzUEI5ajV0Y0pUbExJaWREUFVwYXh4NVhweXl3ZF9NeDJHMnlQd3B1dmphTG1FN0kyeHRMRzd2OGJOeTFvRFRCaGFJaGoxMG8tcUdtLVh4cktSOF9VUnpIR2JkTHlYQ0NlUWFhM29KczNlYzNIUmk5azRsWGdpSUdJU0N0N1B2QWh0QUd6SDY0dWZCREdqMzRIM0dMX1FpR2VMbkJFTEVERHNpUQ?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Une « monstruosité » : Poilievre veut stopper le projet de TGV entre Québec et Toronto",
+    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQMDBqZmp4VDBwc1dFZUxKZzN6Qk1ZOUFxQW9SRWlMdVRnbG42d1pJNXBoejBsbzVRY3NtZnFNVW01VWZaWnQ4LWdJeFdWSEZ2cmFYbTB4bTRVaVF5bGxjTnZSOUxBVm9TNjk0emtjM3lrRWhzOXRvYkVHM2x3QjRENC1zUWFodTd1WXY2MnJRUlBUMnBUejNuY0QybmtkY0huVWVjeTlmaDdiS1BFTm5CZXk1TTgyWWlXVDJDSUdsbzJKSjBP?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-31T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Pas si vite, le TGV",
+    "lien": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBrNDQyVkpOQkhLcm1KUGFBTDAzVVNtVi1pbmttcWdkWWFZOExVOEZxWmhWTUppc3ktWmlBRXg4SlNjV2Vza0RTUW5IdWFzR19ZeFE3OGcwYm1pVEx1Mm0wU1ZIZ0M0d05Sb0RfRzJsdWQ?oc=5",
+    "source": "Le Journal de Montréal",
+    "date": "2026-04-03T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Pierre Poilievre s’oppose au projet de TGV",
+    "lien": "https://news.google.com/rss/articles/CBMihgFBVV95cUxOQ3JzazVuS29Wa19vdkNYVUpZM29hQUd1cjA1MVZ0VDVVUTFJYnFCR3l1QUhFOC1OLWxoeEM1cVktVXdibElTYTFlVXM0dGRLdDVIQTEwM0p4RFAyOHBVajlfX05jSHNSeWVkMXdhUEYweGtYOWo5SUFZMldiTTdwbXpiSk5fQQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-31T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Champagne devra répondre aux questions en comité sur ses liens avec Alto",
+    "lien": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPMnNCVEJTRTE3Vy1CcGx3MzVuXzFuaTlLamh3bGVyUjl0YmpEczdPdVNScVdjMkdVbzVkQjJ0Zl9Oa3o2dzRJSEdaR3lNUjByaHZqQTFmMnBWTkpLOGdlUURDNkw3dEVKM084STAzVHNWbklpb1NKZl82bWNlZllwWUQwNXJsRFVybTBGbg?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-22T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "Train à grande vitesse | Pierre Poilievre demande au gouvernement d’annuler le projet",
+    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPT2xoaWRGWmw2OGk3TUdza24tUlVldnJyaWs1eFlKaFlJVkNTTERxdDNxaDhxTTd0U3lwakh3bHFlQ2xHMUhRaHhYMkxQc3pHdjlGYVBHSm1vWWZ5UUdWX3E0R254cUJkUTNqMDN4RUEyMjhOdFFSblg5dG9LRkl1S2VrWVdvaDUwWWlTZ3RQbENGeS05OEgwcldueWljQ2UzS0pQSkE5a042d2FnR0NsYlFKcElvajJLOFNNV2ZUeDBIX3JXdG16R0xIZUstamNkRmR4Rm9taE9GMUU?oc=5",
+    "source": "La Presse",
+    "date": "2026-03-31T07:00:00+00:00",
+    "projet": "TGV"
+  },
+  {
+    "titre": "État des routes au Québec : la faute au « syndrome du ruban », selon des spécialistes",
+    "lien": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObjMtQ2tpS3JnbVRaS1lyUFBYM3NLd3FWekZ3dC1RX0R1a2taZDBSTGxrU3BRbVl3RzNYR1VwRXpsQUZJQThKY0Y4X19ieGkzZzlJU1BqMkRrTmZfZFpLZ1BQTFVKOXlEaW1DYklIUGRZU1hiTTNfSjRKcFN3MmhraHBaSEs?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Infrastructures publiques | L’entropie qu’on refuse de voir",
+    "lien": "https://news.google.com/rss/articles/CBMitAFBVV95cUxON2NvaWZWVEVYQmE3a2VyYklSd0EzdkVaM0g0Q3o5UnAzQ3FBVTRGWkQ0c3hxUDNZVExVQ2ZsZnpXanZWMUp3Wk5EM29pRlJXV250NjRrZlI1SnhOS3YtZzJfZTB3ZHVwSDFzVjV6MnJfdEpzYlc0Q2g1WXdBSkM0Y2NldmpBS3VoLWhCMUdYNXhOcXUzbDlTQWpNWHJ3TzZZWGFuZjkxY2ttUUx5TFotS3NOd3Q?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-24T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Infrastructures municipales | « Tout tombe en ruine » | La Presse",
+    "lien": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNdlI2cEhGaDBlYzkzRU5DLTRqVDZDZG1YNHlSc3JoalJuYkd5VmtzU0VGYWpZT0NHTnJ3ZlJlMm5fQ01tTnYzZXVqdl9pNWFvQ2M3RmpDWGQ4NlNhbm1KSWdjM21teEtHSHphVy1CT05KVHNDcG9INHZoaVZyejRqTERON0J2UjNFVkJlT2tINUVMU1VUUExKRjFwYUVqbnRsQjJKelJzNGdNSmc?oc=5",
+    "source": "La Presse",
+    "date": "2026-05-14T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Entretien des routes au Québec | Le péage est la « bonne avenue », soutient le ministre des Transports",
+    "lien": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxNX1BkeHQzeFhtbm04Nk1sLTNCSDNucHZrU3VYR3NoTEtKRUVvNDZqR1pZMGpGX01FeGV5WnhXUGxRU0lBVGhvVGxpNnJQVDZZckFNdFVKemd0blk0aGY1X3NrQm54eW9FNl9PM2w1SHhsYmNidXRRTjd1NERSM0gzeGJxblR6V3hEMkNZeVlEblN2SzJqX1pRMTZjRU1faktrb2Zvc09FV1VRMUtrZkotNE9CZ0ZZZGxVcXFCdU1BcEtSLWdrdE1QNDZSTTExMmdXRXFydVpzMXI4clh3d0pma2QzTkUzZ1RfWHhF?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Habituez-vous aux nids-de-poule: notre réseau routier est plus mal en point que jamais et il faut s’attendre à pire encore",
+    "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxPbUVPYzB4Q2w5d25wa0dJb1JEUFBGRDVxTmdmQTY1dG92NFhvN1Y4MjIycjhyNW4yOXdGU1BocFBsb0lrOExwWm52c2NiQ3padnVoWjE5a2xMeWJIeHA3YWh3b2FfSDVLMm1Ya0RHcFQycjJZblBVeTNXMEQ5Ui02UkNyYkFtTmNHWW1XbU5tR1QxNXN2eUNIRVZoWVNEVDByOEZMaW55U0ZtZVNuQlN0eWhuT0U1VFZ4RW1WenczbWNUd21WWXhrdEpsT2VJdw?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-11T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "L’opposition n’est pas contre le péage sur nos routes... mais à certaines conditions",
+    "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOYTczX1VLVUNzWmg4ZFp6M3RZNDY5N3RfZ3UzWXczV1UxTG9ZMU4xbXhGSlQ5Z3BGSzBfaHJsSWs4UklELVNxaU9YZ0VYMHNqRXdMdmtLQU9wM3BHZ3EyaTRYZm44b0ZCZEV4emg3V2JMN0h1amdmOW9sLU1pQ1JaOU0zSE1EcUFfc200dEJIWUM?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-16T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Péage sur les routes du Québec | L’opposition n’est pas contre, mais à certaines conditions",
+    "lien": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQX0ZoX1hwc3VuNzVNTEM2TWZEeHJPb1BlU3NFa2R2bklFTXhEbkp3S2pBck1GR0VHZFhQTHdWcWlQb0cwWE14QlZabnE4bjUyZjJoTWZ1UXhUbDZ2TktVaXhQeGxHZnpoUjAydEhEN2NGODNYUTJRdDQwWlNYdEIta0FhZ01VWktIQk9SUUxVTnZTdk5JQnF3d1dpVnBMZ1RPa1NYUlZQMEhnR3prYmI4RUdva2hKRXVNTm5oVlRTQlh1TjBTMjFMYWhOaEt4cXp2bGVEd3A0cHVCY21NR20ydk5B?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-16T07:00:00+00:00",
+    "projet": "DMA"
+  },
+  {
+    "titre": "Région métropolitaine de Montréal | Plus de la moitié des ponts en chantier cet été",
+    "lien": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQZGl2RlhiLTctcFRIcHpYU2RzSU0wUnMxWTNtNzNZdDBmbzB4dGw1U0c5Wk56LUotaUdraDh1cHJPZHRFSm9qWjFVTTN3V19jaDhxVlMtZ3Q2NTJjUUZrWVV2aUF2YkdZQ3ltc3hvNlF5YkZwdTc3WEkwdTBxT1FnOERkRWI4YjVqSzJxYU1nQkpZRW1sUzU4cmFpbkhIbElPNEFsRVA0MGxrOU5nMnprZW9CaHJTNkZSZXFEN3p6SWtWeW5MNFBiUlVnYkRDcXRZeG82cG5Ua2xDWjhvOGs0?oc=5",
+    "source": "La Presse",
+    "date": "2026-05-15T07:00:00+00:00",
+    "projet": "Pont-tunnel Louis-Hippolyte-La Fontaine"
+  },
+  {
+    "titre": "Le boulevard urbain sur Laurentienne largué en même temps que les voies réservées",
+    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPeG1wMDBwRjJiVC1ua19nZ25OUW1aeGtsaTM5Ylg4bUZ0LWR0SHgzSHlyOXh4X1R0REJBdXZTeHN4eUJ4SVZxODU0bEVhcEpjbGE1cmNGcTVqU2xxTHEzX0dPUFBWRUZzSFN0ZnQ3MV9RZEtETk5TMFRIcTFKUXlQYkxyLUx4MDNWMmg0?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-17T07:00:00+00:00",
+    "projet": "PQI"
+  },
+  {
+    "titre": "Québec injecte près de 300 M$ pour les routes du Bas-Saint-Laurent",
+    "lien": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQVFpsbDl1eUFDbERxM3lkcXZwMU9CcHhJbUE0aHRZT3RNYU9kNXM3ZXI4LVV6QXNKZEgtM09sRTNOM3dBWl9PRXp2VFU4NFdDdmdpRWY3bjNwc0hwV1hVWWV1WW00a3g1M3hFUEZMbnJGdkhXeVh1UmVsczQyTE1rM2duWjZhTUUzOEtJ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-07T07:00:00+00:00",
+    "projet": "PQI"
+  },
+  {
+    "titre": "Fréchette dégage 700 millions $ pour le futur hôpital Maisonneuve-Rosemont",
+    "lien": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNZ2dNTndqNWRmSjNBQWwwQWE0MTl2dmJ4Vl9lLVI0alhFbnZHOEs3bWNYeTlOY1E3ODY0R3RtTEt2TWV2cm11TzFZaVhoUzZzZlFsUl9tRTM2MHlXUFM3dDdiT20walZsUzRWZHc1elFuTHE0NmRBYzZsTnNEamt4c0VoRV9yQ2JCdWtnampsSlE4S2pRQWc?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-23T07:00:00+00:00",
+    "projet": "PQI"
+  },
+  {
+    "titre": "Fréchette ira de l’avant avec un troisième lien à l’est « en collaboration avec le privé »",
+    "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxQM3RMbGRFTW1YdENJWEhlcTVfOWxYVXNSWGJUNnVJaElKbVl1WHVUM3Y1TEFVVmtYNGhYNkszaVJoRXFnUUlFUWtiZm1PemtfU1NzMjJfTi1Yam9XdzNOaXR5Zk1DVzZKUXJqS1RsNWpWT1ZSUTc1M01vVV85OU54WkJNSHAxQlNUc2t4U2RVOA?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-15T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Le troisième lien serait conditionnel à l’appui du privé sous un gouvernement du PLQ",
+    "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPakthT2FER3hWYVNXakM4bXByam1pSEVBZFZkWWtBdGhVcWtGXzY3Wmg5NG42WFJHeEZPbjlUUGVzX3RQbEJoSkxtLXpOTHI0OV9kTmZXUWJIdnpWNHdGbkd0UHV5OExyTGxwV0VLaEJDWTVxSC12cnc0VTNYbnpRWFJpSndwX3RsV2dDTzRJRG9xaUNNQ1VIQnNTeldYT2lOVlhOY1NPOFVzZmNIQjBxWkJEY2dIRDFyRHBROUVIeElYbDdxMXc?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-17T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "3e lien : la nouvelle ministre Kariane Bourassa y croit toujours",
+    "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOblBQYVU2QUtpcGg2V01aTmJwc2NUNlRpVm9DTUVSZmF0ME4zTnZLVkVXc0VIRXVRVk5QMndnazJHZVlTMUhYUEpSVEkzMTRWcTVWSFVfbG1FRmdiZzdUWlp4TjNTRVFXNVRvOHo2RUd2U2UybTJuanVQS1JZRDJSaG1jX0FYdC1jYS1fRW1WY09Idw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-22T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Abandon du tracé central du 3e lien: les citoyens poussent un soupir de soulagement",
+    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNU0JUUnQ4a3hfdU04Q25MenhHOEF3dy1UQnpNTnBua2JNcFFQbDJfMlFtUFRtMkltTmdwYnFYRzVVZmgtM3NTS2UyNlBGVHlwbmpiTW1VQzR2SUk5V0ZNRHhNVDRMeC12ekp6OWdiXzhiY0lQSmVxVmoyc2xqbDNSYjFFNnJEOFZMeWhyVnBMN3VxSHd1bG01aE5CaVpQR1RDekxQSkY1bHlPU21XS0Z1SVdBN0JGOENZY29kcjhZcVBta2Zp?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-14T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Troisième lien : malgré le « scepticisme », Drainville appuie la proposition de Fréchette",
+    "lien": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPZjZETmJEODRFMWJMd1g0S3NWaks3by1CNnJ6cTVFZkVJQldLWmFVVlV5MVFkU0JfOXAwZXZzWWNaT0UyUGJtSzl2OFZaM3hDRW91Nzd6SkkyZmxfWlpKWWpTWjNMN0JzaFhIcWRjZ203dDJYT3FydmZOaUx3WW5rM1pCVkpoQjdiM2w3RUFR?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-23T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Troisième lien: Blaney «soulagé» après la victoire de Fréchette",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPVzd3cjB6Q2tYLTZ0TlVBU1ExWWgxX0JCdGdWVHMwTmJNRXo4U1RzQ0tFT2ZYVndKSi1ob2huNUhsUXY1NXljVW1wY0tvcDhlaU1IY2JEanM2S1daZXhqSE9FR19vcWpXOWI1ak9NWkUwUW1wTmExTk1WdUMzZWFMV1RBMm1PZVdOTU43dmxheWFQWUZlSEpfdjRxcUwwaU90a1p6ZWZR?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-14T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Les aspirants PM croisent le fer sur le 3e lien: Fréchette attaque «l’ego» de Drainville",
+    "lien": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNZGRXemtqOGVleUlpS1Rkd1VtdUNsT1VCeWtGdFJ2N2xUR2FJY2JjaUtJLTVqTUlkSVIwdHFIdnd5bHNQNV9Tdk9SdXRMM1dEaGpWS2thclRHME1xa25JWFA5X3RJYU9wSjJDb1RWcUR0NnhUcW1WYkxnVHpIX0NwOGNVZElZa090R3k4d2tqYzh1S3drcnk2VUhtUld4bm1PUURwYm94ajZWRHlSRTB2X19rRlhuOWtUejcyY21LSVo2VVk1NWc?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Débat Fréchette-Drainville : le ton monte au sujet du 3e lien",
+    "lien": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQVlLeUZva2k2Nl9Xd0I0S2ZiWHNjYm5vRGxueXBnd0E3ZkdkS1dqNEM3RnpSdl9Cc09YUnoza2lYYnA5WERpWUpRenlVbnJSeE5zS0I1MTlTWm0wbzVoUG00OG15TDFMMEh6LUFPeUxSc1FZaFRhSndpYTJBSUY5ZlFoMy1ZOFZRMnBMMjZubkRod3Zyak9Lc3U4eVhGTnh5YU5FTmpmVQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Direction de la CAQ | Il ne faut pas faire un troisième lien pour « l’ego » de Drainville, dit Fréchette",
+    "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPNGdNd2ozVmxvc093dmhsUGJHeUlTcmhFS2gwYUI5Z3VpSlZYODNwTDU1N2ZpRk9UWUtFRGNMOXhCWkRVdTE4cFMtTVVHZkREaXZLTml3N1ZxVzNlbHo1SkljbTBySzZRcnd0Q0ZRMGZZdFBaRUxBOUNUcXdOUXdoVVZIUjNjeW1aSkdwcHRybmppY3l1dEFtaTB3Ym5tWTIxT2VNMFJFdmlsaW1rRDA3cWxDak5vemIxT1gtZXZiZ2FSWVFUb0RGUXIzNXpLOEpIMWotYVFCZUtRcTk5dW51T0JiVGNubk54cUpWVjh3?oc=5",
+    "source": "La Presse",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Débat Fréchette-Drainville : le ton monte sur le 3e lien",
+    "lien": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPWUZNQkt3a3JWSFFMY3VmNHdvY2pVOHZRN0w3SGY3bUUxaXh2RnNsZkhOZ3NWM3dUa3YwZE1CUXJfTnJad0syZ0hhWDc0X3lzZC0zQkg1VDhRNFNURTlCMl9jcldZa2hNS0x6Q3lGXzkxRGlZSkcxdFpKSXR6cG9QQzZIN2hmd21HZzFEeDRB?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Christine Fréchette passe à l’attaque au premier débat de la CAQ",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQMnZMdFNkbWpjbGd1aHdZSUNDY3ROc09obTVKZUhyWjZvcU9yWGx3VEZoTHY1S25CNU1GUzFpeVkyeEIxclpxbW5WWGVqOGZ6SXBTeUZURUhMV1NVLTFXaEM2d1owUVAzYUVjNlRqZW9yS3dwTGV1WUlvX1l5ZGQzOW1GcTNWM0owMll5em9MVkVKcEpFUTJ5X2dTS2syUTN1YWhRdWpB?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-03-21T07:00:00+00:00",
+    "projet": "Troisième lien"
+  },
+  {
+    "titre": "Un fonds fédéral de 25 milliards pour les grands projets",
+    "lien": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOZ2dyZEg0eTJsaGZ6ZklqTmZtNDZMMjUzcE90djNwd2wyUTFTVjB2VXpaekU4RXdBSl9CV2hEaHBXdy0tWXlXSWM2Wm5UVFAwT1hQdjE5YWh3WmU5LVQ0Z0tXbURNMm9EZjl6RXR5UjF1eGtxR1IzVTlWRFN0dEhXSWJOVHdnTEwweFBabXJ2bURxQUhHU1JnRW1uQm5YZk9BMlE?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-27T07:00:00+00:00",
+    "projet": "Projets d'intérêt national"
+  },
+  {
+    "titre": "Ottawa promet le lancement de 5 à 10 grands projets d’ici l’an prochain",
+    "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONTB3T3lRSTVENXdLU3A4eU9wRnNuNGo4aXIwZ2ZaQzFuMHBwMUZjblBVN1J6aGI3WjMyOVZoWVo5dUdMWDQyU1p3aUJYWm5GeFR4czlPelVsS0J2dW0xYmZFbHl0SGQ0UGpxOFg3NTgyTnJ4LWhZYWNzalhLX1RSWV9IQ2hfOEZVZkdvMFpPUzMwYVg0YUk2OV8zQy1nTjRqX3VxOHhRSWwtMWVE?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-24T07:00:00+00:00",
+    "projet": "Projets d'intérêt national"
+  },
+  {
+    "titre": "« Un projet, une évaluation environnementale » | Québec tarde à s’entendre avec le gouvernement Carney",
+    "lien": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxPSDd4VG5YVXBZU0tDM3RadWpGSFlfN1pMSlc0a1habTZfTEI2SG93dExfWnM2aFZvaFREN0JqeUpzN2VCaFFxUTJMVzRtY1BLMUxSNXVReFJyczlaZWdSQ2dfSGRLejlKS2M5NWpfazd0ZkxfWm52b0JoZWlUekRVZXhFZ2FHQ2pBWEZiQWZOaHYzLVR1NDR5Y3BRX2dYYzZhU0pQYUs2enJsTWhubHNvS0EzdU9oSXhkUWZJQWFWbkJGcW1YT2s4OGJfZkdPdHZxNXRXMHhScmtMQTQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-03T07:00:00+00:00",
+    "projet": "Projets d'intérêt national"
+  },
+  {
+    "titre": "L’OTE : les projets de concessions d’énergies renouvelables menacent la souveraineté et l’intérêt national",
+    "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOOHAxS214Q3QxTzdJeEFFREpiS2d1WTRHb0ljbklVcWljbWYzSGltMHp3OHNvLWROY3dKd1FCZ1NDcEVNMUlnenY3RkY5MVIyVFZUS1AzZjhqWjZaMWdWc0kxZFR2ZmxNMVFHc21IY0JEWDJzT3FtbXFnZk95MXJBelBCclVtQ3NwTkdRSlFtOVVkRWJOZnNzSzRjbUpNZWhPMnluenZSNktQU2dTUkxfMVB2OTB3ei1YdE5tcS1mZVNWeXBhYnFTbW9sMHludUlKMlVN?oc=5",
+    "source": "La Presse de Tunisie",
+    "date": "2026-04-28T07:00:00+00:00",
+    "projet": "Projets d'intérêt national"
+  },
+  {
+    "titre": "Le pipeline Trans Mountain atteint sa pleine utilisation",
+    "lien": "https://news.google.com/rss/articles/CBMifkFVX3lxTFB3TXVoTlpJM2pqTlZBM05lNTJ0bkVTUjhqbllKZmJZZU5nb1FYQ0Foc21yTmJEd1hTMU0xdUxJT2poYUlKRWswY1hxTTBwVHVoRmNlazNLcXJVVXRNaS1JV1FzelA5OG1wWVB1VEdha2hablRKTWstWENqX00wQQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Pipeline en Alberta"
+  },
+  {
+    "titre": "Le protocole d’accord Alberta-Canada subit son premier échec",
+    "lien": "https://news.google.com/rss/articles/CBMigwFBVV95cUxQNlgtOGlUNjc2c3NfUDlRUENGeGF5Q1dtbXBKazZkUGhISWdXTVNiSlpFbS03Q0hHNGVWdklGR3gzbnVfRmt2QzdhN2tuN0dYamV4dFEzWmpEejFROERJYmQ3RkNiY1N1elE0a2VFLVZEcGlROVhTcWZTNFFKQ2FQUHlJRQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-01T07:00:00+00:00",
+    "projet": "Pipeline en Alberta"
+  },
+  {
+    "titre": "Secteur de l’énergie | Mark Carney et Danielle Smith feront une annonce vendredi",
+    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOeGFIV1kyNldrdUl3RmUxZWFMbDdqejhFNWctRGtzaWtHZUFlUVdzbUNaSzFPQ1VPWm5vQm5UUFgtdXVDMU9EVEMzaFFFRzdMZ3RobmRmczBSUG1vdGJFOGdfSnVJTVM2Z3p2bWZHMHIwNkVPQUpTLWdpTlZXUk9uZkhhT2kzNkxVUmxsdWJQeWhOQ0VlS0w1R1dndGZyNk05WEdRUUhIWDVuZXpPTWZ0bzRhWl9ZTVFOWUlQT1d1VGo0OFFS?oc=5",
+    "source": "La Presse",
+    "date": "2026-05-14T07:00:00+00:00",
+    "projet": "Pipeline en Alberta"
+  },
+  {
+    "titre": "Victoria préfère un tracé d’oléoduc par le sud de la C.-B.",
+    "lien": "https://news.google.com/rss/articles/CBMiggFBVV95cUxQTUFPak1GQkZUWFNvYTdCclhSVXk5TFZnT2VoeWdJVXFyMGlkc3N0RW9DTzdoZnQtV3BZOEZYa3I5NjJ5NVlUSnNwczdBY0haYzV2NjdXZHAxNHJ4WWVWeXRJcTA3MDZXYnNyMTRGbEcwNExJOUd4eE1tTHZzNTQxVzdB?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-21T07:00:00+00:00",
+    "projet": "Pipeline en Alberta"
+  },
+  {
+    "titre": "Expansion à Contrecœur | Le Port de Montréal prêt à s’endetter à un niveau inédit",
+    "lien": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPcVd5UTZIcnlHczEyNXRUNHdyR09mSDVFMVdxVVpVZ0ZWc1libzdJbGp3TFVvU29vRjRDOHpiTDN6UE9SNmtBV3VrME42V1gtcnY5YkdKYUgxN3lYaFBxeTlzSU5rWXh4NTdWVHdaQTlhQm84dmdzbU9lOXJqci1xcDZvLVJ3QXVrRG5pdFd0aWZkVkZoc2daSWF1RWd6clpGT1RXc1hickhuaXNHcEEtalJxall1UVdmelJMSG1idVhjckFpSkxJ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Ottawa prêtera 1,16 milliard pour la construction du terminal de Contrecœur",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNUTB4RFp6QV9CYkljQ1A3Tzd3c3o0bWZWWlpZVFphVXdrRjV0LUpCeXA5aGJEUHpzMmU5MDlxSGJZV25KRWNEekhYZlBQTXo2bGFNZVF3VWQtVV9RQW5VWlhyQTJBemZ6bm1iajhwODB0OXRHaktRMVlaVHpRMWJuMTE1RGQzcFBaRWFsV3hkMEZSSHhiSThBaWF1NDdFZGtKTDdIekxn?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-09T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "La BIC prêtera 1,16 milliard $ pour la construction du terminal de Contrecœur",
+    "lien": "https://news.google.com/rss/articles/CBMikAFBVV95cUxONUpYeW1NQlJfZ2cxVmE1SG1jdTZsdk5HV1c3Mm1UdWZjNnpMZGExZ21EWC1OVWlNZnBEMm5HZnlHa0RDUU05cnRlRXpRWnZmWnp0RTA2QkpMVTZMektoUXdyU01sTURHamNJMVVSSG1BTTU2XzFOLTViMmdqSzJsT0xORFh4THZoVWFZOVZyMWM?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-09T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Expansion du Port de Montréal à Contrecœur | Feu vert fédéral, mais la première pelletée de terre est reportée",
+    "lien": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQUlQ1MjhPczBSTExiVEdsVFlpc3FIQm1CLWJPa2hMTEpQMF9ybHk3ZjgtNFExdDhrV3RYNi12cWl6NkpVQ29GUS1OeGswbS1tZ1Y2ZGttbTM3QXpXbUxZQ2hKclh4WFNqMEJBYnVyNDNJRmpjajh4X1R3Q3psdDRvaVJMWlRsV2RseXdKandnVGlhZ3J0WWt1VDFLVE8zWVlWMk9jMlY4eUNMWUdmMzlXTjRIdDIyNFFKMEc3ZWpqekJXZ3pRS3BuZU5xWkx2b2ZyenFMNnMwUWFYODZHNFVrMHJwMkJBeVRpMXhvTg?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-09T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Exode au Port de Montréal | Les ex-dirigeants appelés par un comité fédéral",
+    "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQUzBOY0dfVi1fZXM4T1JYWDNIWjQ1ZDV5cG1Xd2l6aUlBcEdZX2hWYmJ5RUdnLWxQZDU3Umt1czJlQUdlTTVPU0FPa09PdElGb3dnQTdrcmpXYzZmcFhnb2lmOTJjNjZBM18zUXVpRnAwS1RYSUYyNHBPRWNFZk9pWUs4Uk5pRUZFRUI2NWFoSzF1SmdVZVZiRjJqNlZ2MkhVZExxV3RsWFRTamF6ZEh1YkpyLWhvZFpYdUwzb2Rn?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-13T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Hécatombe au Port de Montréal | Le responsable des finances plie bagage",
+    "lien": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNTBpNDZ3LUNYanlvUEdKVDJoU3U0TzJrcmloSXV5UlFjM2ZsMEM4RXRFd1FiSmFRRmRmSnhxcEVJZ3FCNTMwNGhJUkpPMW5pR1dUcndqQ05JaDM5clpYWWtENW1scXFqdWYzdEd3R09PTE1jcFBJZTlZVVlmbkNsaE9sSWR2OUFSV3B4LXNVazFaV0xYZjhORTFwWUN3b25RbS02eTd5cElua1N5WTU1cHdVSDJOMXhm?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-13T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Départ de la p.-d.g. du Port de Montréal",
+    "lien": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOMEFtNENfNWtsbmpLZHhUYVlqU3NJZVA0Mkg4aEZBc3Y0Y0NZYjBaXzBhRTl2bXBrc1dwckVSVUVhaWg2NE1VRGIyUElkc0dZM2lKemNMQkVXUUt4WVhfdXZYQmFGQWo2cEV3V09xYS1OWWVsWVdMd2JaRnFGMWlBLQ?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-04T07:00:00+00:00",
+    "projet": "Port de Montréal (Contrecœur)"
+  },
+  {
+    "titre": "Nouveau Monde Graphite : ouverture de l’usine de Bécancour prévue pour 2028",
+    "lien": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNclFjd0xzb2lHVDY5bWhScE1VN1paRE5TY3I0Q0FyeUpSc2RHaGY2aVF6ZWlfbTJzQ21GZWxSZkZEWHlUcFUzam5zeU4yQWs4MEFKOF9LX3pNaHJyb2xjNDh2akJYQmFSdVBsREFMZHgwSmkzNDB3OXZGMk82Nzc4WFpkSDRBNXY5ejdSR2prR2ZpeWM?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-13T07:00:00+00:00",
+    "projet": "Nouveau Monde Graphite"
+  },
+  {
+    "titre": "Minéraux critiques | Nouveau Monde Graphite a l’argent pour sa mine",
+    "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWi1tOEVDeTBadmpMSi1JLVExUm03Mjc3ZmtmZHNCd1ZVeUJLTFl1QzFxcFlTeXpBZ2duSDNOTzFjbTQ0VW1PVjdSUjF2b3hwallnNnlJYURCRURlclFIVkk4bkcxbWE4SS1xcmhwN21wa1o2TWp2VUV0VzZ6U3YzQk9hOEtZa016RFMwY3V1UTJ3ckJFNjF3aU1xV2RLUzhqLUU1WDJVbWlXMnZZcnJaSUlFUQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-10T07:00:00+00:00",
+    "projet": "Nouveau Monde Graphite"
+  },
+  {
+    "titre": "Québec | Des projets miniers difficiles à lever de terre",
+    "lien": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNRThSUjh1TVFUZ3VWNk5hZ0d2Vk1UQUJjUW5GaHEtb1g1Z1JCbUZZaGt6M2FFenNDX0NVUDZyT1dwN3hvWTh3UUJ1RXF1X1B1d0NSSVN6bUUyQUROVFE4dWR0TTM5R1Q4VmxIdG5jYVhlSWVXUjR0TVZ5M1FqdTl2bWF2Y2tKNE1XN0FsVWRJNXhOdTRFZmd1YkFod0xTTmdUQUNDNDEzYnBXQ3lGRE0zQVowWQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-24T07:00:00+00:00",
+    "projet": "Nouveau Monde Graphite"
+  },
+  {
+    "titre": "Ottawa annonce la création du premier fonds souverain",
+    "lien": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPVk1XOEhJUHdzd2NDSmNBdGkxd1Q2UnRtRWp4MEFLZlFlT1R4LU40Vk02Zl9jR1UzUUVNal9OX2RIYjA0TURkelFVWnZzTkNpMHY2b3lRamVTOTFySnJEVi1xTjVtWWdhZG1iMjhYVlZHRnJWajRHa3NmSThIbXFNRFln?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-26T07:00:00+00:00",
+    "projet": "Bureau des grands projets"
+  },
+  {
+    "titre": "Le plus gros projet industriel du Québec avance… derrière des portes closes",
+    "lien": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOd0NMam1wYTU1Y3pYckhnMWtkMnBtMC1JLUtoTmEtUlA4ZDh4SGktbWxoMUcwRVNqbV9tYWxoWFBQY1B0Y2tUcTc5YVVIMTZ1VklZRVhhVDZsWm1nbUE1U1RaS1IxaDdIV25mNlprQWc2VWNWd1d6dl9hQnctbURweTRTaGRkazAxX3VpZHNxcER4YVlHeWkwVENia0JpVmxoU0EzQTF1aTJzOFNHTkNPMVNkcUdvM1oxTV9iZnRR?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-03-28T07:00:00+00:00",
+    "projet": "Bureau des grands projets"
+  },
+  {
+    "titre": "Une seconde vie pour l’immense camp de travail du Site C",
+    "lien": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQM1FTbUhoSnB1N1FnTHRldUc2TmgzWkpWOGhFWHlpdzgtQ1hNM0s5V3dIQ3BFRGsyb21leVB6V3FtbUlfeHY1LUhlWUExdlpDbUVwUEZFTHl5N1hOclVpeDg0c1dXSFZkSWFJS3M5MTEyc3JJOGdZeDR4aGh5ZVdMQ09Ga1FqZw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-03-27T07:00:00+00:00",
+    "projet": "Bureau des grands projets"
+  },
+  {
+    "titre": "Tunisie : grands projets publics relancés, priorité à Sidi Bou Saïd et aux infrastructures universitaires",
+    "lien": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQVDlOUURzaGRQN0tlSV9ZSmt6WGJQc3Y5VDl0bVp1OEF5MDNUeHdlTEtqRk1aUEVpbXZ4ekFPNVVENlVsTWc3TFBPVm1BampQaEY4M0xPS0t5d0t5aTk2TEE3WG5DdXpUNGdMV2tYYkhtVGp4UDNibF83NllIVjVsX0g4c1VUZ1NGVERuQjV6SlhweTZ3aUthNWp4OEVFeXdCZGpZTzZmQnhkOFp2VFpDMkFJbTVOOW15VGllREM1MXZvYXBTR2hERVBVemhmd0hJUzlHYg?oc=5",
+    "source": "La Presse de Tunisie",
+    "date": "2026-04-18T07:00:00+00:00",
+    "projet": "Bureau des grands projets"
+  },
+  {
+    "titre": "Le rapport indépendant sur Churchill Falls publié le 19 mai",
+    "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxPcGs3dEtmYUhpb2lYTVRvVnE0bVdaLVJvWE1sTXlWVEVHQVd1Vl9jenNvNEN4eUdtZVg4RTlRcV9CZXlUZjR1dm1lNU0zcnhxZU1TLUtjRVhzcUJHN29tbHNjT1lKZ0E4TWNDWXE0S08wRWZTWEl5SXpjUUVobHQtRDhJaE9NdDluZnVSbm9wUDJDZnljSU96Z1J1cnlydw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-04T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Accord de Churchill Falls | Le premier ministre Tony Wakeham souhaite poursuivre les négociations avec Québec",
+    "lien": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOaVl6UE9ZclR0RWxmSFNOdUgzbWsxbFZsQUZKMS1aSTl3S3NsNEl6NExENTZpdWtua19teXZXMUNrMGNfd2RDRlF0V09pS01USWFyMEJnU0NncDlVYnVOeU1WRjlGd0FMWnZROG5LanhkQ09rZEtJM0tMT2pzeVoxTlU0ZkJrZk5rcC1lS1ROeDhyQi1nQlpRSmZCUjVkVi12dUdIM045SVRNR014OVlYbko5cU55Z2Rhc1R5TmRFUWVpNDhFbGtoanp1amtiaGE3NkZmWk1Ha1JnMVJCQXo5dnQ1YUtRQ2ZFXzRWcUwxQ3ZWaWdNeVFOeXJmRQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-30T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Churchill Falls : Hydro-Québec bonifie son offre aux Innus",
+    "lien": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZkh1RDEzdVVQUFltWGZJMzh1TVF5dFV1YTJ0WGhsYjF0WmNKUXpXbHhiZ2U0NllKOHdCdEJiS0FwQ2Z5U1RNTTBST21vdXVIU2RmX0dTZTY5SnVoSlpJQlpaQktIdXlxa2VpNzRZRFppYnVpbkpCUTZvSEFMSU1TbGNzcVhiT0RJWlIxcVVuYzhhMHh4dnVfM3Q2NHRFUQ?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-04T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Churchill Falls : Fréchette ne tiendra pas compte de l’échéance de l’entente",
+    "lien": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNMWI0aFAzUHpWQ2xFN1hxUmtpbXFqZFFrWHRObjFfTDg0MmtfZUZqdWFFOFB3d2NNa08xWEpodDVsQXk1Z2J6ZFA0M21hZ1ZQanQ1Q2lGby1CZWJZUm1WT2U5M3lmUVdrM0h0dDlyUG9RbThYTkEzRDQ3cU5haFlvZHZPc0IyVUU5?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-02T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Churchill Falls : les libéraux du Québec et de T.-N.-L. parlent d’une même voix",
+    "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNYzJnSkVOSFQ4RVdBc0E4amdBVzgwOFFnME9VY3NvbGg2TlZzLXN6RG9Jb29QX0hxRUFCMlQzcTJOQnFiaFNRSlBNMjJtUnVGUGNDZ282N1lPN0tPY2lYZ1NWNUUzX0VKNE55eW9Hd0tPXzh5dmRiRnhHUFZFUjZLQzBJYkZvZ1E?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-28T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Les Québécois « maîtres chez eux » au Labrador, selon un nouveau livre",
+    "lien": "https://news.google.com/rss/articles/CBMif0FVX3lxTE51cXlBMXcyZWo2bzZYcm5UMjBLZWg5QmdXS1Jlb254Yk00N3p1ZVoycEh3MzNqZy1uejJlSkRRTExSbW41UGJvVE12VU5sZWViR29fQUFQYTM3UmEtNFR5QlR3RUQzX3ViZFc2VzVOWGtNT3lJZ2RLcVZmRlVTRGM?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-13T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Churchill Falls : un négociateur clé de l’entente quitte Hydro T.-N.-L.",
+    "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNWi1CN1VTSm5fOElnQ0ZlaUZhOTJJQVExcVRIUUlBamUtQzQ0OC0tYVZLTnRxZVAtRjVCQVBaRmw1OG5GRVBxajZDSWVfWUF2NVUxQkllS3Z2MER2UXB2dUxsWUk5S0RaTG9RT0ZOWVZHS3JiQzY0TTFWelJJR0hCdWRhZ2VuanFtTlE?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-24T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Churchill Falls : la publication du rapport évaluant l’accord provisoire se fait attendre",
+    "lien": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYkhaUDR1WkdUbXIyMUNSMXR2ZXYxb1NNVUxYZF9Ecnl4ZU53MWNNSmpyWjVlOTVwOEo3bDB6UTM2VlFGeWxnbHg3Z2JGQ1RzOEhxeGlYcjF5TTZMZzQ1a3BDc3Z6dEtzdlNDdzJiQVczX2pYMlB3SFVuZnByLWJXVmF4Y0F3ZFlWa3c?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-30T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Entente de Churchill Falls | Fréchette garde espoir pour un partenariat",
+    "lien": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaDB2dlVvVlJhS05CeVBCQWN6bkpaVHR1cDhSRmtmR3dVZkFhVjd2YXo1c091YlVJaXRHaTZQRTN2RVhUNFBMUm00dWNtRFpyMk02cHFQR24zQjY4TXRaOTl0d0FzUlBkQVdOaU1yTXoxWjRzYTRYSDJ6ZUhBQ0Y1TkFIMW1ITlhHbDhNLV9YSVFlQ0wtNWdTX0hybV9lZHlSVDg0RWM3RHpPU25WVDR1VkY4ei1EYXZtak1xM1E2RE5nOTRB?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-27T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Danny Williams a soutenu Tony Wakeham contre Churchill Falls",
+    "lien": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWEZBTFdFdmVYZUtGOFY5Q202Y1ZqT2NYSVJ4eGF2U1Ewb2JzSnZFNWhnLTVFUGlGWUVLc1ZSSW9RNzRveUozbGlzbDdJZk1BSmRKdjI2RnNvOG1obWVtTEtWcWFjczVISzlQVlhTMy1xYkdzNE1GN1Yxb0R4TmJ6R2lZU0YyMzBkakdZd2U0dURtaldMZVMwYmt3?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Entente énergétique de Churchill Falls | Le PLQ demande à Christine Fréchette de rendre des comptes",
+    "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeXlaRmtBcXVaRHJCaF9rejlkRUtlX19iUFZiMEZwRUtjXzd4SmRIWnhoeHhBbHZNa2N2SkNOcEc3RUZkTm1xSVdadXhuM1A1bzZOS2FXejVKbUdvVXRHdFl2aEVVLWhkR1VXY05hWWhsa1M0Wmg0MkhLaHhhS09DcFpfaXFPQUZSbzYxSjl3NkE2emdVdFZOZjhvQ18wVUVSS0l6aHR5dzBLVzhPYlhfREp2Q2VIc3M0QWZuQXE3aElIa0JxaldBd3cyanZBckVxclJhd0hKUjY0ZHFoZEJ5clpPZGtnbExSTTlXSENn?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-28T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Énergie: Christine Fréchette espère des bonnes nouvelles de Terre-Neuve-et-Labrador jeudi",
+    "lien": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPU2xPZWVfc0tlMDhpN29lQ2RJVTVNUjdkcFJxWjM0RTFlMGczc0pOSjVtLUxoUnlJdGl4U0VuWV9Ea29EN0VfQjMzZ1gzVkRrbmF4SFc1R0l3cFdMLV8xMDVTWG1MaTVuOGc3SXZCOG1MVkkyZ2pTUGJGQjd4QTFUTTQxSDQtLVZFLS12SUxmaFRxektUTGRQbXp6QnFjMVk3RkJmaW9uOXUxM3RCc3c?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-29T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Un gros test pour Fréchette",
+    "lien": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9rdUwtMTNHeFlWQnB3ZUlQRVhyVnFKM1NBMGFDcGhEcF9BMWg0M0NST0p6aF9rRTZNYm11LTEtQ3VXWXF6c1JCNVB6Y1JuZG9naHo1TW4xTHlhQ0QteWgzdzhNamVIYkVCeTd6VWZQZmE5YTM4TjhXcjV3?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-05-02T07:00:00+00:00",
+    "projet": "Churchill Falls"
+  },
+  {
+    "titre": "Dossier | Dossier santé numérique | Un déploiement sous haute surveillance (2 articles)",
+    "lien": "https://news.google.com/rss/articles/CBMihgJBVV95cUxPcUhKVTdVQlJnemdfOGVtaWZwcXdVUjF4QW5NalVWMFM4TUxhNjlBcG1xRHZqLXNfTlRhck8tcUZMd0Nramk5ZDl6d3VXZ1hUU1RaTG5BRmdpeWVVczZFblNzM1dyUnI0QUtxOGhLSUpSZ2tJeEphZTdINDVIY1ZONEM4MzNjNk5zVUFBbk5kZkdWMmVGc0JQUy00SW9IRmk1SEUyOEJmdmg4SFlFck5qUnU1R1k4VDBSaE1Mci1ENHgyM0VUSVVVa3RNZWNOWkhTNDJHVE9EMjBVQXZhZDR6NkJyc09Sazl6a2I3a1BLWWhsckVVZlJZYzA5RHE1R3N2WnBMcUVB?oc=5",
+    "source": "La Presse",
+    "date": "2026-05-01T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "Le Dossier santé numérique, qu’est-ce que ça change?",
+    "lien": "https://news.google.com/rss/articles/CBMidEFVX3lxTE05NTlycWV2Mjk3N1V3XzVlMUN0OWpLdGFMaE41LTJ0bW1tWm9lU21BT20zcnExZjVrRkJDejkwRlM3ZjRxN09LS2kxaklzM2Rmb3NMWXFwOU9JelFzVjRDSm9hdVVseDdFZm55QzdnSE5MeHJQ?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-05-04T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "«Aucun incident majeur» lors du lancement partiel du nouveau Dossier santé numérique",
+    "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZ0ZvZmNDNkd3cVN4aHcycVpRNHk0WmFPVUc5T3BZTExnYWZpb2NHUEtMTVNHN1YwTjMyYmVqMXpsRmZGSUQ2YjNuTnRmcmIwcVdlRzlVQzFIbzVhYUhWUUlDMU1uMmhLTHlMSldLcmszSlFUUEpTaGgweGlnb0xFcm9XQkJrRzVZV0dpVHpwa0ZfNW9oLVRGVnhQUFhacUg3OTN1dUV6R25lTVdaRUFlcjZhT1R6d19IbE1BUktwZDdVVFE?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-05-10T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "Plus de 200 demandes de soutien 10 heures après le lancement du Dossier santé numérique",
+    "lien": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPX3ZrbTdLTm9TU0dFM3Frd2dwb3h3aUdpOF9MeUhxeWZmWldGWWhRSmZVQkpYUDJRMmczdkJTeE84REc1ZzJpQzY2X2I0azdMSEdRaU1NV2tPU1NJc2NoOVFxM1pnZnBYcnNzRUxESzBrb3FLamEwWmtnQ1NTcmhHbkxNdmRWYUFDZUxtLXpINnNJTm93aTFyTFZUdzBXdDVjdHRaXzNSWGpEdGVFVzNoMzAzc0NMNDE5Q2RFYXZKY3RmY1Jtd1dOaFp0MnI?oc=5",
+    "source": "Le Journal de Montréal",
+    "date": "2026-05-09T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "Ce que le Dossier santé numérique (DSN) va changer pour vous",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQVnY3Z3lRdlZLVnlOM3hRRHY3Njd0WmdfS2pZTFlzTVgyWWZnTkZUWktkRWJXY0h1NXpLWVhMZFg2cUliakprWGhRRkZOX3J5M0pVVVFEQmNkUHRYMVJSVzIxbnI5N0ZyZ2d0QlBmTzUyYjNyV0pKQWQyejBtcF9RZE9nazRaNFI2YS1nQllOY0xYMzNqWFpraFlnREk1Ymh4U25iZ3hB?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-09T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "DSN : Fréchette approuve le déploiement dans 2 CIUSSS",
+    "lien": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPQ3poVWV2dDVEY0ZfOWJNT2ctY1JVUVNPb3BycWRfNTJNWGJwYkVTem1HY3dQRGJ0S09mME5CRm1YY0VVU2dNTmpXeFZMam9nSU1tcEhpSExzNkZxR3lyd2c1SkJob241ZWlIdWotbjVHcVBFZ2t6bUI3dWZ1MHN4ang5WFBiOTd2UFRQTUlyU3p1Nzd3OFIxeE9ycW83VVNjaEFCdk53?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-05-04T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "Dossier santé numérique: les données de santé des Québécois en danger, dit le ministre Bélanger",
+    "lien": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPaXBBSmQ0b0Q1OGNWQkdPNkN4cV9heGtzRXN3Ym1rY245a0ZRUFFjdWFxVFpMM3lTVElrYXdUUFE5N3o0UXdwY01zcVpSX01xcjFaUU10YlBqdFFRYkZfQkliMVVXUGdqSDNMN0tWcFhEcHc1bGZXUEVBTFg0akFzZU8wZGV0bklwSld6VE9lOXNPOHRjZTB5VFZBNGRKUDZiRW5MTXQtMENwWjJrV3pXXzJYQW5ldkh0cS1lU2VYdW1pbXZuTVU2b1Q5WFB5ZUNObmZ3?oc=5",
+    "source": "Journal de Québec",
+    "date": "2026-04-10T07:00:00+00:00",
+    "projet": "Dossier santé numérique"
+  },
+  {
+    "titre": "F-35: Lockheed Martin et L3 Harris font miroiter d’importants contrats à Mirabel",
+    "lien": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcU1HQlpUbjdWWVdlZGU3cVhaSTM5NGNCS1dmLTloM3lXLTJXbWg5cHoyNnZET1lIUmdWZnltNDhmSWtUVWwyUTdSS25yc0xyMW0yZjdaWURETV95WDl6MnVjeGQwWUY1WG5wXzZYRnIwNDlCRHRNTWRValVENmVZM1JWNnlJTktxS2tkN3NqaUZxSFFJa0hSeVJPZU9jdndzWlhZOTFjRTFJQ1RF?oc=5",
+    "source": "Le Devoir",
+    "date": "2026-04-21T07:00:00+00:00",
+    "projet": "F-35"
+  },
+  {
+    "titre": "F-35 : les dirigeants de Lockheed Martin débarquent à Mirabel",
+    "lien": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPZkVjU1ZxLS01b21lbXNObHBieEhjSW9aTWE2bzk3dFRpOUJFVW9MQnhJbU9EYTR6MG95bEVVdFByY1kzWThDSi1mVjM5Y3JlNW9TaElGWmc2MUxzbTNxVUFMYWxRM0g4VThoaTNMYjBWT1pjdHo0TXdxaTJ3Y1FEd0JwZEl5Znc?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-18T07:00:00+00:00",
+    "projet": "F-35"
+  },
+  {
+    "titre": "Retombées du contrat des avions de chasse | Lockheed Martin prépare sa riposte",
+    "lien": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxORnFlV2ZUX3ZoQ1JVZkxBM0xPbTlEc2lET3FONU94MEVta0cwY2FLNWJOTVN1cVFkRkN1Y2RQRXdSSm9MWjlOMTI4QlNpNmkzSDN1LTZZaWpPLU5GTlBwS3RGN2hZc3dwampRSWxQZUk2dkhTNzV0OHF6eWtCNEhIQVNSMTk3eE12TW0xaVJlNTFxVE1HZ2dzdDVlZFBpMUhIS0tqNkwzVEtubXNZV2RwT3g4b2hPTy1LOTZsaWJCMVlIMGM5R2tlakg5VThmMWFzblE?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-20T07:00:00+00:00",
+    "projet": "F-35"
+  },
+  {
+    "titre": "Le Canada envisage de participer à un nouveau programme d’avions de chasse",
+    "lien": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPX1F6VDhoalZDcC1iNVJqQnBOMDJyb3dGaGlMS3ZDUUZtYUhrTzBkejJOcF93RzNEVW9LVWV4S3ZGOHYybWZ4a0VVNEdZVEVPY3JFLUNRNm5qZmMxNEtMUzVFSVY1U1VVWUZtVTFva2J3VHhsTWZFMEdUaHdEVGJGNmUxbzFKVVJnVmJjb0N0TzNvbjJkWG9wR3FSNlpOVFctMTJMZTNLQmx3MU1WdVl2aUNQc1U4a1dQZlYzTXJfNHRzUFJSOVhwWlVLVFhJRDA?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-27T07:00:00+00:00",
+    "projet": "F-35"
+  },
+  {
+    "titre": "Saab propose un centre de données sécurisé à Montréal pour d’éventuels chasseurs Gripen",
+    "lien": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNM2RVeHY1cU9LOEhwbEJDeWtIM1NDcV9XY1JGa1FJTDRiRFA4cXcwY3BlbW1VY2VyU0k3S1JCUDZGYUtfQmpPTEszMDhFU01GYjgwd3V2eVpGc0R0OUdBd3BMUGJuaHFzUnZCUFVFcWtndnNYMEp0dDAwMDI4TXg5TlJUYVZ1V3VaQmxubGFsMlFIdw?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-10T07:00:00+00:00",
+    "projet": "F-35"
+  },
+  {
+    "titre": "REM à l’aéroport Montréal-Trudeau | Incursion à 40 mètres sous terre",
+    "lien": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNZ0VyUW5LLW12RnJ1eFBWcTE2UU5ZeTA3VFFnaml6Vkh4MENtX2I5b05DQVBuY0hpRGN4Z1NxZFlvM2hFYnBnMFRVWWJFOWp3VS15Z2VSbW50YTFPWDRiQzdQb2NuMWNaNU5XNjZZdFN3a0ZfMW1fME9kVk9NQmUtNkZ2a1lrX0ItNmU3X1MwLUUzN0w2Ukk2OXB0cHlTTXczNjdHRlRzaF9OVTg3d08xdTJUeGs4M0EySmZhdGpIc19hTnN0SHRRODJ4RQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "La station du REM de l’aéroport de Montréal respectera le calendrier prévu",
+    "lien": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNQmF4QmdUQktwRzZmcDdtZ1ZEUExTZThZeHJuLXdMRkdvNnFKajZDNXI4RHlPeENRdW9WajhTUVBmZEtPTF8tbF9tZUpSaGpVUWp4Qy1yalZoYkZxZFJnT0RyYUdRU19SWkc2aVU1LWVkbUlwckJQQVg5SWlLd1N3YTlNaUU2YWJkRWtFRkRXOA?oc=5",
+    "source": "Radio-Canada",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "On a visité la future station du REM à l’aéroport Montréal-Trudeau",
+    "lien": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeUhNWnlTVHdNcWNfdXctMUpmODRzZi1Gc1ZBckZac19pdTJHWXBnWmpINm14RmJpV1V1d21SbTQ4U21mSVFmNGN2Nzd3N0IwS1dyYTdRenVNOURzeDNRNHhyT2ptSWdabVlVRVBOR1pIam1DN05fV2JzSGFzQl9aUVpWcXM2RjhDZUZaSEY3aXNERm1fUUZ2c2h4dHQwOHlFdHJycWVmM1VqZGFDNzgw?oc=5",
+    "source": "Le Journal de Montréal",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "Congestion à Montréal-Trudeau | Il faudra encore s’y prendre à l’avance cet été",
+    "lien": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQZkNUZnl3ZHF3QVVIODJWRFMzMU1BZ3hpOVhQUjhpY24tX3NEWm0zVndhNWJZVmwwN0dUQmNrVlhiZ3ZWajROVTZwbTR3TTRVS04weEVMR1o3TGZSLUlzdlBRbmNuS1BLMDVONWp1TlI3ZnhtZzUtdklfLURvTXhtdzhaampRSjNDUWVkYW5oS1NlOXJxd19FamZQb0dCdjNIbG1qTU1YS2tYNDdyeHhFMHo3YnZDWEgzeldEYkU1VmhZckE?oc=5",
+    "source": "La Presse",
+    "date": "2026-05-08T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "Ce qu’on suit ce mercredi | Artemis II, REM, CF Montréal",
+    "lien": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQeHhjNmV2dFhScWM4dnI3Z1h2Q2lkZTN6YkFYU1pSRFhzdDNwUWRMUmRfdjU3NkN5eTcwRjUydXhTWVNhOWRpMnprRlhNTnk1clNNZHRjQWEyWk9qcTVDbzRtcWJWOHB6bWcyLTkwS0lSUXlIM3htYVJWTnZVLXhPc003NERCeDllRi1SdDEwSi10bS1VMDk0MElJQk1CS1FBMDZESg?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-08T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "Pistes cyclables | Le chantier d’un futur tronçon du REV mis sur pause",
+    "lien": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNTElGTWJGTmtJU3dDTG45RUt2MUFPZGNnTWpGNC1ZejV0RnVxRkV6RWgyVWdsdDNNVFNWSmlOR0lTMXFsWThVQ3Bya3d1dmY0VHFJZFhhc3pyRWwycDBpd3JqZkFvbkVNVGpRTlhwNHNJUG9vOG9LZ3hBLWhFeE8tbXBhbWVxc3d6cFBub3BfVVdJWjlrZGhYTVhURkNrdS1tbWhRWkI3U2ZkSU1aeEl4VkMtT2pCdTl5Tl9HenpsU1dPSTgzOHVCS3Q0TnhUQQ?oc=5",
+    "source": "La Presse",
+    "date": "2026-04-20T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
+  },
+  {
+    "titre": "Location de logements neufs à Montréal | La crainte que les promoteurs désertent la métropole",
+    "lien": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNRVFGTGMtaGlHUTBSRkxscktLeWpIVms3bzhjWFZHbUowaGVKUlBQa1g5emNFWHBjZzVuN3NjcUVXOXIzVTNFQXFWaVFPU1A5TmVfNTNHT1NCU20zbjVxbVN3bm9YbHVkVmRSeUNMa0Q5b3dkb3g5NGNTNzF6c1pCWmVYWl9JT3hsUTh0X2l0b29aUGw3U0xBa3dvUG5HcUFwcXFoYnZsNVV6M1JqSmY5Y0x0MEloNXVISUU0NGVmaGpxdElBUDRTeHdhTmNkdG96cGNndUl6UlJWTm84VEh5NUVXTWRGcWFiekxIRzFn?oc=5",
+    "source": "La Presse",
+    "date": "2026-03-26T07:00:00+00:00",
+    "projet": "Aéroports de Montréal"
   }
 ]
